@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="280" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Multiple Realizability</text>
+
+  <rect x="200" y="50" width="160" height="55" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="280" y="82" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">"Pain" (functional role)</text>
+
+  <path d="M 260 105 L 120 175" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armC)"/>
+  <path d="M 280 105 L 280 175" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armC)"/>
+  <path d="M 300 105 L 440 175" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armC)"/>
+
+  <rect x="40" y="180" width="160" height="55" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="120" y="212" text-anchor="middle" font-size="12" fill="#2b2620">Human neurons</text>
+
+  <rect x="200" y="180" width="160" height="55" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="212" text-anchor="middle" font-size="12" fill="#2b2620">Octopus neurons</text>
+
+  <rect x="360" y="180" width="160" height="55" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="440" y="212" text-anchor="middle" font-size="12" fill="#2b2620">Silicon system</text>
+
+  <text x="280" y="262" text-anchor="middle" font-size="12" fill="#8a7f6a">Same causal role, three different possible substrates underneath it.</text>
+
+  <defs>
+    <marker id="armC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
