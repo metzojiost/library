@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="200" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Spectrum, Not One Thing</text>
+
+  <line x1="60" y1="110" x2="500" y2="110" stroke="#8a7f6a" stroke-width="3"/>
+  <text x="90" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">mild disorientation</text>
+  <text x="470" y="90" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">severe, impairing</text>
+
+  <text x="90" y="135" text-anchor="middle" font-size="9" fill="#5c5648">common, transient</text>
+  <text x="470" y="135" text-anchor="middle" font-size="9" fill="#5c5648">rare, needs support</text>
+
+  <text x="280" y="175" text-anchor="middle" font-size="10" fill="#8a7f6a">Concentrated disproportionately in intensive, prolonged retreat settings.</text>
+</svg>

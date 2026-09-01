@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Two Parallel, Correlated Streams</text>
+
+  <rect x="60" y="60" width="180" height="70" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="88" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Trained first-person</text>
+  <text x="150" y="105" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">introspective report</text>
+
+  <rect x="320" y="60" width="180" height="70" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="410" y="88" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Third-person</text>
+  <text x="410" y="105" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">brain measurement</text>
+
+  <path d="M 240 95 L 320 95" stroke="#a15c3e" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#armR)"/>
+  <path d="M 320 105 L 240 105" stroke="#a15c3e" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#armR)"/>
+  <text x="280" y="150" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">correlated, neither subordinate</text>
+
+  <defs>
+    <marker id="armR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+</svg>

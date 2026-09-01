@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Gamma Activity, by Group</text>
+
+  <line x1="70" y1="200" x2="500" y2="200" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="100" y="165" width="70" height="35" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="135" y="215" text-anchor="middle" font-size="9" fill="#5c5648">novice</text>
+
+  <rect x="240" y="150" width="70" height="50" fill="#8a7f6a" opacity="0.3"/>
+  <text x="275" y="215" text-anchor="middle" font-size="9" fill="#5c5648">ordinary rest</text>
+
+  <rect x="380" y="70" width="70" height="130" fill="#a15c3e" opacity="0.55"/>
+  <text x="415" y="215" text-anchor="middle" font-size="9" fill="#5c5648">monks, compassion meditation</text>
+
+  <text x="280" y="240" text-anchor="middle" font-size="10" fill="#8a7f6a"></text>
+</svg>
