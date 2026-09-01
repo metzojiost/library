@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="230" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Trend Concentrated in the U.S.</text>
+
+  <line x1="60" y1="180" x2="500" y2="180" stroke="#8a7f6a" stroke-width="1"/>
+  <line x1="60" y1="55" x2="60" y2="180" stroke="#8a7f6a" stroke-width="1"/>
+  <text x="60" y="200" text-anchor="middle" font-size="9" fill="#5c5648">1990</text>
+  <text x="500" y="200" text-anchor="middle" font-size="9" fill="#5c5648">2013</text>
+
+  <polyline points="60,160 140,150 220,135 300,110 380,90 460,70 500,60" fill="none" stroke="#a15c3e" stroke-width="2.5"/>
+  <text x="505" y="60" font-size="9" fill="#a15c3e" font-weight="600">U.S. trials</text>
+
+  <polyline points="60,165 140,163 220,162 300,158 380,160 460,157 500,156" fill="none" stroke="#8a7f6a" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <text x="505" y="156" font-size="9" fill="#8a7f6a" font-weight="600">European trials</text>
+
+  <text x="280" y="222" text-anchor="middle" font-size="10" fill="#8a7f6a">Chronic pain trials, Mogil et al. (2015) — same era, same condition, diverging trend.</text>
+</svg>

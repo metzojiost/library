@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Consent Spectrum</text>
+
+  <line x1="60" y1="110" x2="500" y2="110" stroke="#8a7f6a" stroke-width="2"/>
+
+  <circle cx="90" cy="110" r="8" fill="#8a7f6a"/>
+  <text x="90" y="140" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Fully deceptive</text>
+  <text x="90" y="153" text-anchor="middle" font-size="9" fill="#5c5648">no disclosure</text>
+
+  <circle cx="280" cy="110" r="8" fill="#a15c3e"/>
+  <text x="280" y="140" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Sham-controlled trial</text>
+  <text x="280" y="153" text-anchor="middle" font-size="9" fill="#5c5648">odds disclosed, assignment blind</text>
+
+  <circle cx="470" cy="110" r="8" fill="#a15c3e"/>
+  <text x="470" y="140" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Open-label placebo</text>
+  <text x="470" y="153" text-anchor="middle" font-size="9" fill="#5c5648">full disclosure</text>
+
+  <text x="280" y="195" text-anchor="middle" font-size="10" fill="#8a7f6a">Each point has documented, historically real medical use.</text>
+</svg>
