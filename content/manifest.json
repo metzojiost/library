@@ -598,6 +598,22 @@
         {
           "slug": "chapter-1",
           "title": "Chapter 1: You, Plus a Crowd, Minus You"
+        },
+        {
+          "slug": "chapter-2",
+          "title": "Chapter 2: Social Loafing — Ringelmann's Rope and Latané's Blindfold"
+        },
+        {
+          "slug": "chapter-3",
+          "title": "Chapter 3: The Robbers Cave Experiment and Intergroup Conflict"
+        },
+        {
+          "slug": "chapter-4",
+          "title": "Chapter 4: Online Deindividuation and Digital Crowd Behavior"
+        },
+        {
+          "slug": "chapter-5",
+          "title": "Chapter 5: The Wisdom of Crowds, and What Separates It From the Madness"
         }
       ]
     },
