@@ -642,6 +642,20 @@
         {
           "slug": "chapter-5",
           "title": "Chapter 5: A Practical Toolkit \u2014 CBT-I and Working With Your Own Pattern"
+        },
+        {
+          "slug": "chapter-6",
+          "title": "Chapter 6: Shift Work and the Circadian Mismatch"
+        }
+      ],
+      "guides": [
+        {
+          "slug": "guide-tonight-toolkit",
+          "title": "The Right-Now Toolkit: Techniques You Can Do From a Chair"
+        },
+        {
+          "slug": "guide-shift-reset",
+          "title": "The Shift-Reset Plan: Moving from Nights to Days"
         }
       ]
     },

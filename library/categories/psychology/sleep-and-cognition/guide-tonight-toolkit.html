@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Right-Now Toolkit: Techniques You Can Do From a Chair — Sleep and Cognition</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Psychology</span> / <a href="index.html">Sleep and Cognition</a> / <span>The Right-Now Toolkit: Techniques You Can Do From a Chair</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">The Right-Now Toolkit: Techniques You Can Do From a Chair</h1>
+<p class="chapter-meta">Field guide &middot; ~4 min read</p>
+<p>This isn't a summary of Chapters 1-6 — it's the opposite: skip the "why," go straight to the "do this now." Everything below can be done sitting exactly where you are, with no equipment, no privacy, and no real concentration required — which matters, because the state this guide is most useful in (foggy, wired, running on too little sleep) is exactly the state where a complicated technique falls apart. Pick one. You don't need all of them.</p>
+
+<h2>Box breathing (about 90 seconds)</h2>
+
+<p>The steps: breathe in slowly for a count of 4. Hold for a count of 4. Breathe out slowly for a count of 4. Hold empty for a count of 4. Repeat for 4-6 rounds. That's the whole technique — the "box" is just the four equal sides. It works by deliberately slowing your breathing rate below its resting pace, which reliably nudges the nervous system out of an alert, wired state, the same mechanism Chapter 2 described cognitive arousal working against. You can do this with your eyes open, mid-conversation-lull, without anyone noticing.</p>
+
+<h2>4-7-8 breathing (about 60 seconds)</h2>
+
+<p>A slightly more sedating variant: breathe in quietly through your nose for 4 counts, hold for 7 counts, exhale slowly and audibly through your mouth for 8 counts. Repeat 4 times. The long exhale is doing most of the work — it's the part of the breath cycle most associated with the parasympathetic, "rest" side of the nervous system, so deliberately stretching it out has an outsized calming effect for how little effort it takes.</p>
+
+<h2>Five-senses grounding (about 2 minutes)</h2>
+
+<p>Useful specifically when your mind feels too scattered to follow a breathing count. Silently name: 5 things you can see, 4 things you can hear, 3 things you can physically feel (the chair, your feet on the floor, fabric on your skin), 2 things you can smell, 1 thing you can taste. This isn't a sleep-specific technique — it's borrowed from general anxiety management — but it works well for the same reason cognitive shuffling does below: it gives a racing or foggy mind something structured and undemanding to do instead of nothing.</p>
+
+<h2>Cognitive shuffling (as long as you want)</h2>
+
+<p>Chapter 5 introduced this briefly: deliberately think of random, unrelated, mundane words, one at a time, and for each one picture it for a few seconds before moving to the next. Apple. Ladder. Cloud. Spoon. The randomness is the point — structured, effortful thought (worrying, replaying a conversation, planning tomorrow) is much harder for the brain to sustain than loose, disconnected imagery, so deliberately feeding it disconnected images short-circuits whatever loop it was stuck in. This one is genuinely well suited to a boring wait — it fills time and quiets a racing mind at the same time.</p>
+
+<h2>Seated progressive muscle relaxation (about 3 minutes)</h2>
+
+<p>Starting at your feet: tense the muscles hard for 5 seconds, then release and notice the contrast. Move upward — calves, thighs, hands, forearms, shoulders, face — tensing and releasing each in turn. All of this is doable seated, subtly, without drawing attention. The value isn't mystical: deliberately tensing and releasing gives you a clear, physical marker of what "relaxed" actually feels like, which is often surprisingly hard to locate directly when you're already tense.</p>
+
+<h2>The worry dump (2-5 minutes, needs a phone or paper)</h2>
+
+<p>Chapter 5 covers this as scheduled evening prep; it also works as an in-the-moment reset. Write down, in list form, whatever's actively looping in your head — an unfinished task, a worry, something you don't want to forget. You're not trying to solve anything in this window, just get it out of working memory and onto something external. A surprising amount of racing-mind fatigue comes from your brain trying to hold onto things it's afraid of losing track of; writing them down is a signal it's safe to stop rehearsing them.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>If you only try one thing from this guide right now, make it box breathing</strong> — it needs the least setup and works whether you're anxious, wired, or just foggy.</li>
+<li><strong>Notice which one actually works for you specifically</strong> — these techniques target slightly different states (physical tension vs. racing thoughts vs. general fog), and people tend to have one that reliably clicks more than the others.</li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="sleep-and-cognition" data-chapter="guide-tonight-toolkit"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div></div>
+  <a class="nav-link" href="index.html">Back to topic</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>
