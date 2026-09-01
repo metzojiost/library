@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="200" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Rise, Scrutiny, Narrower Claim</text>
+
+  <line x1="50" y1="110" x2="510" y2="110" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <circle cx="110" cy="110" r="6" fill="#a15c3e"/>
+  <text x="110" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">mid-2000s</text>
+  <text x="110" y="135" text-anchor="middle" font-size="9" fill="#5c5648">broad advantage claimed</text>
+
+  <circle cx="300" cy="110" r="6" fill="#2b2620"/>
+  <text x="300" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">2015</text>
+  <text x="300" y="135" text-anchor="middle" font-size="9" fill="#5c5648">publication bias found</text>
+
+  <circle cx="470" cy="110" r="6" fill="#2b2620"/>
+  <text x="470" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">today</text>
+  <text x="470" y="135" text-anchor="middle" font-size="9" fill="#5c5648">narrower, specific claim</text>
+
+  <text x="280" y="175" text-anchor="middle" font-size="10" fill="#8a7f6a">The replication crisis's corrective pattern, applied to a sympathetic finding.</text>
+</svg>

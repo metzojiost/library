@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Recursion: the Narrowest Surviving Gap</text>
+
+  <rect x="40" y="55" width="220" height="130" rx="10" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="150" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Human language</text>
+  <text x="150" y="115" text-anchor="middle" font-size="9" fill="#5c5648">"the dog that chased</text>
+  <text x="150" y="130" text-anchor="middle" font-size="9" fill="#5c5648">the cat that caught...</text>
+  <text x="150" y="155" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">nesting, no fixed limit</text>
+
+  <rect x="300" y="55" width="220" height="130" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="410" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Best-documented</text>
+  <text x="410" y="96" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">ape communication</text>
+  <text x="410" y="130" text-anchor="middle" font-size="9" fill="#5c5648">short, largely flat sequences</text>
+  <text x="410" y="155" text-anchor="middle" font-size="10" fill="#5c5648" font-weight="600">no clear nesting shown</text>
+
+  <text x="280" y="215" text-anchor="middle" font-size="10" fill="#8a7f6a">Not the whole story — but the clearest gap that has survived scrutiny.</text>
+</svg>

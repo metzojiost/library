@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Critical Period for Grammar</text>
+
+  <line x1="60" y1="210" x2="500" y2="210" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="60" y1="210" x2="60" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <path d="M 60 90 L 280 90 L 480 190" stroke="#a15c3e" stroke-width="2.5" fill="none"/>
+  <text x="150" y="80" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">grammar</text>
+
+  <path d="M 60 150 L 480 100" stroke="#2b2620" stroke-width="2.5" fill="none"/>
+  <text x="450" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">vocabulary</text>
+
+  <line x1="280" y1="210" x2="280" y2="90" stroke="#8a7f6a" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="280" y="228" text-anchor="middle" font-size="9" fill="#5c5648">puberty</text>
+
+  <text x="280" y="245" text-anchor="middle" font-size="10" fill="#8a7f6a">Vocabulary stays reachable; full native grammar drops off sharply after the window.</text>
+</svg>
