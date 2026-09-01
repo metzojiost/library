@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">One Model Assumed, Many Arrangements Exist</text>
+
+  <rect x="30" y="55" width="240" height="130" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Assumed by the model</text>
+  <circle cx="150" cy="120" r="18" fill="#a15c3e" opacity="0.3"/>
+  <text x="150" y="125" text-anchor="middle" font-size="9" fill="#2b2620">1-2 caregivers</text>
+  <text x="150" y="160" text-anchor="middle" font-size="10" fill="#5c5648">categories fit cleanly</text>
+
+  <rect x="300" y="55" width="240" height="130" rx="10" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="420" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Alloparenting</text>
+  <circle cx="390" cy="120" r="12" fill="#a15c3e" opacity="0.4"/>
+  <circle cx="420" cy="115" r="12" fill="#a15c3e" opacity="0.4"/>
+  <circle cx="450" cy="122" r="12" fill="#a15c3e" opacity="0.4"/>
+  <text x="420" y="160" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">categories fit awkwardly</text>
+
+  <text x="280" y="215" text-anchor="middle" font-size="11" fill="#8a7f6a">Historically, distributed caregiving is more common than the nuclear model.</text>
+</svg>
