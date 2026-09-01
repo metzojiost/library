@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Structural Fixes, Not Willpower</text>
+
+  <rect x="30" y="55" width="155" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="107" y="90" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Cognitive</text>
+  <text x="107" y="106" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">interview</text>
+
+  <rect x="200" y="55" width="155" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="277" y="90" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Double-blind</text>
+  <text x="277" y="106" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">lineups</text>
+
+  <rect x="370" y="55" width="155" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="447" y="90" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Spaced</text>
+  <text x="447" y="106" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">retrieval</text>
+
+  <text x="280" y="185" text-anchor="middle" font-size="11" fill="#8a7f6a">Each one changes the process itself, instead of asking anyone to just be more careful.</text>
+</svg>

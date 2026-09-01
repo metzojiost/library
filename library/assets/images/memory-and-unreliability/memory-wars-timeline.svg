@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="200" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Memory Wars</text>
+
+  <line x1="50" y1="110" x2="510" y2="110" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <circle cx="90" cy="110" r="6" fill="#a15c3e"/>
+  <text x="90" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">late 1980s</text>
+  <text x="90" y="135" text-anchor="middle" font-size="9" fill="#5c5648">recovered-memory therapy rises</text>
+
+  <circle cx="240" cy="110" r="6" fill="#a15c3e"/>
+  <text x="240" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">early 1990s</text>
+  <text x="240" y="135" text-anchor="middle" font-size="9" fill="#5c5648">court cases, allegations</text>
+
+  <circle cx="370" cy="110" r="6" fill="#2b2620"/>
+  <text x="370" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">1990s</text>
+  <text x="370" y="135" text-anchor="middle" font-size="9" fill="#5c5648">Loftus's false-memory research</text>
+
+  <circle cx="480" cy="110" r="6" fill="#2b2620"/>
+  <text x="480" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">late 1990s</text>
+  <text x="480" y="135" text-anchor="middle" font-size="9" fill="#5c5648">standards shift</text>
+
+  <text x="280" y="170" text-anchor="middle" font-size="10" fill="#8a7f6a">A technique that rose fast, met the data, and receded within about a decade.</text>
+</svg>
