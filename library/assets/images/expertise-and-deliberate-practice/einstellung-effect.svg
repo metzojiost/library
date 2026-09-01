@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Familiar Pattern Fires First</text>
+
+  <rect x="200" y="50" width="160" height="50" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="280" y="80" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Puzzle presented</text>
+
+  <path d="M 245 105 L 150 145" stroke="#8a7f6a" stroke-width="1.5"/>
+  <path d="M 315 105 L 410 145" stroke="#8a7f6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <rect x="60" y="150" width="180" height="55" rx="8" fill="#a15c3e" opacity="0.25" stroke="#a15c3e"/>
+  <text x="150" y="175" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Familiar pattern</text>
+  <text x="150" y="192" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">used — fast, automatic</text>
+
+  <rect x="320" y="150" width="180" height="55" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="410" y="175" text-anchor="middle" font-size="10" fill="#5c5648">Better solution</text>
+  <text x="410" y="192" text-anchor="middle" font-size="10" fill="#5c5648">never consciously seen</text>
+
+  <text x="280" y="228" text-anchor="middle" font-size="10" fill="#8a7f6a">Eye-tracking shows the gaze passed over it — the chunk still won.</text>
+</svg>

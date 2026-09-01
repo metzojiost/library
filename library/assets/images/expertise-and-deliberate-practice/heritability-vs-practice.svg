@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Three Overlapping Factors</text>
+
+  <circle cx="190" cy="130" r="80" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+  <text x="150" y="110" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Heritable</text>
+  <text x="150" y="126" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">traits</text>
+
+  <circle cx="290" cy="100" r="80" fill="#f1e3d8" opacity="0.7" stroke="#e6ddd0"/>
+  <text x="290" y="80" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Deliberate</text>
+  <text x="290" y="96" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">practice</text>
+
+  <circle cx="370" cy="160" r="80" fill="#8a7f6a" opacity="0.2" stroke="#8a7f6a"/>
+  <text x="410" y="180" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Starting</text>
+  <text x="410" y="196" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">conditions</text>
+
+  <text x="280" y="225" text-anchor="middle" font-size="10" fill="#8a7f6a">No single factor dominates — outcomes emerge from all three together.</text>
+</svg>

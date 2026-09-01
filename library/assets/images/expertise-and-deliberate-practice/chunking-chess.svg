@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Where the Advantage Comes From</text>
+
+  <line x1="70" y1="210" x2="510" y2="210" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="110" y="70" width="60" height="140" fill="#a15c3e" opacity="0.5"/>
+  <text x="140" y="230" text-anchor="middle" font-size="10" fill="#5c5648">GM, real board</text>
+
+  <rect x="190" y="130" width="60" height="80" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="220" y="230" text-anchor="middle" font-size="10" fill="#5c5648">club, real board</text>
+
+  <rect x="330" y="160" width="60" height="50" fill="#a15c3e" opacity="0.3"/>
+  <text x="360" y="230" text-anchor="middle" font-size="10" fill="#5c5648">GM, random</text>
+
+  <rect x="410" y="165" width="60" height="45" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="440" y="230" text-anchor="middle" font-size="10" fill="#5c5648">club, random</text>
+
+  <text x="280" y="55" text-anchor="middle" font-size="10" fill="#8a7f6a">recall accuracy →</text>
+</svg>

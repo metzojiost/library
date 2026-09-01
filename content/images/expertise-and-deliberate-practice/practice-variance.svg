@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">What Practice Explains, by Domain</text>
+
+  <line x1="70" y1="210" x2="510" y2="210" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="100" y="95" width="70" height="115" fill="#a15c3e" opacity="0.55"/>
+  <text x="135" y="230" text-anchor="middle" font-size="10" fill="#5c5648">chess</text>
+  <text x="135" y="87" text-anchor="middle" font-size="10" fill="#2b2620">higher</text>
+
+  <rect x="240" y="150" width="70" height="60" fill="#a15c3e" opacity="0.4"/>
+  <text x="275" y="230" text-anchor="middle" font-size="10" fill="#5c5648">sports</text>
+  <text x="275" y="142" text-anchor="middle" font-size="10" fill="#2b2620">~12% overall</text>
+
+  <rect x="380" y="175" width="70" height="35" fill="#a15c3e" opacity="0.25"/>
+  <text x="415" y="230" text-anchor="middle" font-size="10" fill="#5c5648">education</text>
+  <text x="415" y="167" text-anchor="middle" font-size="10" fill="#2b2620">lower</text>
+
+  <text x="280" y="250" text-anchor="middle" font-size="10" fill="#8a7f6a">A real effect, roughly 12% overall — with wide variation by domain.</text>
+</svg>
