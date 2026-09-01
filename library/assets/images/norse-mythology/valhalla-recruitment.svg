@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Recruiting for a War Already Lost</text>
+
+  <circle cx="100" cy="130" r="35" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="100" y="126" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Warrior</text>
+  <text x="100" y="142" text-anchor="middle" font-size="10" fill="#5c5648">dies bravely</text>
+
+  <path d="M 140 130 L 210 130" stroke="#a15c3e" stroke-width="2" marker-end="url(#armG)"/>
+  <text x="175" y="115" text-anchor="middle" font-size="10" fill="#a15c3e">chosen by valkyries</text>
+
+  <rect x="215" y="90" width="150" height="80" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="290" y="120" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Valhalla</text>
+  <text x="290" y="140" text-anchor="middle" font-size="10" fill="#5c5648">feast, fight, revive,</text>
+  <text x="290" y="155" text-anchor="middle" font-size="10" fill="#5c5648">repeat daily</text>
+
+  <path d="M 365 130 L 435 130" stroke="#a15c3e" stroke-width="2" marker-end="url(#armG)"/>
+
+  <rect x="440" y="95" width="90" height="70" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="485" y="125" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Ragnarok</text>
+  <text x="485" y="143" text-anchor="middle" font-size="10" fill="#5c5648">known defeat</text>
+
+  <text x="280" y="220" text-anchor="middle" font-size="11" fill="#8a7f6a">An afterlife built entirely around training for a fight the gods already know they'll lose.</text>
+
+  <defs>
+    <marker id="armG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+</svg>
