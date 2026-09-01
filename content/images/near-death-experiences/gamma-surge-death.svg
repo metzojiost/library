@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Surge, Not a Fade</text>
+
+  <line x1="60" y1="200" x2="500" y2="200" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="60" y1="200" x2="60" y2="55" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="60" y1="110" x2="500" y2="110" stroke="#8a7f6a" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="65" y="103" font-size="9" fill="#5c5648">waking baseline</text>
+
+  <path d="M 60 130 L 150 125 L 200 60 L 260 90 L 500 195" stroke="#a15c3e" stroke-width="2.5" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">surge, exceeds waking</text>
+
+  <text x="80" y="220" font-size="9" fill="#5c5648">cardiac arrest</text>
+  <text x="470" y="220" font-size="9" fill="#5c5648">flat</text>
+
+  <text x="280" y="235" text-anchor="middle" font-size="10" fill="#8a7f6a"></text>
+</svg>
