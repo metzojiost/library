@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">A Testimony Chain</text>
+
+  <circle cx="70" cy="110" r="26" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="70" y="114" text-anchor="middle" font-size="10" fill="#2b2620">original</text>
+
+  <circle cx="190" cy="110" r="26" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="190" y="114" text-anchor="middle" font-size="10" fill="#2b2620">retold</text>
+
+  <circle cx="310" cy="110" r="26" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="310" y="114" text-anchor="middle" font-size="10" fill="#2b2620">retold</text>
+
+  <circle cx="430" cy="110" r="26" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="430" y="114" text-anchor="middle" font-size="10" fill="#2b2620">retold</text>
+
+  <circle cx="530" cy="110" r="20" fill="#ffffff" stroke="#8a7f6a"/>
+  <text x="530" y="114" text-anchor="middle" font-size="9" fill="#5c5648">you</text>
+
+  <path d="M 96 110 L 164 110" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armF)"/>
+  <path d="M 216 110 L 284 110" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armF)"/>
+  <path d="M 336 110 L 404 110" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armF)"/>
+  <path d="M 456 110 L 510 110" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armF)"/>
+
+  <text x="280" y="180" text-anchor="middle" font-size="11" fill="#8a7f6a">Every link can drift, simplify, or add motive — and you rarely see the original.</text>
+
+  <defs>
+    <marker id="armF" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
