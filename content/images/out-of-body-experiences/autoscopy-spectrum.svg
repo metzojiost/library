@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Graded Family, Not One Switch</text>
+
+  <rect x="30" y="60" width="150" height="80" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="105" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Autoscopy</text>
+  <text x="105" y="108" text-anchor="middle" font-size="9" fill="#5c5648">double seen, self stays put</text>
+
+  <rect x="205" y="60" width="150" height="80" rx="8" fill="#8a7f6a" opacity="0.2" stroke="#8a7f6a"/>
+  <text x="280" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Heautoscopy</text>
+  <text x="280" y="108" text-anchor="middle" font-size="9" fill="#5c5648">ambiguous, flickering self</text>
+
+  <rect x="380" y="60" width="150" height="80" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="455" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Full OBE</text>
+  <text x="455" y="108" text-anchor="middle" font-size="9" fill="#5c5648">self fully relocates</text>
+
+  <text x="280" y="175" text-anchor="middle" font-size="10" fill="#8a7f6a">Tracking how completely bodily sensory integration has broken down.</text>
+</svg>
