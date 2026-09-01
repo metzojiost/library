@@ -870,6 +870,54 @@
           "title": "Chapter 5: The Ethics of Deception in Medicine"
         }
       ]
+    },
+    {
+      "slug": "neuroplasticity",
+      "title": "Neuroplasticity",
+      "category": "psychology",
+      "description": "Belief and deliberate effort aren't just motivational talk \u2014 under the right conditions, they correspond to real, measurable, if modest, physical changes in brain structure.",
+      "chapters": [
+        {
+          "slug": "chapter-1",
+          "title": "Chapter 1: The Brain That Rewires Itself"
+        },
+        {
+          "slug": "chapter-2",
+          "title": "Chapter 2: Synaptic Plasticity \u2014 How Neurons Actually Rewire"
+        },
+        {
+          "slug": "chapter-3",
+          "title": "Chapter 3: Can the Adult Brain Grow New Neurons?"
+        },
+        {
+          "slug": "chapter-4",
+          "title": "Chapter 4: Cortical Remapping \u2014 Phantom Limbs and the Mirror Box"
+        },
+        {
+          "slug": "chapter-5",
+          "title": "Chapter 5: Belief, Expectation, and the Brain"
+        },
+        {
+          "slug": "chapter-6",
+          "title": "Chapter 6: Deliberate Practice and Skill Acquisition"
+        },
+        {
+          "slug": "chapter-7",
+          "title": "Chapter 7: Growth Mindset \u2014 What Survives Scrutiny"
+        },
+        {
+          "slug": "chapter-8",
+          "title": "Chapter 8: Rewiring Habits"
+        },
+        {
+          "slug": "chapter-9",
+          "title": "Chapter 9: Meditation and Structural Brain Change"
+        },
+        {
+          "slug": "chapter-10",
+          "title": "Chapter 10: The Real Limits of Neuroplasticity"
+        }
+      ]
     }
   ]
 }

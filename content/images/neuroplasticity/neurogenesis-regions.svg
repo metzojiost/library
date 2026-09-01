@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Where Adult Neurogenesis Actually Happens</text>
+
+  <ellipse cx="280" cy="130" rx="190" ry="80" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="70" text-anchor="middle" font-size="9" fill="#5c5648" font-weight="600">Neocortex — no confirmed adult neurogenesis</text>
+
+  <ellipse cx="280" cy="150" rx="55" ry="30" fill="#a15c3e" opacity="0.3" stroke="#a15c3e"/>
+  <text x="280" y="147" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Hippocampal</text>
+  <text x="280" y="160" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">dentate gyrus</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="9" fill="#a15c3e" font-weight="600">New neurons confirmed here, at a modest rate</text>
+  <text x="280" y="225" text-anchor="middle" font-size="10" fill="#8a7f6a">Most of the brain relies on rewiring existing neurons, not growing new ones.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Belief-Effort-Change Loop</text>
+
+  <circle cx="140" cy="110" r="55" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="140" y="106" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Belief in</text>
+  <text x="140" y="120" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">capacity to change</text>
+
+  <path d="M 195 100 L 245 90" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armE)"/>
+
+  <circle cx="300" cy="80" r="55" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+  <text x="300" y="76" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Sustained</text>
+  <text x="300" y="90" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">effortful practice</text>
+
+  <path d="M 350 110 L 400 140" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armE)"/>
+
+  <circle cx="440" cy="170" r="55" fill="#8a7f6a" opacity="0.18" stroke="#8a7f6a"/>
+  <text x="440" y="166" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Measurable</text>
+  <text x="440" y="180" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">brain change</text>
+
+  <path d="M 400 190 C 320 230, 200 220, 155 165" stroke="#8a7f6a" stroke-width="2" fill="none" stroke-dasharray="3,3" marker-end="url(#armE)"/>
+
+  <defs>
+    <marker id="armE" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>

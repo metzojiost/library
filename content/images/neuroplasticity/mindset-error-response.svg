@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Two Responses to the Same Mistake</text>
+
+  <rect x="50" y="55" width="210" height="130" rx="8" fill="#e6ddd0" stroke="#8a7f6a" stroke-dasharray="3,3"/>
+  <text x="155" y="80" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Fixed mindset</text>
+  <text x="155" y="105" text-anchor="middle" font-size="9" fill="#5c5648">"I'm bad at this"</text>
+  <text x="155" y="122" text-anchor="middle" font-size="9" fill="#5c5648">Reduced engagement</text>
+  <text x="155" y="139" text-anchor="middle" font-size="9" fill="#5c5648">with the error</text>
+  <text x="155" y="160" text-anchor="middle" font-size="9" fill="#5c5648">Avoid harder tasks</text>
+
+  <rect x="300" y="55" width="210" height="130" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="405" y="80" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Growth mindset</text>
+  <text x="405" y="105" text-anchor="middle" font-size="9" fill="#5c5648">"Useful feedback"</text>
+  <text x="405" y="122" text-anchor="middle" font-size="9" fill="#5c5648">Heightened attention</text>
+  <text x="405" y="139" text-anchor="middle" font-size="9" fill="#5c5648">to the error</text>
+  <text x="405" y="160" text-anchor="middle" font-size="9" fill="#5c5648">Persist through setback</text>
+
+  <text x="280" y="210" text-anchor="middle" font-size="10" fill="#8a7f6a">Same mistake, measurably different processing.</text>
+</svg>

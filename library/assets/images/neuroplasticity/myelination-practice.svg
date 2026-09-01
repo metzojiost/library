@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="200" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Myelination Speeds the Pathway</text>
+
+  <text x="60" y="80" font-size="9" fill="#5c5648" font-weight="600">Before extended practice</text>
+  <line x1="60" y1="100" x2="500" y2="100" stroke="#e6ddd0" stroke-width="6"/>
+  <circle cx="60" cy="100" r="6" fill="#8a7f6a"/>
+  <circle cx="500" cy="100" r="6" fill="#8a7f6a"/>
+  <text x="280" y="120" text-anchor="middle" font-size="8" fill="#8a7f6a">thin myelin — slower signal</text>
+
+  <text x="60" y="155" font-size="9" fill="#5c5648" font-weight="600">After extended practice</text>
+  <line x1="60" y1="175" x2="500" y2="175" stroke="#a15c3e" stroke-width="12"/>
+  <circle cx="60" cy="175" r="7" fill="#a15c3e"/>
+  <circle cx="500" cy="175" r="7" fill="#a15c3e"/>
+  <text x="280" y="195" text-anchor="middle" font-size="8" fill="#a15c3e" font-weight="600">thick myelin — faster, more reliable signal</text>
+</svg>

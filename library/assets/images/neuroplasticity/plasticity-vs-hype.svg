@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="230" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Real Evidence vs. the Popular Version</text>
+
+  <rect x="50" y="55" width="220" height="140" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="160" y="78" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">What's evidenced</text>
+  <text x="160" y="102" text-anchor="middle" font-size="9" fill="#5c5648">Weeks to years of</text>
+  <text x="160" y="117" text-anchor="middle" font-size="9" fill="#5c5648">sustained, effortful practice</text>
+  <text x="160" y="140" text-anchor="middle" font-size="9" fill="#5c5648">→ modest, real,</text>
+  <text x="160" y="155" text-anchor="middle" font-size="9" fill="#5c5648">circuit-specific change</text>
+
+  <rect x="300" y="55" width="220" height="140" rx="8" fill="#a15c3e" opacity="0.12" stroke="#a15c3e"/>
+  <text x="410" y="78" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">What's oversold</text>
+  <text x="410" y="102" text-anchor="middle" font-size="9" fill="#5c5648">A brief app session</text>
+  <text x="410" y="117" text-anchor="middle" font-size="9" fill="#5c5648">or belief alone</text>
+  <text x="410" y="140" text-anchor="middle" font-size="9" fill="#5c5648">→ unlimited, rapid,</text>
+  <text x="410" y="155" text-anchor="middle" font-size="9" fill="#5c5648">effortless transformation</text>
+
+  <text x="280" y="218" text-anchor="middle" font-size="10" fill="#8a7f6a">The mechanism is real — the marketing usually isn't.</text>
+</svg>

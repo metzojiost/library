@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Cortical Remapping After Amputation</text>
+
+  <rect x="50" y="55" width="210" height="120" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="155" y="75" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Before amputation</text>
+  <rect x="70" y="90" width="80" height="70" fill="#a15c3e" opacity="0.25"/>
+  <text x="110" y="130" text-anchor="middle" font-size="8" fill="#2b2620">Hand</text>
+  <rect x="155" y="90" width="80" height="70" fill="#8a7f6a" opacity="0.2"/>
+  <text x="195" y="130" text-anchor="middle" font-size="8" fill="#2b2620">Face</text>
+
+  <rect x="300" y="55" width="210" height="120" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="405" y="75" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">After amputation</text>
+  <rect x="320" y="90" width="80" height="70" fill="#8a7f6a" opacity="0.35"/>
+  <text x="360" y="125" text-anchor="middle" font-size="8" fill="#2b2620">Face territory</text>
+  <text x="360" y="138" text-anchor="middle" font-size="8" fill="#2b2620">expands in</text>
+  <rect x="405" y="90" width="80" height="70" fill="#8a7f6a" opacity="0.2"/>
+  <text x="445" y="130" text-anchor="middle" font-size="8" fill="#2b2620">Face</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="10" fill="#8a7f6a">Touching the face can trigger sensation felt in the phantom hand.</text>
+</svg>

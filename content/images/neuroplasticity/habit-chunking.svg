@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 210" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="210" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Habit Chunking in the Basal Ganglia</text>
+
+  <text x="60" y="65" font-size="9" fill="#5c5648" font-weight="600">Early, unpracticed sequence</text>
+  <rect x="60" y="75" width="60" height="20" fill="#a15c3e" opacity="0.5"/>
+  <rect x="130" y="75" width="60" height="20" fill="#a15c3e" opacity="0.5"/>
+  <rect x="200" y="75" width="60" height="20" fill="#a15c3e" opacity="0.5"/>
+  <rect x="270" y="75" width="60" height="20" fill="#a15c3e" opacity="0.5"/>
+  <text x="195" y="112" text-anchor="middle" font-size="8" fill="#5c5648">activity spans every step</text>
+
+  <text x="60" y="150" font-size="9" fill="#5c5648" font-weight="600">After extensive repetition</text>
+  <rect x="60" y="160" width="20" height="20" fill="#a15c3e"/>
+  <rect x="90" y="160" width="200" height="6" fill="#e6ddd0" y2="168"/>
+  <rect x="270" y="160" width="20" height="20" fill="#a15c3e"/>
+  <text x="195" y="195" text-anchor="middle" font-size="8" fill="#a15c3e" font-weight="600">activity compresses to start and end only</text>
+</svg>
