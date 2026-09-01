@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 4: Diminishing Marginal Returns — Managerial Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Managerial Economics</a> / <span>Chapter 4: Diminishing Marginal Returns</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 4: Diminishing Marginal Returns</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Chapter 3's breakeven model quietly assumed every additional unit costs the same as the last one to produce. Chapter 4 is about the case where that assumption breaks down — a pattern so common and so counterintuitive that most people fight it in practice long after they'd agree with it in theory.</p>
+
+<h2>The kitchen example</h2>
+
+<p><span class="term">Diminishing marginal returns</span> describes what happens when one input keeps increasing while others stay fixed: each additional unit of the growing input adds less extra output than the one before it, eventually. A kitchen with one cook and fixed counter space, ovens, and prep stations produces some amount of food per hour. Adding a second cook roughly doubles output — plenty of unused space and equipment to work with. Adding a third and fourth cook still helps, but by less each time, since counter space and oven access are now being shared and occasionally waited on. Add an eighth cook to a kitchen built for two, and the extra person may barely help at all, or actively slow things down through crowding and coordination overhead — the same additional unit of labor, now producing far less than it did earlier, because every other input (space, equipment) stayed fixed while labor kept growing.</p>
+
+<figure>
+  <img src="../../../assets/images/managerial-economics/diminishing-returns-curve.svg" alt="A curve showing output rising steeply as workers are added at first, then rising more slowly, and eventually flattening or declining as more workers are added to a fixed space." />
+  <figcaption>Each additional unit of a growing input adds less than the one before it, once the fixed inputs become the real constraint.</figcaption>
+</figure>
+
+<h2>Why this applies far beyond staffing a kitchen</h2>
+
+<p>The same pattern governs a huge range of real decisions once you're looking for the shape: study hours added to an already-long study session produce less learning per additional hour past a certain point, as fatigue and attention (the fixed inputs, in this case) become the binding constraint rather than time itself. Marketing spend produces diminishing extra customers per additional dollar once the most responsive segment of the audience has already been reached and each new dollar is chasing progressively less interested people. A single additional hour of overtime on an already-long week often produces less useful output than the same hour would on a fresh day, because attention and energy — not time — are the actually-scarce input by that point.</p>
+
+<h2>The practical skill: recognizing the inflection point</h2>
+
+<p>The useful application isn't "diminishing returns are bad" — early returns to additional input are often strongly positive, which is exactly why adding the input made sense in the first place. The useful skill is noticing when you've crossed from the steep part of the curve to the flat part, since that's the point where the same additional unit of effort, staff, or spending stops being the highest-value place to put the next increment of that resource — and Chapter 2's marginal rule applies here directly: once the marginal output of one more unit of an input drops below what that unit costs, the right move is redirecting it elsewhere, not adding more of the same thing out of momentum.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Think of a recent case where "just add more" — more hours, more staff, more budget — stopped actually helping much:</strong> what was the fixed input that became the real bottleneck once the growing input passed a certain point?</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>The opposite pattern also exists: producing more can sometimes get cheaper per unit, not more expensive — the mirror image of this chapter.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 5.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="managerial-economics" data-chapter="chapter-4"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-3.html">&larr; Chapter 3: Breakeven — The Number That Actually Tells You Something</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-5.html">Chapter 5: Economies (and Diseconomies) of Scale &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

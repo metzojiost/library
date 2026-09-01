@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">The Nine-Tool Checklist</text>
+
+  <g font-size="13" fill="#2b2620">
+    <text x="50" y="65">1. Opportunity cost — what's the real alternative?</text>
+    <text x="50" y="95">2. Marginal analysis — next unit, not the average</text>
+    <text x="50" y="125">3. Breakeven — how much volume is actually needed?</text>
+    <text x="50" y="155">4. Diminishing returns — is this input past its peak?</text>
+    <text x="50" y="185">5. Economies of scale — does batching lower the cost?</text>
+    <text x="50" y="215">6. Sunk costs — ignored, or quietly still driving this?</text>
+    <text x="50" y="245">7. Firm boundary — one-off, or worth systematizing?</text>
+    <text x="50" y="275">8. Time's full price — honestly valued, not free</text>
+    <text x="50" y="305" font-weight="600" fill="#a15c3e">9. Budget fit — re-justified from zero</text>
+  </g>
+
+  <line x1="30" y1="53" x2="30" y2="313" stroke="#e6ddd0" stroke-width="2"/>
+  <text x="280" y="360" text-anchor="middle" font-size="12" fill="#8a7f6a">Nine chapters, one repeatable checklist for any resource-allocation decision.</text>
+</svg>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 6: The Sunk Cost Rule — Managerial Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Managerial Economics</a> / <span>Chapter 6: The Sunk Cost Rule</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 6: The Sunk Cost Rule</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Chapter 2's workshop example depended on a specific claim: the $10,000 already spent on setup was irrelevant to whether the next order was worth taking. This chapter states that claim as a formal rule, and works through why it's so consistently hard to actually follow, even once it's fully understood.</p>
+
+<h2>The rule, stated precisely</h2>
+
+<p>A <span class="term">sunk cost</span> is money, time, or effort already spent that cannot be recovered regardless of what's decided next. The formal decision rule in managerial economics is unambiguous: sunk costs should play no role whatsoever in a forward-looking decision. Only the costs and benefits that change depending on what's chosen next — the marginal costs and marginal benefits from Chapter 2 — belong in the calculation. This is a purely logical point, not a psychological one: the $10,000 is gone whether the next order is accepted or declined, so it literally cannot be affected by, and therefore cannot rationally influence, that decision.</p>
+
+<h2>Why this is so hard to actually do</h2>
+
+<p>Almost everyone agrees with the rule in the abstract, and almost everyone still violates it in practice — continuing to fund a struggling project because of how much has already gone into it, finishing a bad meal because it was already paid for, staying in a length of a movie or a book because of the time already invested. The mechanism isn't stupidity; it's that sunk costs get psychologically entangled with a separate, real question — "was this a good decision to have made in the first place" — which does matter for learning and future judgment, but is a completely different question from "given where things stand right now, what's the best next move." Keeping those two questions cleanly separated is the actual skill: it's fine, even useful, to review whether starting the project was a mistake for future reference, while still correctly ignoring the money already spent when deciding whether to continue it right now.</p>
+
+<figure>
+  <img src="../../../assets/images/managerial-economics/sunk-cost-decision-tree.svg" alt="A decision tree separating two distinct questions: was starting this a good decision (a question for future learning), versus what should happen next given where things stand now (a decision that should ignore sunk costs entirely)." />
+  <figcaption>Two genuinely different questions, easy to tangle together — only the second one should ignore the money already spent.</figcaption>
+</figure>
+
+<h2>A concrete test for whether you're actually following the rule</h2>
+
+<p>A reliable practical test: would this decision look any different to someone with the exact same options going forward, but who hadn't already spent anything on it? If a stranger, offered the exact same remaining choice with none of the history, would clearly walk away — and the only reason to continue is "but I've already put so much in" — that's the sunk-cost rule being violated in real time. This reframing works because it strips out the emotional weight of the money already spent and leaves only the forward-looking comparison that actually determines whether continuing is the right call.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Apply the stranger test to one decision you're currently hesitant to walk away from</strong> — a subscription, a project, a course, a purchase — because of what's already been invested: would a stranger, handed the exact same remaining choice with none of your history, make the same call you're making?</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Every chapter so far has looked at a single decision-maker in isolation — but many real decisions involve deciding whether to do something yourself or bring someone else in.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 7, on why organizations exist at all.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="managerial-economics" data-chapter="chapter-6"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-5.html">&larr; Chapter 5: Economies (and Diseconomies) of Scale</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-7.html">Chapter 7: Why Firms Exist at All &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="640" height="220" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">The Four-Step Leverage Audit</text>
+
+  <g font-size="12">
+    <rect x="20" y="60" width="140" height="110" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="90" y="90" text-anchor="middle" font-weight="600" fill="#2b2620">1. Scales or not?</text>
+    <text x="90" y="115" text-anchor="middle" fill="#5c5648">Separate capped-by-</text>
+    <text x="90" y="130" text-anchor="middle" fill="#5c5648">hours income from</text>
+    <text x="90" y="145" text-anchor="middle" fill="#5c5648">leveraged income</text>
+
+    <rect x="180" y="60" width="140" height="110" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="250" y="90" text-anchor="middle" font-weight="600" fill="#2b2620">2. Scarce combo?</text>
+    <text x="250" y="115" text-anchor="middle" fill="#5c5648">What rare skill</text>
+    <text x="250" y="130" text-anchor="middle" fill="#5c5648">combination do</text>
+    <text x="250" y="145" text-anchor="middle" fill="#5c5648">you occupy?</text>
+
+    <rect x="340" y="60" width="140" height="110" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="410" y="90" text-anchor="middle" font-weight="600" fill="#2b2620">3. BATNA check</text>
+    <text x="410" y="115" text-anchor="middle" fill="#5c5648">What happens if</text>
+    <text x="410" y="130" text-anchor="middle" fill="#5c5648">this relationship</text>
+    <text x="410" y="145" text-anchor="middle" fill="#5c5648">falls through?</text>
+
+    <rect x="500" y="60" width="140" height="110" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+    <text x="570" y="90" text-anchor="middle" font-weight="600" fill="#a15c3e">4. Survivable?</text>
+    <text x="570" y="115" text-anchor="middle" fill="#5c5648">Size any leverage</text>
+    <text x="570" y="130" text-anchor="middle" fill="#5c5648">to what you can</text>
+    <text x="570" y="145" text-anchor="middle" fill="#5c5648">afford to be wrong by</text>
+  </g>
+
+  <path d="M 160 115 L 178 115" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M 320 115 L 338 115" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M 480 115 L 498 115" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a3)"/>
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>

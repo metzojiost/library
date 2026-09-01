@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Two Ways to Budget</text>
+
+  <rect x="40" y="60" width="220" height="150" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="90" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">Incremental</text>
+  <text x="150" y="115" text-anchor="middle" font-size="11" fill="#5c5648">last month's number,</text>
+  <text x="150" y="130" text-anchor="middle" font-size="11" fill="#5c5648">adjusted slightly</text>
+  <text x="150" y="160" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">unexamined spending</text>
+  <text x="150" y="175" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">drifts forward</text>
+
+  <rect x="300" y="60" width="220" height="150" rx="10" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="410" y="90" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">Zero-based</text>
+  <text x="410" y="115" text-anchor="middle" font-size="11" fill="#5c5648">every category</text>
+  <text x="410" y="130" text-anchor="middle" font-size="11" fill="#5c5648">re-justified from $0</text>
+  <text x="410" y="160" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">forces the marginal</text>
+  <text x="410" y="175" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">question each time</text>
+
+  <text x="280" y="235" text-anchor="middle" font-size="12" fill="#8a7f6a">More effort, but worth running at least periodically.</text>
+</svg>

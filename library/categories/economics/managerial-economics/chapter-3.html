@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3: Breakeven — The Number That Actually Tells You Something — Managerial Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Managerial Economics</a> / <span>Chapter 3: Breakeven — The Number That Actually Tells You Something</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 3: Breakeven — The Number That Actually Tells You Something</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Chapter 2's workshop example leaned on a distinction between costs already spent regardless of the decision and costs that change with the decision. This chapter makes that distinction precise, and builds the single most useful practical tool in the whole topic on top of it: knowing exactly when any project, job, or business idea actually starts making money.</p>
+
+<h2>Fixed costs vs. variable costs</h2>
+
+<p><span class="term">Fixed costs</span> don't change with how much you produce or do — rent, a software subscription, insurance, a piece of equipment already bought. They're incurred whether output is zero or maximal. <span class="term">Variable costs</span> scale directly with output — materials for each unit made, payment processing fees per sale, the marginal labor hours a bigger order requires. This distinction matters because it changes what a decision should actually be compared against: a fixed cost, once committed, is irrelevant to whether the next unit is worth producing (Chapter 2's marginal rule); a variable cost is directly relevant to every single unit.</p>
+
+<h2>Contribution margin: the number that actually tells you something</h2>
+
+<p><span class="term">Contribution margin</span> is the amount each unit sold contributes toward covering fixed costs, after its own variable cost is subtracted: price minus variable cost per unit. A product selling for $50 with $30 in variable cost per unit has a $20 contribution margin — each unit sold puts $20 toward paying off the fixed costs, and once enough units have been sold to cover all the fixed costs, every additional unit's $20 contribution margin becomes pure profit.</p>
+
+<h2>Breakeven analysis: the point where a project stops losing money</h2>
+
+<p>The <span class="term">breakeven point</span> — the number of units that must be sold to exactly cover fixed costs — is simply fixed costs divided by contribution margin per unit. If fixed costs are $4,000 and each unit contributes $20, breakeven is 200 units. Below 200 units, the venture is losing money overall even if each individual sale is profitable in isolation; above 200, every additional sale is straightforwardly adding to profit. This single number reframes a huge number of vague "is this worth doing" questions — a side business, a new product line, whether to take on a bigger apartment for a home studio — into a concrete, checkable target: how many units, clients, or sales does this actually need to break even, and is that number realistic given the actual market for it?</p>
+
+<figure>
+  <img src="../../../assets/images/managerial-economics/breakeven-chart.svg" alt="A breakeven chart showing total cost and total revenue lines crossing at the breakeven point, with a loss region below it and a profit region above it." />
+  <figcaption>Below breakeven, the venture loses money overall. Above it, every additional unit is pure profit on top of an already-covered base.</figcaption>
+</figure>
+
+<h2>Why this changes how a decision should actually be framed</h2>
+
+<p>The practical shift breakeven analysis forces: instead of asking the vague question "will this be profitable," ask the concrete question "how many units/sales/clients does this specifically need, and how confident am I in reaching that number." A project needing 5,000 units sold to break even is a very different bet than one needing 20 — even if both have identical contribution margins per unit — because the realism of actually hitting the volume, not the margin math itself, is usually where these decisions actually succeed or fail.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Pick a real or hypothetical side project, and actually calculate its breakeven point:</strong> total fixed costs to get started, divided by contribution margin per sale. Is the resulting number realistic given the actual size of the market you'd be selling into?</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>The breakeven model assumes each additional unit costs the same to produce as the last — in practice, that's often not true.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 4.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="managerial-economics" data-chapter="chapter-3"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-2.html">&larr; Chapter 2: The Marginal Decision Rule</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-4.html">Chapter 4: Diminishing Marginal Returns &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

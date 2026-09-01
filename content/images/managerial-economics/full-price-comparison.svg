@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="280" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Money Price vs. Full Price</text>
+
+  <rect x="40" y="60" width="220" height="170" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="90" text-anchor="middle" font-size="14" fill="#2b2620" font-weight="600">$8 meal, 2 hours</text>
+  <text x="150" y="120" text-anchor="middle" font-size="12" fill="#5c5648">+ 2 hrs opportunity cost</text>
+  <text x="150" y="160" text-anchor="middle" font-size="16" fill="#a15c3e" font-weight="700">higher full price</text>
+
+  <rect x="300" y="60" width="220" height="170" rx="10" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="410" y="90" text-anchor="middle" font-size="14" fill="#2b2620" font-weight="600">$15 meal, 15 min</text>
+  <text x="410" y="120" text-anchor="middle" font-size="12" fill="#5c5648">+ small opportunity cost</text>
+  <text x="410" y="160" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="700">lower full price</text>
+
+  <text x="280" y="260" text-anchor="middle" font-size="12" fill="#8a7f6a">The cheaper-looking option isn't always cheaper once time is honestly priced in.</text>
+</svg>

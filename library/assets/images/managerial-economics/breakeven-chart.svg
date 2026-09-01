@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="320" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Breakeven Chart</text>
+
+  <line x1="70" y1="270" x2="520" y2="270" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="70" y1="270" x2="70" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+  <text x="295" y="300" text-anchor="middle" font-size="12" fill="#5c5648">Units sold</text>
+
+  <!-- loss region -->
+  <path d="M 70 240 L 300 150 L 70 150 Z" fill="#a15c3e" opacity="0.1"/>
+  <!-- profit region -->
+  <path d="M 300 150 L 520 70 L 520 150 Z" fill="#a15c3e" opacity="0.18"/>
+
+  <!-- fixed cost line -->
+  <line x1="70" y1="150" x2="520" y2="150" stroke="#8a7f6a" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="525" y="154" font-size="11" fill="#5c5648">fixed cost</text>
+
+  <!-- total cost line -->
+  <line x1="70" y1="240" x2="520" y2="90" stroke="#2b2620" stroke-width="2.5"/>
+  <text x="525" y="88" font-size="11" fill="#2b2620">total cost</text>
+
+  <!-- revenue line -->
+  <line x1="70" y1="270" x2="520" y2="70" stroke="#a15c3e" stroke-width="2.5"/>
+  <text x="525" y="68" font-size="11" fill="#a15c3e" font-weight="600">revenue</text>
+
+  <circle cx="300" cy="150" r="4" fill="#2b2620"/>
+  <text x="300" y="135" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">breakeven</text>
+</svg>

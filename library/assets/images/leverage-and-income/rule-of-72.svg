@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="280" fill="#ffffff"/>
+  <text x="280" y="32" text-anchor="middle" font-size="18" fill="#2b2620" font-weight="600">Rule of 72: Years to Double</text>
+
+  <line x1="60" y1="70" x2="500" y2="70" stroke="#e6ddd0"/>
+  <text x="100" y="65" text-anchor="middle" font-size="13" fill="#5c5648" font-weight="600">Rate</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#5c5648" font-weight="600">72 ÷ Rate</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#5c5648" font-weight="600">Years to double</text>
+
+  <g font-size="14" fill="#2b2620">
+    <text x="100" y="105" text-anchor="middle">4%</text>
+    <text x="300" y="105" text-anchor="middle">72 ÷ 4</text>
+    <text x="450" y="105" text-anchor="middle" font-weight="600" fill="#a15c3e">18 years</text>
+
+    <text x="100" y="145" text-anchor="middle">6%</text>
+    <text x="300" y="145" text-anchor="middle">72 ÷ 6</text>
+    <text x="450" y="145" text-anchor="middle" font-weight="600" fill="#a15c3e">12 years</text>
+
+    <text x="100" y="185" text-anchor="middle">9%</text>
+    <text x="300" y="185" text-anchor="middle">72 ÷ 9</text>
+    <text x="450" y="185" text-anchor="middle" font-weight="600" fill="#a15c3e">8 years</text>
+
+    <text x="100" y="225" text-anchor="middle">12%</text>
+    <text x="300" y="225" text-anchor="middle">72 ÷ 12</text>
+    <text x="450" y="225" text-anchor="middle" font-weight="600" fill="#a15c3e">6 years</text>
+  </g>
+
+  <line x1="60" y1="90" x2="500" y2="90" stroke="#f1e3d8"/>
+  <line x1="60" y1="130" x2="500" y2="130" stroke="#f1e3d8"/>
+  <line x1="60" y1="170" x2="500" y2="170" stroke="#f1e3d8"/>
+  <line x1="60" y1="210" x2="500" y2="210" stroke="#f1e3d8"/>
+</svg>

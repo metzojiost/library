@@ -46,6 +46,102 @@
       ]
     },
     {
+      "slug": "leverage-and-income",
+      "title": "Leverage and Income",
+      "category": "economics",
+      "description": "Why some people's income scales and others' doesn't — the real mechanics of leverage, negotiation, and building durable financial ground, aimed at your own situation rather than the market.",
+      "chapters": [
+        {
+          "slug": "chapter-1",
+          "title": "Chapter 1: Four Types of Leverage, and What Actually Sets Your Bargaining Power"
+        },
+        {
+          "slug": "chapter-2",
+          "title": "Chapter 2: Why Capital Income Compounds Faster Than Labor Income"
+        },
+        {
+          "slug": "chapter-3",
+          "title": "Chapter 3: The Real Math of Compounding"
+        },
+        {
+          "slug": "chapter-4",
+          "title": "Chapter 4: Which Skills Actually Compound"
+        },
+        {
+          "slug": "chapter-5",
+          "title": "Chapter 5: Negotiation, Beyond BATNA"
+        },
+        {
+          "slug": "chapter-6",
+          "title": "Chapter 6: Equity vs. Salary"
+        },
+        {
+          "slug": "chapter-7",
+          "title": "Chapter 7: Debt as Leverage — The Double-Edged Mechanism"
+        },
+        {
+          "slug": "chapter-8",
+          "title": "Chapter 8: The Media Flywheel"
+        },
+        {
+          "slug": "chapter-9",
+          "title": "Chapter 9: When Leverage Blows Up"
+        },
+        {
+          "slug": "chapter-10",
+          "title": "Chapter 10: Auditing Your Own Leverage"
+        }
+      ]
+    },
+    {
+      "slug": "managerial-economics",
+      "title": "Managerial Economics",
+      "category": "economics",
+      "description": "The inward-facing half of economics — decision tools for a single business, team, or person, with no markets, competitors, or prices to model.",
+      "chapters": [
+        {
+          "slug": "chapter-1",
+          "title": "Chapter 1: The Economics of One"
+        },
+        {
+          "slug": "chapter-2",
+          "title": "Chapter 2: The Marginal Decision Rule"
+        },
+        {
+          "slug": "chapter-3",
+          "title": "Chapter 3: Breakeven — The Number That Actually Tells You Something"
+        },
+        {
+          "slug": "chapter-4",
+          "title": "Chapter 4: Diminishing Marginal Returns"
+        },
+        {
+          "slug": "chapter-5",
+          "title": "Chapter 5: Economies (and Diseconomies) of Scale"
+        },
+        {
+          "slug": "chapter-6",
+          "title": "Chapter 6: The Sunk Cost Rule"
+        },
+        {
+          "slug": "chapter-7",
+          "title": "Chapter 7: Why Firms Exist at All"
+        },
+        {
+          "slug": "chapter-8",
+          "title": "Chapter 8: Time as the Scarce Resource"
+        },
+        {
+          "slug": "chapter-9",
+          "title": "Chapter 9: Budgeting, Done as Marginal Thinking"
+        },
+        {
+          "slug": "chapter-10",
+          "title": "Chapter 10: One Decision, Run Through All Nine Tools"
+        }
+      ]
+    },
+    {
       "slug": "philosophy-of-mind",
       "title": "Philosophy of Mind",
       "category": "philosophy",

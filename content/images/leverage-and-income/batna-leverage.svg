@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="640" height="300" fill="#ffffff"/>
+  <text x="320" y="32" text-anchor="middle" font-size="18" fill="#2b2620" font-weight="600">Same Case, Different Leverage</text>
+
+  <!-- Weak BATNA -->
+  <rect x="60" y="70" width="230" height="170" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="175" y="100" text-anchor="middle" font-size="14" fill="#2b2620" font-weight="600">No other offer</text>
+  <text x="175" y="130" text-anchor="middle" font-size="12" fill="#5c5648">If this deal falls through:</text>
+  <text x="175" y="150" text-anchor="middle" font-size="12" fill="#5c5648">stay at the same pay</text>
+  <text x="175" y="185" text-anchor="middle" font-size="13" fill="#a15c3e" font-weight="600">Weak leverage</text>
+  <text x="175" y="205" text-anchor="middle" font-size="11" fill="#8a7f6a">regardless of how</text>
+  <text x="175" y="220" text-anchor="middle" font-size="11" fill="#8a7f6a">good the case is</text>
+
+  <!-- Strong BATNA -->
+  <rect x="350" y="70" width="230" height="170" rx="10" fill="#a15c3e" opacity="0.12" stroke="#a15c3e"/>
+  <text x="465" y="100" text-anchor="middle" font-size="14" fill="#2b2620" font-weight="600">Competing offer in hand</text>
+  <text x="465" y="130" text-anchor="middle" font-size="12" fill="#5c5648">If this deal falls through:</text>
+  <text x="465" y="150" text-anchor="middle" font-size="12" fill="#5c5648">leave for the other offer</text>
+  <text x="465" y="185" text-anchor="middle" font-size="13" fill="#a15c3e" font-weight="600">Strong leverage</text>
+  <text x="465" y="205" text-anchor="middle" font-size="11" fill="#8a7f6a">the employer's cost-benefit</text>
+  <text x="465" y="220" text-anchor="middle" font-size="11" fill="#8a7f6a">math actually changes</text>
+
+  <text x="320" y="270" text-anchor="middle" font-size="12" fill="#5c5648">Identical performance case. The alternative is what moves the leverage.</text>
+</svg>

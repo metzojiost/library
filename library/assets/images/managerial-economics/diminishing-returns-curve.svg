@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="300" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Diminishing Marginal Returns</text>
+
+  <line x1="70" y1="250" x2="520" y2="250" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="70" y1="250" x2="70" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+  <text x="295" y="280" text-anchor="middle" font-size="12" fill="#5c5648">Workers added</text>
+  <text x="40" y="150" text-anchor="middle" font-size="12" fill="#5c5648" transform="rotate(-90 40 150)">Output</text>
+
+  <path d="M 70 245 C 150 130, 230 90, 320 78 C 400 70, 460 72, 520 90" fill="none" stroke="#a15c3e" stroke-width="3"/>
+
+  <text x="150" y="200" text-anchor="middle" font-size="11" fill="#5c5648">steep gains</text>
+  <text x="420" y="105" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">flattening —</text>
+  <text x="420" y="120" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">space is now the constraint</text>
+</svg>

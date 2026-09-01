@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2: The Marginal Decision Rule — Managerial Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Managerial Economics</a> / <span>Chapter 2: The Marginal Decision Rule</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 2: The Marginal Decision Rule</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Chapter 1 established opportunity cost as what a choice really costs. This chapter gives the actual decision rule built on top of it — the single most-used tool in the whole field, and one that quietly overturns a very natural but wrong way most people evaluate decisions.</p>
+
+<h2>The marginal decision rule</h2>
+
+<p><span class="term">Marginal cost</span> is what one additional unit of something actually costs — one more hour worked, one more item produced, one more client taken on. <span class="term">Marginal benefit</span> is what that same additional unit actually gains. The decision rule is simple to state and easy to misapply: do the next unit if, and only if, its marginal benefit exceeds its marginal cost — not the average cost of everything so far, and not the total picture, just this next specific increment.</p>
+
+<h2>Why average cost is often the wrong number to look at</h2>
+
+<p>This is the part that trips people up. Imagine a small workshop that's already spent $10,000 on fixed setup costs (rent, equipment) and is deciding whether to take one more order that would bring in $600 in revenue but cost $500 in materials and labor to fulfill. The <em>average</em> cost per order so far, including that $10,000 in sunk setup costs spread across everything produced, might look much higher than $500 — which makes the $600 order look unprofitable if judged against the average. But the $10,000 is already spent regardless of whether this order is taken (it's a <span class="term">sunk cost</span> — more on this directly in Chapter 6) — the only number relevant to <em>this specific decision</em> is the $500 marginal cost against the $600 marginal benefit. Taking the order adds $100 of real value, full stop, no matter how unprofitable the business looks on an average-cost basis.</p>
+
+<figure>
+  <img src="../../../assets/images/managerial-economics/marginal-vs-average.svg" alt="A diagram comparing a decision judged against average cost (showing a loss) versus the same decision judged correctly against marginal cost (showing a real gain), since fixed costs already spent don't belong in a marginal calculation." />
+  <figcaption>The same order looks unprofitable by average cost and clearly profitable by marginal cost — only the marginal number is the right one for this decision.</figcaption>
+</figure>
+
+<h2>Where this shows up constantly, once you're looking for it</h2>
+
+<p>This exact confusion — average versus marginal — shows up everywhere real decisions get made. A freelancer deciding whether to take one more small project asks the wrong question if they divide their total desired income by total hours and compare that average rate to the new project's pay; the right question is whether this specific project's payment exceeds what this specific block of time would otherwise be worth. A business deciding whether to stay open one more hour asks the wrong question if it compares that hour's revenue to the store's average revenue per hour across the whole day; the right comparison is that hour's marginal revenue against that hour's marginal cost (extra staff time, extra utilities) alone.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Find one recurring decision you evaluate using an average ("my time is worth $X/hour," "this business makes $Y per order on average") and re-run it using only the marginal numbers for the next specific unit</strong> — does the decision change?</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>The workshop example leaned on a distinction between fixed and variable costs without fully defining it.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 3.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="managerial-economics" data-chapter="chapter-2"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-1.html">&larr; Chapter 1: The Economics of One</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-3.html">Chapter 3: Breakeven — The Number That Actually Tells You Something &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

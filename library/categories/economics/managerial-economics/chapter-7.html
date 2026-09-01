@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 7: Why Firms Exist at All — Managerial Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Managerial Economics</a> / <span>Chapter 7: Why Firms Exist at All</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 7: Why Firms Exist at All</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Every chapter so far has treated the decision-maker as a single unit making choices about resources it already has. This chapter asks a question underneath all of them: why do organizations — firms, teams, any structure where people work together under one roof — exist at all, instead of everyone simply contracting individually for every single task they need done?</p>
+
+<h2>Coase's question</h2>
+
+<p>Economist Ronald Coase asked exactly this in a 1937 paper, and the answer he gave — which won him a Nobel Prize decades later — is genuinely central to managerial economics: if markets are so good at efficiently allocating resources through prices, why doesn't a business just hire a different independent contractor for every individual task, every single time, rather than employing people on an ongoing basis? Coase's answer: because using the market itself isn't free. Every time a task is contracted out, there's a real cost to finding the right person, negotiating terms, verifying the work, and enforcing the agreement — what Coase called <span class="term">transaction costs</span> <span class="gloss">(the real costs of actually using the market for a given exchange, separate from the price paid for the good or service itself)</span>.</p>
+
+<h2>The actual boundary of a firm</h2>
+
+<p>A firm exists, in Coase's framework, precisely up to the point where it's cheaper to bring a function in-house — hire someone, build an internal process — than to keep paying the transaction costs of re-negotiating that same function on the open market every time it's needed. This gives a genuinely useful, concrete answer to a question that otherwise feels vague: "should I hire someone for this, or keep contracting it out each time?" The Coasean answer is a comparison, not a gut feeling — compare the ongoing cost of employing someone (including the coordination and management overhead from Chapter 5's diseconomies of scale) against the transaction costs of repeatedly finding, vetting, negotiating with, and verifying a new contractor each time the task recurs.</p>
+
+<figure>
+  <img src="../../../assets/images/managerial-economics/firm-boundary.svg" alt="A diagram showing a boundary line: tasks with low, one-off transaction costs stay outside the firm as contracted-out work, while tasks with high, recurring transaction costs move inside the firm as hired, in-house work." />
+  <figcaption>The boundary of what gets brought in-house versus contracted out tracks transaction costs, not just the price of the task itself.</figcaption>
+</figure>
+
+<h2>Applying this personally, not just to businesses</h2>
+
+<p>The same logic scales down cleanly to individual decisions, including ones that don't look like "hiring" at all. Someone deciding whether to learn a new skill themselves versus repeatedly paying someone else for it is running a Coasean calculation, whether or not they'd call it that: a one-off task favors the market (find and pay a specialist once, avoiding the cost of building a skill you'll rarely use), while a frequently recurring need favors bringing the capability in-house (learning it yourself, or hiring someone ongoing), because the repeated transaction costs of going back to the market each time eventually exceed the cost of just having the capability directly.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Pick one recurring task you either always outsource or always do yourself, and run the actual Coasean comparison:</strong> what are the real transaction costs of finding and managing it externally each time, against the real cost of building or maintaining the capability yourself?</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Every resource discussed so far has been money, staff, or effort — but the single most consistently scarce resource in any of these decisions hasn't been named directly yet: time itself.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 8.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="managerial-economics" data-chapter="chapter-7"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-6.html">&larr; Chapter 6: The Sunk Cost Rule</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-8.html">Chapter 8: Time as the Scarce Resource &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

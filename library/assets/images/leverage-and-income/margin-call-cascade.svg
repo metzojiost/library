@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="460" height="460" fill="#ffffff"/>
+  <text x="230" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">The Margin Call Cascade</text>
+
+  <g font-size="12" fill="#2b2620">
+    <circle cx="230" cy="100" r="65" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="230" y="96" text-anchor="middle" font-weight="600">Price drops</text>
+    <text x="230" y="112" text-anchor="middle" font-size="10" fill="#5c5648">ordinary market move</text>
+
+    <circle cx="370" cy="230" r="65" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="370" y="226" text-anchor="middle" font-weight="600">Margin call</text>
+    <text x="370" y="242" text-anchor="middle" font-size="10" fill="#5c5648">cash cushion too low</text>
+
+    <circle cx="230" cy="360" r="65" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="230" y="356" text-anchor="middle" font-weight="600">Forced sale</text>
+    <text x="230" y="372" text-anchor="middle" font-size="10" fill="#5c5648">regardless of timing</text>
+
+    <circle cx="90" cy="230" r="65" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+    <text x="90" y="226" text-anchor="middle" font-weight="600" fill="#a15c3e">Price drops</text>
+    <text x="90" y="242" text-anchor="middle" font-size="10" fill="#a15c3e">further, for everyone</text>
+  </g>
+
+  <path d="M 275 145 Q 340 180 355 175" fill="none" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M 355 285 Q 300 340 275 345" fill="none" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M 185 345 Q 120 310 105 285" fill="none" stroke="#8a7f6a" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M 105 175 Q 150 130 185 115" fill="none" stroke="#a15c3e" stroke-width="2" marker-end="url(#a2)"/>
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>

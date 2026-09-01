@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 5: Negotiation, Beyond BATNA — Leverage and Income</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Leverage and Income</a> / <span>Chapter 5: Negotiation, Beyond BATNA</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 5: Negotiation, Beyond BATNA</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>Chapter 1 established that negotiation leverage is set by BATNA — your walk-away alternative — more than by in-room technique. That's the foundation, but it isn't the whole picture. Two more mechanisms shape how a negotiation actually plays out once both sides have some alternative: who speaks first, and who knows more.</p>
+
+<h2>The first-offer effect</h2>
+
+<p>Conventional wisdom used to say: never make the first offer, let the other side reveal their position first. Research on <span class="term">anchoring</span> in negotiation — a direct extension of the anchoring bias covered in <a href="../behavioral-economics/chapter-1.html">Behavioral Economics Chapter 1</a> — found the opposite tends to be true in most negotiations: whoever names a number first meaningfully shifts the entire range the rest of the conversation happens within, even when the other party knows, explicitly, that the number is a tactic and not a neutral fact. A salary negotiation that opens at $90,000 and one that opens at $75,000 tend to settle at different final numbers even when both sides are reasonably skilled negotiators, purely because of where the anchor was planted first. The exception: in genuinely unfamiliar territory, where you have real uncertainty about fair market value, letting the other side anchor first can be the safer move, since anchoring incorrectly (too high or too low) can backfire.</p>
+
+<h2>Information asymmetry as leverage</h2>
+
+<p>A negotiation is rarely between two equally informed parties, and the information gap itself is a form of leverage independent of BATNA. Economist George Akerlof's classic 1970 analysis of used-car markets — the "market for lemons" — showed how this can break a market down entirely: if sellers know a car's true condition and buyers don't, buyers rationally discount every asking price to protect against buying a "lemon," which pushes honest sellers of good cars out of the market since they can't get a fair price, leaving mostly lower-quality cars behind — a market collapsing under its own information gap. In an ordinary negotiation, the same asymmetry works as direct leverage: the party who knows the real minimum the other side will accept, the real timeline pressure they're under, or the real alternatives they have, negotiates from a structurally stronger position — which is also the practical case for doing real research (comparable salaries, comparable prices, the other party's actual constraints) before any negotiation, not just preparing your own position.</p>
+
+<figure>
+  <img src="../../../assets/images/leverage-and-income/information-asymmetry.svg" alt="A diagram showing two negotiating parties, one with more information about the deal's true value than the other, with an arrow indicating leverage flows toward the better-informed side.">
+  <figcaption>The party who knows more about the deal's real value or the other side's real constraints negotiates from a structurally stronger position.</figcaption>
+</figure>
+
+<h2>Putting the three together</h2>
+
+<p>BATNA sets the ceiling on how much leverage is genuinely available. The first-offer effect determines how much of that available range actually gets captured once talks begin. Information asymmetry determines how accurately each side can even judge where that range sits. All three are addressable before a negotiation starts — improving a BATNA, preparing a well-researched opening number, and doing real homework on the other party's position — which is the actual, unglamorous work behind what looks from the outside like negotiating "skill."</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Before your next negotiation of any size, write down what you actually know about the other side's constraints and alternatives, and what you don't</strong> — the gaps in that second list are exactly where doing a bit more homework pays off most.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Equity — an ownership stake instead of a straight salary — is itself a negotiated outcome, and a distinct form of leverage with its own logic.</strong>
+<span class="hook-target">→ Picked up directly in Chapter 6.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="leverage-and-income" data-chapter="chapter-5"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-4.html">&larr; Chapter 4: Which Skills Actually Compound</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-6.html">Chapter 6: Equity vs. Salary &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>
