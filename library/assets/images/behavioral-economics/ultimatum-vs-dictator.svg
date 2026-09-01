@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="640" height="340" fill="#ffffff"/>
+
+  <text x="320" y="34" text-anchor="middle" font-size="18" fill="#2b2620" font-weight="600">Average Offer, as a Share of the Total</text>
+
+  <!-- axis -->
+  <line x1="90" y1="270" x2="580" y2="270" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="90" y1="270" x2="90" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <!-- gridlines / labels 0,25,50 % -->
+  <line x1="90" y1="270" x2="580" y2="270" stroke="#e6ddd0" stroke-width="1"/>
+  <line x1="90" y1="165" x2="580" y2="165" stroke="#e6ddd0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="90" y1="60" x2="580" y2="60" stroke="#e6ddd0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="274" text-anchor="end" font-size="12" fill="#5c5648">0%</text>
+  <text x="80" y="169" text-anchor="end" font-size="12" fill="#5c5648">25%</text>
+  <text x="80" y="64" text-anchor="end" font-size="12" fill="#5c5648">50%</text>
+
+  <!-- Rational-actor prediction line at 0% -->
+  <line x1="90" y1="270" x2="580" y2="270" stroke="#a15c3e" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="585" y="274" font-size="12" fill="#a15c3e">rational-actor prediction (0%)</text>
+
+  <!-- Ultimatum bar: ~45% -->
+  <rect x="180" y="81" width="90" height="189" fill="#a15c3e" rx="4"/>
+  <text x="225" y="70" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">~45%</text>
+  <text x="225" y="296" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">Ultimatum Game</text>
+  <text x="225" y="313" text-anchor="middle" font-size="11" fill="#5c5648">responder can reject</text>
+
+  <!-- Dictator bar: ~25% -->
+  <rect x="390" y="165" width="90" height="105" fill="#c99a7f" rx="4"/>
+  <text x="435" y="154" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">~25%</text>
+  <text x="435" y="296" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">Dictator Game</text>
+  <text x="435" y="313" text-anchor="middle" font-size="11" fill="#5c5648">no veto possible</text>
+</svg>

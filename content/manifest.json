@@ -32,24 +32,16 @@
         {
           "slug": "chapter-5",
           "title": "Chapter 5: Designing Around the Brain You Actually Have"
+        },
+        {
+          "slug": "chapter-6",
+          "title": "Chapter 6: Fairness Is a Preference, Not Just a Judgment Error"
         }
       ],
       "guides": [
         {
           "slug": "field-guide",
           "title": "The Behavioral Economics Field Guide: Turning Insight Into Habit"
-        }
-      ]
-    },
-    {
-      "slug": "test",
-      "title": "Test",
-      "category": "economics",
-      "description": "Blank test topic used to confirm the site updates live.",
-      "chapters": [
-        {
-          "slug": "chapter-1",
-          "title": "Chapter 1: Test"
         }
       ]
     },
