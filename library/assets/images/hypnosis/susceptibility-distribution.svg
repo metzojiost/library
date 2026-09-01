@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Hypnotic Susceptibility, Population-Wide</text>
+
+  <polyline points="60,190 90,185 120,170 150,140 180,95 210,60 230,45 250,55 270,80 300,120 330,150 360,172 390,183 420,188 450,190"
+    fill="none" stroke="#a15c3e" stroke-width="2.5"/>
+  <path d="M 60,190 90,185 120,170 150,140 180,95 210,60 230,45 250,55 270,80 300,120 330,150 360,172 390,183 420,188 450,190 L 450,200 L 60,200 Z"
+    fill="#a15c3e" opacity="0.15"/>
+
+  <rect x="60" y="60" width="60" height="140" fill="#8a7f6a" opacity="0.15"/>
+  <text x="90" y="215" text-anchor="middle" font-size="9" fill="#5c5648">Low (~10-15%)</text>
+
+  <rect x="390" y="60" width="60" height="140" fill="#a15c3e" opacity="0.15"/>
+  <text x="420" y="215" text-anchor="middle" font-size="9" fill="#5c5648">High (~10-15%)</text>
+
+  <text x="240" y="215" text-anchor="middle" font-size="9" fill="#5c5648">Broad middle range</text>
+
+  <line x1="60" y1="200" x2="460" y2="200" stroke="#e6ddd0" stroke-width="1"/>
+  <text x="280" y="232" text-anchor="middle" font-size="10" fill="#8a7f6a">A stable, normally distributed trait — measured by the Stanford Hypnotic Susceptibility Scale.</text>
+</svg>

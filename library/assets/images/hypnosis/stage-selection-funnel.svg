@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="230" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Invisible Screening Funnel</text>
+
+  <path d="M 100 55 L 460 55 L 340 120 L 220 120 Z" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">20+ volunteers on stage</text>
+
+  <path d="M 220 120 L 340 120 L 300 170 L 260 170 Z" fill="#a15c3e" opacity="0.28" stroke="#a15c3e"/>
+  <text x="280" y="148" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Quick suggestibility</text>
+  <text x="280" y="161" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">tests, quietly scored</text>
+
+  <rect x="240" y="178" width="80" height="34" rx="6" fill="#a15c3e"/>
+  <text x="280" y="199" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="600">The show</text>
+
+  <text x="280" y="222" text-anchor="middle" font-size="10" fill="#8a7f6a">Only the fastest, fullest responders continue — the rest are thanked and dismissed.</text>
+</svg>

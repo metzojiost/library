@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="230" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Genuine Analgesia, Not Just Masking</text>
+
+  <rect x="40" y="55" width="150" height="60" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="115" y="90" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Hypnotic suggestion</text>
+  <text x="115" y="104" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">of numbness</text>
+
+  <path d="M 195 85 L 225 85" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armA)"/>
+
+  <rect x="230" y="40" width="150" height="55" rx="8" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+  <text x="305" y="62" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">Pain-experience regions</text>
+  <text x="305" y="76" text-anchor="middle" font-size="9" fill="#2b2620" font-weight="600">(cingulate, insula) ↓</text>
+
+  <rect x="230" y="105" width="150" height="55" rx="8" fill="#e6ddd0" stroke="#8a7f6a" stroke-dasharray="3,3"/>
+  <text x="305" y="127" text-anchor="middle" font-size="9" fill="#5c5648" font-weight="600">Outward-suppression</text>
+  <text x="305" y="141" text-anchor="middle" font-size="9" fill="#5c5648" font-weight="600">regions — not the driver</text>
+
+  <path d="M 385 65 L 420 65" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#armA)"/>
+  <rect x="425" y="45" width="105" height="45" rx="8" fill="#a15c3e" opacity="0.28" stroke="#a15c3e"/>
+  <text x="477" y="70" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">Real analgesia</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="10" fill="#8a7f6a">fMRI: reduced activity in pain-processing regions, not just masking behavior.</text>
+
+  <defs>
+    <marker id="armA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
