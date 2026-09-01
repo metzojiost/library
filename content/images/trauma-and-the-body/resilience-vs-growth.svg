@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Resilience vs. Post-Traumatic Growth</text>
+
+  <line x1="60" y1="200" x2="500" y2="200" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="60" y1="80" x2="500" y2="80" stroke="#8a7f6a" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="65" y="72" font-size="10" fill="#5c5648">prior baseline</text>
+
+  <path d="M 90 90 L 200 170 L 350 90" stroke="#a15c3e" stroke-width="2.5" fill="none"/>
+  <text x="200" y="220" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">resilience — returns to baseline</text>
+
+  <path d="M 90 90 L 200 170 L 450 45" stroke="#2b2620" stroke-width="2.5" fill="none" stroke-dasharray="5,3"/>
+  <text x="450" y="35" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">reported growth</text>
+
+  <text x="280" y="250" text-anchor="middle" font-size="11" fill="#8a7f6a">Resilience alone is a genuine, sufficient outcome — not a lesser one.</text>
+</svg>
