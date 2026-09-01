@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Five-Step Practice Protocol</text>
+
+  <g font-size="9" fill="#2b2620">
+    <rect x="30" y="55" width="500" height="34" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="45" y="76" font-weight="600">1. Pick one narrow, specific target</text>
+
+    <rect x="30" y="97" width="500" height="34" rx="6" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+    <text x="45" y="118" font-weight="600">2. Practice at the edge of current ability</text>
+
+    <rect x="30" y="139" width="500" height="34" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="45" y="160" font-weight="600">3. Protect the belief that keeps you showing up</text>
+
+    <rect x="30" y="181" width="500" height="34" rx="6" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+    <text x="45" y="202" font-weight="600">4. Engineer the loop, if the goal is a habit</text>
+
+    <rect x="30" y="223" width="500" height="34" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="45" y="244" font-weight="600">5. Use a standardized structure for attention-based goals</text>
+  </g>
+</svg>
