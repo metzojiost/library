@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">What a Failed Prediction Implicates</text>
+
+  <rect x="180" y="55" width="200" height="50" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="280" y="85" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Core hypothesis</text>
+
+  <rect x="40" y="130" width="130" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="105" y="157" text-anchor="middle" font-size="11" fill="#2b2620">Instruments</text>
+
+  <rect x="215" y="130" width="130" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="157" text-anchor="middle" font-size="11" fill="#2b2620">Background theory</text>
+
+  <rect x="390" y="130" width="130" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="455" y="157" text-anchor="middle" font-size="11" fill="#2b2620">Boundary conditions</text>
+
+  <path d="M 280 105 L 105 130" stroke="#8a7f6a" stroke-width="1.5"/>
+  <path d="M 280 105 L 280 130" stroke="#8a7f6a" stroke-width="1.5"/>
+  <path d="M 280 105 L 455 130" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="150" y="200" width="260" height="40" rx="8" fill="#ffffff" stroke="#a15c3e" stroke-width="1.5"/>
+  <text x="280" y="225" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">failed prediction points at the whole bundle</text>
+</svg>

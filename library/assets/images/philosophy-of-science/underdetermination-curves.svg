@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Same Points, Different Curves</text>
+
+  <line x1="60" y1="220" x2="500" y2="220" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="60" y1="220" x2="60" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <circle cx="120" cy="170" r="5" fill="#2b2620"/>
+  <circle cx="220" cy="120" r="5" fill="#2b2620"/>
+  <circle cx="320" cy="140" r="5" fill="#2b2620"/>
+  <circle cx="420" cy="90" r="5" fill="#2b2620"/>
+
+  <path d="M 120 170 Q 220 90, 320 140 T 420 90" stroke="#a15c3e" stroke-width="2" fill="none"/>
+  <path d="M 120 170 L 220 120 L 320 140 L 420 90" stroke="#8a7f6a" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 120 170 Q 260 60, 320 140 T 420 90" stroke="#5c5648" stroke-width="2" fill="none" stroke-dasharray="2,3"/>
+
+  <text x="280" y="245" text-anchor="middle" font-size="11" fill="#8a7f6a">Three different theories, all fitting the same four observations exactly.</text>
+</svg>
