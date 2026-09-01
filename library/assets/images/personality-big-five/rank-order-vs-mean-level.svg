@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Both Can Move at Once</text>
+
+  <line x1="70" y1="210" x2="500" y2="210" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="70" y1="210" x2="70" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <path d="M 100 160 L 450 90" stroke="#a15c3e" stroke-width="2.5" fill="none"/>
+  <circle cx="100" cy="160" r="4" fill="#a15c3e"/>
+  <circle cx="450" cy="90" r="4" fill="#a15c3e"/>
+  <text x="460" y="85" font-size="9" fill="#a15c3e">person A</text>
+
+  <path d="M 100 190 L 450 130" stroke="#2b2620" stroke-width="2.5" fill="none"/>
+  <circle cx="100" cy="190" r="4" fill="#2b2620"/>
+  <circle cx="450" cy="130" r="4" fill="#2b2620"/>
+  <text x="460" y="135" font-size="9" fill="#2b2620">person B</text>
+
+  <text x="280" y="235" text-anchor="middle" font-size="10" fill="#8a7f6a">Both rise (mean-level change) — the gap between them barely narrows (rank-order stability).</text>
+</svg>

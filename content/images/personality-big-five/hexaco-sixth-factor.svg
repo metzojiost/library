@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Sixth Dimension, Separated Out</text>
+
+  <rect x="40" y="55" width="220" height="130" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Agreeableness</text>
+  <text x="150" y="115" text-anchor="middle" font-size="10" fill="#5c5648">everyday warmth,</text>
+  <text x="150" y="131" text-anchor="middle" font-size="10" fill="#5c5648">cooperation</text>
+
+  <rect x="300" y="55" width="220" height="130" rx="10" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+  <text x="410" y="80" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Honesty-Humility</text>
+  <text x="410" y="115" text-anchor="middle" font-size="10" fill="#5c5648">willingness to exploit,</text>
+  <text x="410" y="131" text-anchor="middle" font-size="10" fill="#5c5648">entitlement, sincerity</text>
+
+  <text x="280" y="215" text-anchor="middle" font-size="10" fill="#8a7f6a">Pleasant day-to-day and trustworthy with something valuable are different questions.</text>
+</svg>
