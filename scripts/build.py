@@ -211,12 +211,26 @@ def build_library_index(manifest, idx, progress):
 </section>""")
         body = "\n".join(sections)
 
+    games_section = """
+<section class="category-section">
+  <h2>Something Else to Do</h2>
+  <div class="topic-grid">
+  <a class="topic-card" href="games/sudoku.html">
+    <div class="topic-card-title">Sudoku</div>
+    <div class="topic-card-desc">Easy, medium, or hard — fully clickable, no keyboard needed.</div>
+    <div class="topic-card-meta">
+      <span class="badge">game</span>
+    </div>
+  </a>
+  </div>
+</section>"""
+
     html = render_page(
         title="My Library",
         css_path="assets/style.css",
         home_path="index.html",
         breadcrumbs="",
-        content=f'<h1 class="page-title">My Library</h1>\n{body}',
+        content=f'<h1 class="page-title">My Library</h1>\n{body}\n{games_section}',
     )
     (LIBRARY / "index.html").write_text(html, encoding="utf-8")
 
@@ -523,6 +537,13 @@ def copy_static_assets():
         if dst_images.exists():
             shutil.rmtree(dst_images)
         shutil.copytree(src_images, dst_images)
+
+    src_games = CONTENT / "games"
+    if src_games.exists():
+        dst_games = LIBRARY / "games"
+        if dst_games.exists():
+            shutil.rmtree(dst_games)
+        shutil.copytree(src_games, dst_games)
 
 
 def main():
