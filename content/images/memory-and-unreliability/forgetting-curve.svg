@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="520" height="400" fill="#ffffff"/>
+
+  <line x1="80" y1="320" x2="470" y2="320" stroke="#2b2620" stroke-width="1.5"/>
+  <line x1="80" y1="320" x2="80" y2="50" stroke="#2b2620" stroke-width="1.5"/>
+
+  <path d="M80,70 C130,180 180,240 250,265 C320,285 400,300 460,305" fill="none" stroke="#a15c3e" stroke-width="3"/>
+
+  <circle cx="80" cy="70" r="5" fill="#a15c3e"/>
+  <circle cx="460" cy="305" r="5" fill="#a15c3e"/>
+
+  <text x="80" y="45" text-anchor="middle" font-size="12" fill="#2b2620">100% retained</text>
+  <text x="80" y="340" text-anchor="middle" font-size="11" fill="#8a7f6a">just learned</text>
+  <text x="460" y="340" text-anchor="middle" font-size="11" fill="#8a7f6a">weeks later</text>
+
+  <text x="20" y="190" text-anchor="middle" font-size="12" fill="#2b2620" transform="rotate(-90 20 190)">memory retained &#8594;</text>
+  <text x="270" y="375" text-anchor="middle" font-size="12" fill="#2b2620">time since learning &#8594;</text>
+
+  <text x="270" y="20" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Most forgetting happens fast, early — then the loss levels off.</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="520" height="440" fill="#ffffff"/>
+
+  <rect x="80" y="40" width="360" height="110" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="1.5"/>
+  <rect x="80" y="150" width="360" height="130" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <rect x="80" y="280" width="360" height="110" fill="#e0d5c5" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <text x="260" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Hyperarousal</text>
+  <text x="260" y="102" text-anchor="middle" font-size="12" fill="#5c5648">racing thoughts, panic, fight-or-flight</text>
+  <text x="260" y="122" text-anchor="middle" font-size="12" fill="#5c5648">"too much"</text>
+
+  <text x="260" y="205" text-anchor="middle" font-size="17" font-weight="bold" fill="#a15c3e">Window of Tolerance</text>
+  <text x="260" y="228" text-anchor="middle" font-size="12.5" fill="#2b2620">can think clearly, feel emotions,</text>
+  <text x="260" y="246" text-anchor="middle" font-size="12.5" fill="#2b2620">stay present</text>
+
+  <text x="260" y="325" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Hypoarousal</text>
+  <text x="260" y="347" text-anchor="middle" font-size="12" fill="#5c5648">numbness, dissociation, shutting down</text>
+  <text x="260" y="367" text-anchor="middle" font-size="12" fill="#5c5648">"too little"</text>
+
+  <text x="260" y="420" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Trauma can narrow this window, so ordinary stress pushes past its edges more easily.</text>
+</svg>

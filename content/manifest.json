@@ -1,0 +1,255 @@
+{
+  "categories": {
+    "economics": "Economics",
+    "philosophy": "Philosophy",
+    "mythology": "Mythology & Old Beliefs",
+    "psychology": "Psychology",
+    "consciousness-studies": "Consciousness Studies"
+  },
+  "topics": [
+    {
+      "slug": "behavioral-economics",
+      "title": "Behavioral Economics",
+      "category": "economics",
+      "description": "Why humans consistently break the 'rational actor' model — and what predictable patterns replace it.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Model Everyone Assumed Was True"},
+        {"slug": "chapter-2", "title": "Chapter 2: Money Isn't Actually Fungible (To Your Brain)"},
+        {"slug": "chapter-3", "title": "Chapter 3: Judging by What's Easy to Imagine, Not What's Actually Likely"},
+        {"slug": "chapter-4", "title": "Chapter 4: Why \"Future You\" Gets Treated Like a Stranger"},
+        {"slug": "chapter-5", "title": "Chapter 5: Designing Around the Brain You Actually Have"}
+      ],
+      "guides": [
+        {"slug": "field-guide", "title": "The Behavioral Economics Field Guide: Turning Insight Into Habit"}
+      ]
+    },
+    {
+      "slug": "philosophy-of-mind",
+      "title": "Philosophy of Mind",
+      "category": "philosophy",
+      "description": "The hard problem of consciousness: why subjective experience is so difficult to explain physically.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Hard Problem"}
+      ]
+    },
+    {
+      "slug": "free-will-and-determinism",
+      "title": "Free Will vs. Determinism",
+      "category": "philosophy",
+      "description": "Are your choices really yours? The classic debate, and the compatibilist attempt to save free will.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: Could You Have Done Otherwise?"}
+      ]
+    },
+    {
+      "slug": "epistemology",
+      "title": "Epistemology",
+      "category": "philosophy",
+      "description": "How do we actually know what we know? Justification, truth, and the cracks in both.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: What Does It Mean To \"Know\" Something?"}
+      ]
+    },
+    {
+      "slug": "philosophy-of-science",
+      "title": "Philosophy of Science",
+      "category": "philosophy",
+      "description": "What actually makes a theory scientific — and why science doesn't progress the way textbooks imply.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: What Makes a Theory Scientific?"}
+      ]
+    },
+    {
+      "slug": "norse-mythology",
+      "title": "Norse Mythology",
+      "category": "mythology",
+      "description": "The Nine Realms, the World Tree, and a universe built to end on a set date.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: A World Built Around a Tree"}
+      ]
+    },
+    {
+      "slug": "cognitive-biases-and-judgment",
+      "title": "Cognitive Biases & Judgment",
+      "category": "psychology",
+      "description": "Why the mind takes fast, efficient shortcuts — and the predictable ways those shortcuts misfire.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Two Systems Running Your Mind"}
+      ]
+    },
+    {
+      "slug": "attachment-theory",
+      "title": "Attachment Theory",
+      "category": "psychology",
+      "description": "How your earliest bonds quietly script the way you handle closeness, conflict, and trust as an adult.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Strange Situation"}
+      ]
+    },
+    {
+      "slug": "trauma-and-the-body",
+      "title": "Trauma and the Body",
+      "category": "psychology",
+      "description": "Why overwhelming experience gets stored as physical sensation, not just memory — and why talking about it isn't always enough.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Body Keeps Score Even When the Mind Moves On"}
+      ]
+    },
+    {
+      "slug": "obedience-and-conformity",
+      "title": "Obedience, Conformity & Situational Power",
+      "category": "psychology",
+      "description": "How much of behavior is character, and how much is just the situation someone's been placed in?",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: How Far Would You Go?"}
+      ]
+    },
+    {
+      "slug": "memory-and-unreliability",
+      "title": "Memory and Its Unreliability",
+      "category": "psychology",
+      "description": "Memory doesn't play back like a recording — it's rebuilt every time, and that rebuilding can go wrong in predictable ways.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: You Don't Remember — You Reconstruct"}
+      ]
+    },
+    {
+      "slug": "moral-psychology",
+      "title": "Moral Psychology",
+      "category": "psychology",
+      "description": "Why good people who disagree politically usually aren't reasoning differently — they're valuing different things.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Elephant and the Rider"}
+      ]
+    },
+    {
+      "slug": "consciousness-and-the-self",
+      "title": "Consciousness and the Sense of Self",
+      "category": "psychology",
+      "description": "The unsettling case that your sense of being 'you' is a useful, ongoing prediction, not a fixed fact about the brain.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: A Controlled Hallucination"}
+      ]
+    },
+    {
+      "slug": "motivation-and-self-determination",
+      "title": "Motivation and Self-Determination",
+      "category": "psychology",
+      "description": "Why rewards can quietly kill the motivation they're meant to boost — and what actually sustains it long-term.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Reward That Backfires"}
+      ]
+    },
+    {
+      "slug": "expertise-and-deliberate-practice",
+      "title": "Expertise and Deliberate Practice",
+      "category": "psychology",
+      "description": "What genuinely separates world-class skill from 10,000 hours of just showing up — and the case that specializing early can backfire.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: Practice That Doesn't Feel Like Practice"}
+      ]
+    },
+    {
+      "slug": "language-and-thought",
+      "title": "Language and Thought",
+      "category": "psychology",
+      "description": "Is language a window onto thought, or does it quietly shape what you're able to think in the first place?",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: A Universal Grammar Underneath"}
+      ]
+    },
+    {
+      "slug": "group-dynamics-and-crowds",
+      "title": "Group Dynamics and Crowds",
+      "category": "psychology",
+      "description": "How individually reasonable people combine into crowds, mobs, and groupthink that none of them would choose alone.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: You, Plus a Crowd, Minus You"}
+      ]
+    },
+    {
+      "slug": "sleep-and-cognition",
+      "title": "Sleep and Cognition",
+      "category": "psychology",
+      "description": "What your brain is actually doing for a third of your life — and why skipping it costs more than tiredness.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: Sleep Is Not Downtime"},
+        {"slug": "chapter-2", "title": "Chapter 2: Why Some Brains Won't Power Down"},
+        {"slug": "chapter-3", "title": "Chapter 3: The Gatekeepers That Decide What Wakes You Up"},
+        {"slug": "chapter-4", "title": "Chapter 4: The Fog Most People Feel — and Why Some Don't"},
+        {"slug": "chapter-5", "title": "Chapter 5: A Practical Toolkit — CBT-I and Working With Your Own Pattern"}
+      ]
+    },
+    {
+      "slug": "personality-big-five",
+      "title": "Personality (The Big Five)",
+      "category": "psychology",
+      "description": "The trait model with actual predictive power — and why it quietly replaced MBTI in serious psychology.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: Five Numbers, Not Four Boxes"}
+      ]
+    },
+    {
+      "slug": "meditation-and-contemplative-practice",
+      "title": "Meditation & Contemplative Practice",
+      "category": "consciousness-studies",
+      "description": "Real, measurable effects on attention and stress — but the popular claims often run well ahead of what's actually proven.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: What Changes When You Sit Still"}
+      ]
+    },
+    {
+      "slug": "lucid-dreaming",
+      "title": "Lucid Dreaming",
+      "category": "consciousness-studies",
+      "description": "Confirmed in the lab in 1975 via a prearranged eye signal sent from inside a dream — genuine conscious control during REM sleep.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: A Signal Sent From Inside a Dream"},
+        {"slug": "chapter-2", "title": "Chapter 2: Training the Doubt — Reality Testing and Dream Signs"},
+        {"slug": "chapter-3", "title": "Chapter 3: The Technique You Already Have"},
+        {"slug": "chapter-4", "title": "Chapter 4: Once You're In — Stability, Control, and False Awakenings"},
+        {"slug": "chapter-5", "title": "Chapter 5: What the Practice Is Actually Good For"},
+        {"slug": "chapter-6", "title": "Chapter 6: What's Actually Different in a Lucid Dreamer's Brain"},
+        {"slug": "chapter-7", "title": "Chapter 7: Dream Yoga — A Thousand Years Before the EEG"},
+        {"slug": "chapter-8", "title": "Chapter 8: Who's Actually Talking? Dream Characters and the Limits of Control"},
+        {"slug": "chapter-9", "title": "Chapter 9: What This Implies About Everything Else You're Sure Of"}
+      ]
+    },
+    {
+      "slug": "out-of-body-experiences",
+      "title": "Out-of-Body Experiences",
+      "category": "consciousness-studies",
+      "description": "The experience is real and can now be triggered in a lab — but what it actually means is where agreement ends.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Experience Is Real. The Explanation Isn't Settled."}
+      ]
+    },
+    {
+      "slug": "near-death-experiences",
+      "title": "Near-Death Experiences",
+      "category": "consciousness-studies",
+      "description": "A strikingly consistent set of reported experiences during medical crisis — with genuinely competing explanations for what's producing them.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: What People Consistently Report, and Why That's Hard to Explain Either Way"}
+      ]
+    },
+    {
+      "slug": "hypnosis",
+      "title": "Hypnosis",
+      "category": "consciousness-studies",
+      "description": "The effects are real and measurable — but the classic \"trance state\" explanation behind them has mostly been abandoned by researchers.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: Real Effects, a Retired Explanation"}
+      ]
+    },
+    {
+      "slug": "placebo-and-nocebo-effects",
+      "title": "Placebo & Nocebo Effects",
+      "category": "consciousness-studies",
+      "description": "A fake treatment can produce real physiological change — and a feared one can produce real harm. Neither is \"just in your head\" in the dismissive sense.",
+      "chapters": [
+        {"slug": "chapter-1", "title": "Chapter 1: The Fake Pill That Does Something Real"}
+      ]
+    }
+  ]
+}

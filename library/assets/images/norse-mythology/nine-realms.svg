@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 480" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="620" height="480" fill="#ffffff"/>
+
+  <!-- trunk -->
+  <rect x="298" y="80" width="24" height="320" fill="#c9a06e"/>
+  <!-- branches -->
+  <path d="M310,120 L150,70 M310,120 L470,70 M310,120 L310,50" stroke="#8a7f6a" stroke-width="4" fill="none"/>
+  <!-- roots -->
+  <path d="M310,400 L150,450 M310,400 L470,450 M310,400 L310,470" stroke="#8a7f6a" stroke-width="4" fill="none"/>
+
+  <!-- Upper realms (branches) -->
+  <circle cx="150" cy="60" r="34" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="150" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b2620">Asgard</text>
+  <text x="150" y="30" text-anchor="middle" font-size="10.5" fill="#8a7f6a">gods</text>
+
+  <circle cx="310" cy="42" r="34" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="310" y="47" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b2620">Vanaheim</text>
+  <text x="310" y="12" text-anchor="middle" font-size="10.5" fill="#8a7f6a">the Vanir gods</text>
+
+  <circle cx="470" cy="60" r="34" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="470" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b2620">Alfheim</text>
+  <text x="470" y="30" text-anchor="middle" font-size="10.5" fill="#8a7f6a">light elves</text>
+
+  <!-- Middle realms (around trunk) -->
+  <circle cx="130" cy="220" r="34" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="130" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b2620">Midgard</text>
+  <text x="130" y="190" text-anchor="middle" font-size="10.5" fill="#8a7f6a">humans</text>
+
+  <circle cx="490" cy="220" r="34" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="490" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b2620">Jotunheim</text>
+  <text x="490" y="190" text-anchor="middle" font-size="10.5" fill="#8a7f6a">giants</text>
+
+  <circle cx="80" cy="330" r="30" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="80" y="334" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2620">Svartalfheim</text>
+  <text x="80" y="304" text-anchor="middle" font-size="10" fill="#8a7f6a">dark elves</text>
+
+  <circle cx="540" cy="330" r="30" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="540" y="334" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2620">Nidavellir</text>
+  <text x="540" y="304" text-anchor="middle" font-size="10" fill="#8a7f6a">dwarves</text>
+
+  <!-- Lower realms (roots) -->
+  <circle cx="150" cy="450" r="30" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="150" y="454" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2620">Niflheim</text>
+  <text x="150" y="424" text-anchor="middle" font-size="10" fill="#8a7f6a">primal ice</text>
+
+  <circle cx="310" cy="470" r="30" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="310" y="474" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2620">Helheim</text>
+  <text x="310" y="444" text-anchor="middle" font-size="10" fill="#8a7f6a">the dead</text>
+
+  <circle cx="470" cy="450" r="30" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="470" y="454" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2620">Muspelheim</text>
+  <text x="470" y="424" text-anchor="middle" font-size="10" fill="#8a7f6a">primal fire</text>
+
+  <text x="310" y="145" text-anchor="middle" font-size="11" fill="#a15c3e" font-style="italic">Yggdrasil</text>
+</svg>

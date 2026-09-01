@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="520" height="420" fill="#ffffff"/>
+
+  <line x1="90" y1="330" x2="470" y2="330" stroke="#2b2620" stroke-width="1.5"/>
+  <line x1="90" y1="330" x2="90" y2="60" stroke="#2b2620" stroke-width="1.5"/>
+
+  <rect x="130" y="112" width="70" height="218" fill="#a15c3e"/>
+  <text x="165" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#a15c3e">65%</text>
+  <text x="165" y="352" text-anchor="middle" font-size="11.5" fill="#2b2620">Standard setup</text>
+
+  <rect x="250" y="192" width="70" height="138" fill="#8a7f6a"/>
+  <text x="285" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#5c5648">40%</text>
+  <text x="285" y="352" text-anchor="middle" font-size="11.5" fill="#2b2620">Learner in same room</text>
+
+  <rect x="370" y="262" width="70" height="68" fill="#c9bda6"/>
+  <text x="405" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#5c5648">20%</text>
+  <text x="405" y="352" text-anchor="middle" font-size="11.5" fill="#2b2620">Orders given by phone</text>
+
+  <text x="70" y="60" text-anchor="end" font-size="11" fill="#8a7f6a">100%</text>
+  <text x="70" y="330" text-anchor="end" font-size="11" fill="#8a7f6a">0%</text>
+
+  <text x="260" y="390" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Approximate rates from Milgram's obedience variations — small changes, large swings.</text>
+</svg>

@@ -1,0 +1,12 @@
+.claude/
+instructions.txt
+__pycache__/
+*.pyc
+content/progress.json
+
+# Personal/sensitive topic kept out of the public deploy — still present
+# on disk for local reading, just never committed to this repo.
+content/categories/body-and-movement/
+content/images/lower-back-health/
+library/categories/body-and-movement/
+library/assets/images/lower-back-health/

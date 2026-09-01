@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="400" fill="#ffffff"/>
+
+  <line x1="180" y1="60" x2="180" y2="340" stroke="#2b2620" stroke-width="1.5"/>
+
+  <g font-size="13" fill="#2b2620">
+    <text x="170" y="90" text-anchor="end">Peace / calm</text>
+    <rect x="185" y="76" width="300" height="20" fill="#a15c3e"/>
+
+    <text x="170" y="135" text-anchor="end">Tunnel or light</text>
+    <rect x="185" y="121" width="230" height="20" fill="#a15c3e"/>
+
+    <text x="170" y="180" text-anchor="end">Life review</text>
+    <rect x="185" y="166" width="150" height="20" fill="#a15c3e"/>
+
+    <text x="170" y="225" text-anchor="end">Meeting deceased</text>
+    <rect x="185" y="211" width="170" height="20" fill="#a15c3e"/>
+
+    <text x="170" y="270" text-anchor="end">Reluctance to return</text>
+    <rect x="185" y="256" width="120" height="20" fill="#a15c3e"/>
+  </g>
+
+  <text x="280" y="370" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Commonly reported NDE elements — approximate relative frequency across studies.</text>
+</svg>

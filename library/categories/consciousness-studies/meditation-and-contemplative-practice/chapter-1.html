@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1: What Changes When You Sit Still — Meditation & Contemplative Practice</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Consciousness Studies</span> / <a href="index.html">Meditation & Contemplative Practice</a> / <span>Chapter 1: What Changes When You Sit Still</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 1: What Changes When You Sit Still</h1>
+<p class="chapter-meta">~4 min read</p>
+<p>For most of the 20th century, meditation sat outside serious science — treated by skeptics as unfalsifiable relaxation folklore, and defended by practitioners with claims that went far beyond what anyone had actually measured. That changed once neuroscientists started literally wiring meditators up to brain-imaging equipment. What they found wasn't a cure-all, but it also wasn't nothing: real, measurable, replicated effects — attached to a much more modest picture than either side originally expected.</p>
+
+<h2>What actually replicates</h2>
+
+<p>Neuroscientist Richard Davidson has spent decades studying long-term meditators, including Tibetan monks with tens of thousands of hours of practice. His most consistent finding involves the <span class="term">default mode network</span> <span class="gloss">(a set of connected brain regions that activates during unfocused, self-referential thought — mind-wandering, replaying conversations, worrying about the future)</span>. Experienced meditators show measurably reduced default mode network activity, both during meditation and, more interestingly, in everyday resting states afterward — evidence that meditation isn't just a temporary trick for calming down, but can shift baseline brain activity with enough sustained practice.</p>
+
+<p>Shorter-term, well-controlled studies (weeks, not decades) reliably show smaller but real effects: reduced cortisol <span class="gloss">(the body's primary stress hormone)</span>, improved sustained attention on lab tasks, and modest reductions in self-reported anxiety — enough that mindfulness-based programs are now used clinically alongside, not instead of, standard treatment for anxiety and chronic pain.</p>
+
+<figure>
+  <img src="../../../assets/images/meditation-and-contemplative-practice/dmn-activity.svg" alt="A diagram comparing default mode network activity between an untrained mind (high) and an experienced meditator (reduced), both at rest.">
+  <figcaption>Default mode network activity, resting state: novice vs. experienced meditator (illustrative, based on Davidson's research).</figcaption>
+</figure>
+
+<h2>Where the evidence gets thinner</h2>
+
+<p>Davidson's own more recent book, <em>Altered Traits</em>, is unusually candid for a researcher promoting his own field: he and co-author Daniel Goleman explicitly audit the weak studies that flooded meditation research once it became trendy — small sample sizes, no control groups, self-reported outcomes from people who wanted the practice to work. Their honest accounting: a lot of the most viral claims (meditation "rewires the brain" in weeks, cures depression outright, dramatically boosts IQ) run well ahead of what well-controlled studies actually show. The real effects are consistently smaller, slower to appear, and more dependent on sustained practice than the popular version suggests.</p>
+
+<h2>Why nobody fully agrees on the mechanism</h2>
+
+<p>Here's the genuinely "iffy" part: <em>that</em> meditation changes attention and stress response is fairly well established. <em>Why</em> it works is much less settled. Is it simply a form of trainable attention control, similar to any other skill? A structured stress-reduction technique, no different in principle from a relaxing hobby practiced with more consistency? Or is something else going on that current models of attention don't fully capture? Serious researchers disagree, and the field hasn't converged the way research on, say, exercise and cardiovascular health has. That gap between "it works" and "we know how" is exactly the kind of iffy-but-real territory this topic sits in.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Try a basic breath-focused sit:</strong> 5-10 minutes, eyes closed, attention on the physical sensation of breathing, gently returning your attention every time it wanders (it will, constantly — that's normal, not failure). Notice how many times your mind wanders in even that short window.</li>
+<li><strong>Notice your own default mode network:</strong> during a boring task today (a commute, a shower), catch yourself mid-mind-wander and notice what it was actually doing — usually replaying the past or rehearsing the future, rarely the present.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Some advanced meditators can voluntarily trigger unusual EEG patterns</strong> — very high-amplitude gamma wave activity rarely seen outside of seizures — that researchers still don't fully understand the significance of.</li>
+<li><strong>Meditation apps rarely mention that difficult, even distressing experiences can surface during intensive practice</strong> — a real, under-discussed phenomenon sometimes called the "dark night" in contemplative circles, now getting more serious clinical research attention.
+<span class="hook-target">→ Ties into <a href="../../psychology/consciousness-and-the-self/index.html">Consciousness and the Sense of Self</a> — some meditation traditions describe directly experiencing the dissolving of the self-model discussed there.</span></li>
+<li><strong>Lucid dreaming uses a very different, much more surprising method to study a related question</strong> — what the mind can deliberately control during altered states of consciousness.
+<span class="hook-target">→ Already in the library: <a href="../lucid-dreaming/index.html">Lucid Dreaming</a> covers that side of things.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="meditation-and-contemplative-practice" data-chapter="chapter-1"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="380" fill="#ffffff"/>
+
+  <line x1="70" y1="320" x2="510" y2="320" stroke="#2b2620" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="70" y2="50" stroke="#2b2620" stroke-width="1.5"/>
+
+  <text x="30" y="90" font-size="11" fill="#8a7f6a">awake</text>
+  <text x="30" y="150" font-size="11" fill="#8a7f6a">light</text>
+  <text x="30" y="210" font-size="11" fill="#8a7f6a">deep</text>
+  <text x="30" y="270" font-size="11" fill="#8a7f6a">REM</text>
+
+  <path d="M70,90 L120,140 L160,260 L200,140 L220,110 L260,150 L300,240 L340,145 L370,95 L400,150 L430,220 L460,130 L490,100"
+        fill="none" stroke="#a15c3e" stroke-width="2.5"/>
+
+  <text x="120" y="335" text-anchor="middle" font-size="11" fill="#5c5648">hour 1-2</text>
+  <text x="290" y="335" text-anchor="middle" font-size="11" fill="#5c5648">hour 3-5</text>
+  <text x="460" y="335" text-anchor="middle" font-size="11" fill="#5c5648">hour 6-8</text>
+
+  <text x="290" y="360" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Sleep cycles through stages roughly every 90 minutes — deep sleep dominates early, REM dominates late.</text>
+</svg>

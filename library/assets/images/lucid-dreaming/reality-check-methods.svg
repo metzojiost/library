@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="340" fill="#ffffff"/>
+
+  <rect x="20" y="60" width="160" height="150" rx="10" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="100" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Read text twice</text>
+  <text x="100" y="130" text-anchor="middle" font-size="11" fill="#5c5648">dream text</text>
+  <text x="100" y="146" text-anchor="middle" font-size="11" fill="#5c5648">shifts or blurs</text>
+
+  <rect x="200" y="60" width="160" height="150" rx="10" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="280" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Check a clock</text>
+  <text x="280" y="130" text-anchor="middle" font-size="11" fill="#5c5648">digits change or</text>
+  <text x="280" y="146" text-anchor="middle" font-size="11" fill="#5c5648">make no sense</text>
+
+  <rect x="380" y="60" width="160" height="150" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="460" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Nose-pinch test</text>
+  <text x="460" y="130" text-anchor="middle" font-size="11" fill="#5c5648">you can "breathe"</text>
+  <text x="460" y="146" text-anchor="middle" font-size="11" fill="#5c5648">through pinched nose</text>
+
+  <text x="280" y="270" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Each check exploits a specific, well-documented weak point in how dreams simulate detail.</text>
+</svg>

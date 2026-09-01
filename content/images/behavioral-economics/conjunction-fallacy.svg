@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="500" height="400" fill="#ffffff"/>
+
+  <circle cx="250" cy="200" r="150" fill="#f1e3d8" fill-opacity="0.7" stroke="#a15c3e" stroke-width="2"/>
+  <circle cx="250" cy="230" r="70" fill="#e0c4ab" fill-opacity="0.9" stroke="#5c5648" stroke-width="2"/>
+
+  <text x="250" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#a15c3e">"Linda is a bank teller"</text>
+  <text x="250" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">bank teller</text>
+  <text x="250" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">AND feminist</text>
+
+  <text x="250" y="370" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">The smaller circle can never be more probable than the larger one it sits fully inside.</text>
+</svg>

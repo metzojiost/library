@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1: You Don't Remember — You Reconstruct — Memory and Its Unreliability</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Psychology</span> / <a href="index.html">Memory and Its Unreliability</a> / <span>Chapter 1: You Don't Remember — You Reconstruct</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 1: You Don't Remember — You Reconstruct</h1>
+<p class="chapter-meta">~4 min read</p>
+<p>In 1932, psychologist Frederic Bartlett had participants read an unfamiliar Native American folk tale, then asked them to recall it repeatedly over weeks and months. Their retellings didn't just get vaguer — they actively changed, drifting toward things that made more sense within the participants' own cultural framework: odd details got dropped, ambiguous ones got "corrected" into familiar shapes, and the story quietly reorganized itself into something tidier than the original. Bartlett's conclusion, radical at the time, still holds up: memory isn't a recording you play back. It's something closer to a reconstruction, rebuilt fresh — and subtly rewritten — nearly every time you retrieve it.</p>
+
+<h2>Every retrieval is also a rewrite</h2>
+
+<p>Modern neuroscience backs this up more precisely than Bartlett could have known. Each time a memory is recalled, it becomes briefly unstable — a process called <span class="term">reconsolidation</span> — before being "re-saved." Whatever information, emotion, or suggestion is present during that reactivation window can get folded into the memory itself, and the next time it's recalled, that added material feels just as vivid and "original" as everything else. This is why memories that get discussed and retold often — including, ironically, cherished family stories — tend to drift the most over time, even though the frequent retelling makes them feel more solid and certain, not less.</p>
+
+<figure>
+  <img src="../../../assets/images/memory-and-unreliability/forgetting-curve.svg" alt="A curve showing how sharply memory retention drops shortly after learning, then levels off — the Ebbinghaus forgetting curve.">
+  <figcaption>The forgetting curve, first measured by Hermann Ebbinghaus in the 1880s — most loss happens fast, then levels off.</figcaption>
+</figure>
+
+<h2>Elizabeth Loftus and the memory that was never there</h2>
+
+<p>Psychologist Elizabeth Loftus spent decades demonstrating how easily false memories can be planted — not through hypnosis or coercion, just through ordinary suggestive questioning. In one well-known study, she asked participants leading questions about a video of a car accident: people asked "how fast were the cars going when they <em>smashed</em> into each other?" gave higher speed estimates, and were more likely to later falsely remember seeing broken glass at the scene, than people asked the identical question with "hit" instead of "smashed." The word choice alone edited the memory. In a more striking study, Loftus successfully implanted an entirely fabricated childhood memory — being lost in a shopping mall as a child — into roughly a quarter of adult participants, who then recounted it with real emotional detail and genuine confidence that it had happened.</p>
+
+<h2>Why this matters far beyond the lab</h2>
+
+<p>Loftus's research became central to a real legal crisis: <span class="term">eyewitness testimony</span>, long treated by courts as powerful evidence, turns out to be exactly the kind of memory most vulnerable to this reconstruction effect — stress, leading questions from investigators, and repeated retellings before trial can all distort it, with the witness feeling no less certain the whole time. DNA evidence has since exonerated hundreds of wrongly convicted people, and mistaken eyewitness identification is the single largest contributing factor across those cases. The unsettling core finding isn't that memory is occasionally wrong — it's that subjective confidence and actual accuracy are far less connected than almost everyone instinctively assumes.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Try testing an old, often-retold memory:</strong> pick a childhood story you've told many times and see if you can find one detail you're no longer actually sure about — a low-stakes way to feel reconsolidation in action.</li>
+<li><strong>Notice confidence versus accuracy:</strong> next time you're very sure about something you remember, especially in an argument, remind yourself the two are only loosely connected — worth a beat of humility before treating memory as fact.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Flashbulb memories — the vivid, "I remember exactly where I was" memories of major events — feel uniquely accurate but aren't.</strong> Studies that re-interviewed people about 9/11 or the Challenger disaster years later found major factual inconsistencies with their own accounts recorded just days after — even though their confidence in the memory stayed just as high.</li>
+<li><strong>Loftus has testified as an expert witness in hundreds of trials</strong>, and has faced serious professional and even personal backlash for it — a real illustration of how uncomfortable this research is for a legal system built around eyewitness certainty.
+<span class="hook-target">→ Ties into <a href="../cognitive-biases-and-judgment/index.html">Cognitive Biases & Judgment</a> — confidence and accuracy come apart in judgment generally, not just in memory specifically.</span></li>
+<li><strong>Therapists in the 1980s and 90s sometimes used techniques now known to encourage false memories</strong> — leading to a wave of "recovered memory" abuse allegations, some later shown to be implanted rather than recalled, that badly damaged real families and reshaped how clinical psychology now trains therapists to ask questions.</li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="memory-and-unreliability" data-chapter="chapter-1"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

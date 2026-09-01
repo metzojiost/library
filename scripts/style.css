@@ -1,0 +1,361 @@
+:root {
+  --bg: #faf7f2;
+  --paper: #ffffff;
+  --ink: #2b2620;
+  --ink-soft: #5c5648;
+  --accent: #a15c3e;
+  --accent-soft: #f1e3d8;
+  --border: #e6ddd0;
+  --badge-bg: #efe6d8;
+  --gloss: #8a7f6a;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Georgia", "Iowan Old Style", "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+.page { max-width: 860px; margin: 0 auto; padding: 0 20px 80px; }
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px 0 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.breadcrumbs a { color: var(--ink-soft); }
+.breadcrumbs span:last-child { color: var(--ink); }
+
+.page-title {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+
+.topic-desc, .chapter-meta {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink-soft);
+}
+
+.chapter-meta { font-size: 0.9rem; margin-top: -4px; margin-bottom: 24px; }
+
+.empty {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink-soft);
+}
+
+.category-section { margin-bottom: 40px; }
+.category-section h2 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.topic-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.topic-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+.topic-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.topic-card-desc {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  min-height: 1.2em;
+}
+.topic-card-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.badge {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  background: var(--badge-bg);
+  color: var(--ink-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.topic-meta { display: flex; gap: 8px; margin-bottom: 24px; }
+
+.badge-branch { background: var(--accent-soft); color: var(--accent); }
+.badge-read { background: #dfeee0; color: #3f7a45; }
+
+.chapter-row.is-read { border-color: #cfe6d0; }
+.chapter-check { color: #3f7a45; margin-right: 6px; }
+
+.read-toggle {
+  margin-top: 32px;
+  padding: 14px 18px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.92rem;
+}
+.read-toggle-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.read-toggle-label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.read-toggle input { width: 16px; height: 16px; cursor: pointer; }
+.read-toggle input:disabled { cursor: default; }
+.read-toggle-note {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.confirm-read-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+}
+.confirm-read-btn:hover { opacity: 0.88; }
+.change-read-link {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.is-hidden { display: none !important; }
+
+.continued-from {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-top: -6px;
+}
+
+.branches-section { margin-top: 40px; }
+.branches-section h2 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.guides-section { margin-top: 40px; }
+.guides-section h2 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+.guides-intro {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.guide-card { border-color: var(--accent); }
+.badge-guide { background: var(--accent); color: #fff; }
+
+.chapter-list { display: flex; flex-direction: column; gap: 10px; }
+.chapter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+.chapter-row:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+.chapter-row-title { font-weight: 600; }
+
+.chapter { font-size: 1.08rem; }
+.chapter h2 { font-size: 1.4rem; margin-top: 2em; }
+.chapter h3 { font-size: 1.15rem; margin-top: 1.6em; }
+.chapter p { margin: 1em 0; }
+.chapter ul, .chapter ol { padding-left: 1.4em; }
+.chapter li { margin: 0.4em 0; }
+.chapter blockquote {
+  margin: 1.4em 0;
+  padding: 0.6em 1.2em;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.chapter strong { color: var(--accent); }
+
+.term { color: var(--accent); font-weight: 600; }
+.gloss {
+  color: var(--gloss);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.chapter figure {
+  margin: 1.8em 0;
+  text-align: center;
+}
+.chapter figure img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.chapter figcaption {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+.img-credit {
+  display: block;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--gloss);
+  margin-top: 4px;
+}
+
+.try-this {
+  margin-top: 44px;
+  padding: 20px 22px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.try-this h2 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.try-this-intro {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 0;
+}
+.try-list {
+  margin: 14px 0 0;
+  padding-left: 1.3em;
+}
+.try-list li {
+  margin: 10px 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.94rem;
+}
+
+.hooks {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px dashed var(--border);
+}
+.hooks h2 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.hooks-intro {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 0;
+}
+.hook-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hook-list li {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+.hook-target {
+  display: block;
+  margin-top: 6px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-style: italic;
+}
+.hook-target a { color: var(--accent); font-weight: 600; }
+
+.chapter-footer-nav {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  gap: 12px;
+}
+.nav-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.nav-link:hover { text-decoration: underline; }

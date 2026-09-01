@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="420" fill="#ffffff"/>
+
+  <rect x="30" y="60" width="230" height="290" rx="14" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <rect x="300" y="60" width="230" height="290" rx="14" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+
+  <text x="145" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="#a15c3e">System 1</text>
+  <text x="145" y="122" text-anchor="middle" font-size="12.5" fill="#5c5648">fast</text>
+  <text x="145" y="140" text-anchor="middle" font-size="12.5" fill="#5c5648">automatic</text>
+  <text x="145" y="158" text-anchor="middle" font-size="12.5" fill="#5c5648">effortless</text>
+  <text x="145" y="176" text-anchor="middle" font-size="12.5" fill="#5c5648">always running</text>
+
+  <line x1="65" y1="200" x2="225" y2="200" stroke="#a15c3e" stroke-width="1" opacity="0.4"/>
+
+  <text x="145" y="230" text-anchor="middle" font-size="12" fill="#2b2620">recognizes a face</text>
+  <text x="145" y="252" text-anchor="middle" font-size="12" fill="#2b2620">"2 + 2 = ?"</text>
+  <text x="145" y="274" text-anchor="middle" font-size="12" fill="#2b2620">reads a tone of voice</text>
+  <text x="145" y="296" text-anchor="middle" font-size="12" fill="#2b2620">finishes a familiar phrase</text>
+
+  <text x="415" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="#5c5648">System 2</text>
+  <text x="415" y="122" text-anchor="middle" font-size="12.5" fill="#5c5648">slow</text>
+  <text x="415" y="140" text-anchor="middle" font-size="12.5" fill="#5c5648">deliberate</text>
+  <text x="415" y="158" text-anchor="middle" font-size="12.5" fill="#5c5648">effortful</text>
+  <text x="415" y="176" text-anchor="middle" font-size="12.5" fill="#5c5648">only switches on when needed</text>
+
+  <line x1="335" y1="200" x2="495" y2="200" stroke="#5c5648" stroke-width="1" opacity="0.4"/>
+
+  <text x="415" y="230" text-anchor="middle" font-size="12" fill="#2b2620">"17 × 24 = ?"</text>
+  <text x="415" y="252" text-anchor="middle" font-size="12" fill="#2b2620">filling out a tax form</text>
+  <text x="415" y="274" text-anchor="middle" font-size="12" fill="#2b2620">checking an argument</text>
+  <text x="415" y="296" text-anchor="middle" font-size="12" fill="#2b2620">parking in a tight space</text>
+
+  <text x="280" y="390" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Most cognitive biases happen when System 1 answers a question System 2 should have handled.</text>
+</svg>

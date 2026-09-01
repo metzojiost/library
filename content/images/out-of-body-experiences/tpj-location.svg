@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="480" height="400" fill="#ffffff"/>
+
+  <ellipse cx="220" cy="220" rx="100" ry="120" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <circle cx="290" cy="210" r="14" fill="#a15c3e"/>
+  <text x="330" y="195" font-size="12" font-weight="bold" fill="#a15c3e">TPJ</text>
+  <text x="330" y="212" font-size="10.5" fill="#5c5648">temporoparietal</text>
+  <text x="330" y="226" font-size="10.5" fill="#5c5648">junction</text>
+
+  <circle cx="220" cy="70" r="10" fill="#8a7f6a"/>
+  <path d="M290,205 Q260,140 220,80" fill="none" stroke="#8a7f6a" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="220" y="45" text-anchor="middle" font-size="11.5" fill="#5c5648">felt viewpoint</text>
+  <text x="220" y="60" text-anchor="middle" font-size="11.5" fill="#5c5648">"from outside"</text>
+
+  <text x="240" y="370" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Stimulating the TPJ can trigger the felt sensation of viewing your own body from outside it.</text>
+</svg>

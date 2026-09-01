@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="440" fill="#ffffff"/>
+
+  <!-- axes -->
+  <line x1="40" y1="220" x2="600" y2="220" stroke="#5c5648" stroke-width="1.5"/>
+  <line x1="320" y1="20" x2="320" y2="400" stroke="#5c5648" stroke-width="1.5"/>
+
+  <!-- axis labels -->
+  <text x="600" y="212" text-anchor="end" font-size="14" fill="#5c5648">Gains</text>
+  <text x="40" y="212" text-anchor="start" font-size="14" fill="#5c5648">Losses</text>
+  <text x="325" y="34" font-size="14" fill="#5c5648">Subjective value</text>
+  <text x="325" y="395" font-size="13" fill="#8a7f6a">Objective outcome</text>
+
+  <!-- curve: gains (shallower) -->
+  <path d="M320,220 C 400,192 480,158 596,108" fill="none" stroke="#a15c3e" stroke-width="3.5"/>
+  <!-- curve: losses (steeper) -->
+  <path d="M320,220 C 280,278 190,338 44,372" fill="none" stroke="#a15c3e" stroke-width="3.5"/>
+
+  <!-- reference point -->
+  <circle cx="320" cy="220" r="5" fill="#2b2620"/>
+  <text x="330" y="240" font-size="13" fill="#2b2620">Reference point</text>
+
+  <!-- gain example marker -->
+  <circle cx="392" cy="197" r="5" fill="#2b2620"/>
+  <line x1="392" y1="197" x2="320" y2="197" stroke="#8a7f6a" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- loss example marker -->
+  <circle cx="250" cy="290" r="5" fill="#2b2620"/>
+  <line x1="250" y1="290" x2="320" y2="290" stroke="#8a7f6a" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- annotation boxes -->
+  <text x="400" y="192" font-size="13" fill="#2b2620">+$100 → a small rise</text>
+  <text x="90" y="285" text-anchor="start" font-size="13" fill="#2b2620">-$100 → a much bigger drop</text>
+
+  <text x="320" y="420" text-anchor="middle" font-size="12.5" fill="#8a7f6a">The curve is steeper on the loss side: equal-sized losses hurt more than equal-sized gains feel good.</text>
+</svg>

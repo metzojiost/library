@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="500" height="460" fill="#ffffff"/>
+
+  <circle cx="200" cy="180" r="120" fill="#f1e3d8" fill-opacity="0.75" stroke="#a15c3e" stroke-width="2"/>
+  <circle cx="300" cy="180" r="120" fill="#efe6d8" fill-opacity="0.75" stroke="#5c5648" stroke-width="2"/>
+  <circle cx="250" cy="280" r="120" fill="#e6ddd0" fill-opacity="0.75" stroke="#8a7f6a" stroke-width="2"/>
+
+  <text x="130" y="120" text-anchor="middle" font-size="16" font-weight="bold" fill="#a15c3e">Belief</text>
+  <text x="370" y="120" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Truth</text>
+  <text x="250" y="410" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Justification</text>
+
+  <text x="250" y="240" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2620">Knowledge</text>
+  <text x="250" y="258" text-anchor="middle" font-size="12" fill="#2b2620">(the classic "JTB" definition)</text>
+
+  <text x="250" y="450" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Gettier cases show even this overlap isn't always enough.</text>
+</svg>

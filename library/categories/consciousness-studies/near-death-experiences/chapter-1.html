@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1: What People Consistently Report, and Why That's Hard to Explain Either Way — Near-Death Experiences</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Consciousness Studies</span> / <a href="index.html">Near-Death Experiences</a> / <span>Chapter 1: What People Consistently Report, and Why That's Hard to Explain Either Way</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 1: What People Consistently Report, and Why That's Hard to Explain Either Way</h1>
+<p class="chapter-meta">~4 min read</p>
+<p>Across cultures, medical eras, and belief systems, people who come close to death — cardiac arrest, severe blood loss, near-drowning — report a strikingly similar cluster of experiences: a sense of leaving the body, moving through a tunnel or toward a light, overwhelming peace, meeting deceased relatives or a being of light, a life review, and reluctance to return. Cardiologist Pim van Lommel ran one of the largest prospective studies of this, following cardiac arrest survivors in Dutch hospitals, and found roughly 1 in 5 reported some form of it — a large enough, consistent enough pattern that dismissing it as pure fabrication has become a harder position to hold than actually explaining it.</p>
+
+<h2>Why this is genuinely difficult to explain</h2>
+
+<p>The specific puzzle isn't that people have vivid experiences during medical crisis — plenty of altered states do that. It's that some of these experiences are reported from periods when the patient's own brain monitoring showed extremely reduced or flatlined electrical activity, which under standard neuroscience shouldn't be capable of generating the kind of organized, richly detailed experience being reported afterward. Some researchers argue this points to consciousness surviving, at least briefly, independent of normal brain function — the position van Lommel leans toward in <em>Consciousness Beyond Life</em>. Others argue it more likely reflects gaps and inaccuracies in exactly when brain monitoring can detect all relevant activity, or experiences actually occurring in the minutes just before or after the flattest period, then misremembered as simultaneous with it.</p>
+
+<figure>
+  <img src="../../../assets/images/near-death-experiences/reported-elements.svg" alt="A bar chart showing the approximate frequency of commonly reported near-death experience elements: peace, tunnel or light, life review, meeting deceased relatives, and reluctance to return.">
+  <figcaption>Commonly reported elements across near-death experience studies, and their approximate reported frequency.</figcaption>
+</figure>
+
+<h2>The skeptical counter-explanations</h2>
+
+<p>Philosopher John Martin Fischer, whose critical work is a useful counterweight to van Lommel's, points to several physiologically grounded explanations that don't require consciousness surviving brain death: REM intrusion (dream-like processes bleeding into waking-adjacent states, also implicated in sleep paralysis), the effects of anesthesia drugs like ketamine (which reliably produces very similar tunnel/light/dissociation experiences in fully conscious, healthy volunteers), and oxygen deprivation's known effects on the visual cortex, which independently produces tunnel-like visual narrowing. None of these fully explains every reported detail on its own, which is exactly why the debate hasn't closed.</p>
+
+<h2>What both sides actually agree on</h2>
+
+<p>It's worth being precise about where genuine agreement exists: the experiences themselves are real, sincerely reported, remarkably consistent across unrelated cultures, and often profoundly, measurably life-changing for the people who have them — survivors frequently show durable, positive changes in values and reduced fear of death afterward, regardless of how the experience is later explained. What remains contested is the causal question underneath it: are these standard (if unusual) products of a dying or oxygen-starved brain, or evidence of something current neuroscience doesn't yet account for? Both van Lommel and Fischer would agree that's still an open, serious scientific question — not a settled one in either direction.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Notice the pattern in how this gets reported in media:</strong> next time you see a near-death account presented as either "proof of an afterlife" or "just brain chemistry," notice that both framings usually skip past how much genuine, still-open scientific disagreement is underneath the confident headline.</li>
+<li><strong>Try comparing accounts across sources:</strong> read one first-person NDE account and one skeptical clinical summary of the same general phenomenon back to back — notice how much of the raw experience both sides actually agree really happened, versus where they diverge (only on the cause).</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Ketamine, an anesthetic, reliably produces experiences strikingly similar to reported NDEs in healthy, fully conscious volunteers</strong> — one of the strongest pieces of evidence for a pharmacological explanation, though it doesn't rule out other contributing factors.</li>
+<li><strong>The out-of-body sensation frequently reported during NDEs shares a plausible mechanism with lab-inducible OBEs.</strong>
+<span class="hook-target">→ Already in the library: <a href="../out-of-body-experiences/index.html">Out-of-Body Experiences</a> covers that mechanism directly.</span></li>
+<li><strong>Survivors' life changes after an NDE are themselves a legitimate, separate research subject</strong> — regardless of the metaphysical debate, the psychological aftereffects (reduced death anxiety, shifted values) are consistently measurable and significant.</li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="near-death-experiences" data-chapter="chapter-1"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="540" height="380" fill="#ffffff"/>
+
+  <line x1="70" y1="320" x2="500" y2="320" stroke="#2b2620" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="70" y2="50" stroke="#2b2620" stroke-width="1.5"/>
+
+  <path d="M70,70 C180,110 300,150 490,200" fill="none" stroke="#8a7f6a" stroke-width="3" stroke-dasharray="6,4"/>
+  <text x="495" y="200" font-size="11.5" fill="#8a7f6a">exponential (classical model)</text>
+
+  <path d="M70,70 C110,180 160,230 490,255" fill="none" stroke="#a15c3e" stroke-width="3"/>
+  <text x="495" y="255" font-size="11.5" fill="#a15c3e" font-weight="bold">hyperbolic (real behavior)</text>
+
+  <text x="70" y="45" text-anchor="middle" font-size="11.5" fill="#2b2620">high value</text>
+  <text x="280" y="360" text-anchor="middle" font-size="12" fill="#2b2620">time until reward &#8594;</text>
+  <text x="30" y="190" text-anchor="middle" font-size="12" fill="#2b2620" transform="rotate(-90 30 190)">perceived value &#8594;</text>
+
+  <text x="280" y="20" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Hyperbolic discounting drops sharply right near "now," then flattens — that steep early drop is present bias.</text>
+</svg>

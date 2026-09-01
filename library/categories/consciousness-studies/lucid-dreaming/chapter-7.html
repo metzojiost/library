@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 7: Dream Yoga — A Thousand Years Before the EEG — Lucid Dreaming</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Consciousness Studies</span> / <a href="index.html">Lucid Dreaming</a> / <span>Chapter 7: Dream Yoga — A Thousand Years Before the EEG</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 7: Dream Yoga — A Thousand Years Before the EEG</h1>
+<p class="chapter-meta">~4 min read</p>
+<p>Long before Keith Hearne's eye-signal experiment gave lucid dreaming a scientific paper trail, Tibetan Buddhist practitioners were already treating conscious dreaming as a trainable skill — not as a curiosity, but as one of the core practices in an entire contemplative system. <span class="term">Dream yoga</span> (Tibetan: <em>milam</em>) is documented as part of the "Six Yogas of Naropa," a set of advanced meditation practices formalized around the 11th century, and its actual techniques are, in places, strikingly close to what a modern sleep lab would recognize.</p>
+
+<h2>The techniques converge, even though the goals don't</h2>
+
+<p>Traditional dream yoga instruction includes daytime practices that function almost identically to reality testing: practitioners are taught to repeatedly examine ordinary waking experience and ask whether it might be a dream, cultivating the same standing habit of doubt Chapter 2 covers for entirely secular reasons. Nighttime instructions include techniques for maintaining a thread of awareness while falling asleep — different in specific method, but functionally aimed at the same transition WILD targets in Chapter 3, staying conscious across the boundary rather than losing it.</p>
+
+<figure>
+  <img src="../../../assets/images/lucid-dreaming/dream-yoga-timeline.svg" alt="A timeline showing Tibetan dream yoga practices documented around the 11th century, followed centuries later by the 1975 EEG-confirmed eye-signal experiment.">
+  <figcaption>The same basic skill, trained by two very different traditions, separated by roughly 900 years.</figcaption>
+</figure>
+
+<h2>What the goal was actually for</h2>
+
+<p>Where dream yoga genuinely diverges from the modern, secular version of this practice is its purpose. The techniques weren't developed to produce an entertaining or therapeutic experience inside the dream itself — becoming lucid was treated as a training ground for a much larger claim: that ordinary waking life is, in a specific philosophical sense, no more solid or "real" than a dream is. Recognizing a dream as a dream, while inside it, was meant to build the same recognition toward waking experience — that it too is a constructed, impermanent appearance, not a fixed, independently existing reality. Flying, changing the dream's content, or confronting a dream figure without fear were treated less as goals in themselves and more as proof of concept: if you can act without fear or attachment inside a dream once you know it's constructed, the tradition's claim is that the same freedom is available toward waking life once its own constructed nature is recognized just as clearly.</p>
+
+<h2>An honest note on what transfers and what doesn't</h2>
+
+<p>It's worth being precise here, in the same spirit as the rest of this library: the techniques transfer remarkably well and are testable — reality testing and sustained pre-sleep awareness genuinely work, regardless of framework, which is exactly why secular researchers rediscovered functionally similar methods independently. The larger metaphysical claim — that waking reality and dreaming are equivalent in the specific way the tradition asserts — is a philosophical and contemplative position, not a scientific one, and isn't something a sleep lab is equipped to confirm or rule out. Both things can be true at once: the practice is old, effective, and independently verified by modern methods; the philosophy behind why it was originally developed is a separate, much larger claim that sits outside what any EEG can settle.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Try the philosophical version of a reality check, not just the practical one:</strong> next time you do a daytime reality check, sit for a moment afterward with the actual question dream yoga asks — not just "am I dreaming," but "how would I know either way, and what does that say about how solid this moment actually is?"</li>
+<li><strong>Notice fear inside a lucid dream, if you get one:</strong> dream yoga specifically trains acting without fear once something is recognized as a dream — notice whether knowing you're dreaming actually changes your emotional reaction to something frightening inside it, or not.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Dream yoga is traditionally taught alongside a related practice for consciously navigating the dying process</strong>, treating the dissolution of ordinary waking consciousness at death as structurally similar to falling asleep — a genuinely different framework from anything else in this library.</li>
+<li><strong>The core claim underneath dream yoga — that recognizing a constructed appearance as constructed changes your relationship to it — overlaps directly with a completely secular practice already covered elsewhere.</strong>
+<span class="hook-target">→ Already in the library: <a href="../meditation-and-contemplative-practice/index.html">Meditation &amp; Contemplative Practice</a> covers the broader tradition this technique comes from, and what's actually been measured about it.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="lucid-dreaming" data-chapter="chapter-7"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-6.html">&larr; Chapter 6: What's Actually Different in a Lucid Dreamer's Brain</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-8.html">Chapter 8: Who's Actually Talking? Dream Characters and the Limits of Control &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="500" height="480" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+
+  <rect x="170" y="40" width="160" height="70" rx="10" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="250" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Brain's prediction</text>
+  <text x="250" y="98" text-anchor="middle" font-size="11.5" fill="#5c5648">("best guess" of the world)</text>
+
+  <rect x="170" y="370" width="160" height="70" rx="10" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="250" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Sensory input</text>
+  <text x="250" y="428" text-anchor="middle" font-size="11.5" fill="#5c5648">(noisy signals from the eyes, ears, body)</text>
+
+  <rect x="20" y="205" width="150" height="70" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="95" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Compare</text>
+  <text x="95" y="258" text-anchor="middle" font-size="11.5" fill="#5c5648">prediction vs. input</text>
+
+  <rect x="330" y="205" width="150" height="70" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="405" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Error signal</text>
+  <text x="405" y="258" text-anchor="middle" font-size="11.5" fill="#5c5648">updates the prediction</text>
+
+  <path d="M250,110 Q250,160 170,220" fill="none" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#arrow3)"/>
+  <path d="M330,240 Q400,240 400,205" fill="none" stroke="#a15c3e" stroke-width="2.5"/>
+  <path d="M405,205 Q405,110 330,80" fill="none" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#arrow3)"/>
+  <path d="M250,370 Q250,320 170,275" fill="none" stroke="#5c5648" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <text x="250" y="465" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">What you experience is mostly the prediction, constantly corrected by incoming error signals.</text>
+</svg>

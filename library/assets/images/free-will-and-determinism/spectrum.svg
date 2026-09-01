@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="260" fill="#ffffff"/>
+
+  <line x1="60" y1="90" x2="580" y2="90" stroke="#a15c3e" stroke-width="3"/>
+
+  <!-- point 1 -->
+  <circle cx="90" cy="90" r="7" fill="#a15c3e"/>
+  <text x="90" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Hard Determinism</text>
+  <text x="90" y="120" text-anchor="middle" font-size="12.5" fill="#8a7f6a">everything is caused;</text>
+  <text x="90" y="136" text-anchor="middle" font-size="12.5" fill="#8a7f6a">free will is an illusion</text>
+
+  <!-- point 2 -->
+  <circle cx="320" cy="90" r="7" fill="#a15c3e"/>
+  <text x="320" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Compatibilism</text>
+  <text x="320" y="120" text-anchor="middle" font-size="12.5" fill="#8a7f6a">everything is caused, but you're</text>
+  <text x="320" y="136" text-anchor="middle" font-size="12.5" fill="#8a7f6a">still "free" if no one is forcing you</text>
+
+  <!-- point 3 -->
+  <circle cx="550" cy="90" r="7" fill="#a15c3e"/>
+  <text x="550" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Libertarian Free Will</text>
+  <text x="550" y="120" text-anchor="middle" font-size="12.5" fill="#8a7f6a">some choices genuinely</text>
+  <text x="550" y="136" text-anchor="middle" font-size="12.5" fill="#8a7f6a">break the causal chain</text>
+
+  <text x="320" y="190" text-anchor="middle" font-size="12.5" fill="#5c5648" font-style="italic">Not a single line of agreement — three different answers to "could you have done otherwise?"</text>
+</svg>

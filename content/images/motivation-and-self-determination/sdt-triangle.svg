@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="500" height="460" fill="#ffffff"/>
+
+  <polygon points="250,60 440,360 60,360" fill="#f1e3d8" fill-opacity="0.6" stroke="#a15c3e" stroke-width="2"/>
+
+  <circle cx="250" cy="60" r="9" fill="#a15c3e"/>
+  <circle cx="440" cy="360" r="9" fill="#5c5648"/>
+  <circle cx="60" cy="360" r="9" fill="#5c5648"/>
+
+  <text x="250" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#a15c3e">Autonomy</text>
+  <text x="250" y="20" text-anchor="middle" font-size="11.5" fill="#5c5648">acting from your own choice</text>
+
+  <text x="440" y="390" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Relatedness</text>
+  <text x="440" y="408" text-anchor="middle" font-size="11.5" fill="#5c5648">feeling connected to others</text>
+
+  <text x="60" y="390" text-anchor="middle" font-size="16" font-weight="bold" fill="#5c5648">Competence</text>
+  <text x="60" y="408" text-anchor="middle" font-size="11.5" fill="#5c5648">feeling genuinely capable</text>
+
+  <text x="250" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">Sustained</text>
+  <text x="250" y="264" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b2620">intrinsic motivation</text>
+
+  <text x="250" y="440" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Self-Determination Theory: three needs that sustain motivation from within.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="600" height="460" fill="#ffffff"/>
+
+  <!-- circular arrow path -->
+  <path d="M300,90 A150,150 0 1,1 299,90" fill="none" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#arrow2)"/>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+
+  <!-- nodes -->
+  <circle cx="300" cy="90" r="8" fill="#2b2620"/>
+  <circle cx="510" cy="230" r="8" fill="#2b2620"/>
+  <circle cx="300" cy="370" r="8" fill="#2b2620"/>
+  <circle cx="90" cy="230" r="8" fill="#2b2620"/>
+
+  <!-- labels -->
+  <text x="300" y="55" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2620">Normal Science</text>
+  <text x="300" y="72" text-anchor="middle" font-size="12" fill="#8a7f6a">work inside the accepted paradigm</text>
+
+  <text x="565" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2620">Anomalies</text>
+  <text x="565" y="238" text-anchor="middle" font-size="12" fill="#8a7f6a">pile up unexplained</text>
+  <text x="565" y="254" text-anchor="middle" font-size="12" fill="#8a7f6a">results</text>
+
+  <text x="300" y="405" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2620">Crisis</text>
+  <text x="300" y="422" text-anchor="middle" font-size="12" fill="#8a7f6a">confidence in the old paradigm breaks down</text>
+
+  <text x="35" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2620">Revolution</text>
+  <text x="35" y="238" text-anchor="middle" font-size="12" fill="#8a7f6a">a new paradigm</text>
+  <text x="35" y="254" text-anchor="middle" font-size="12" fill="#8a7f6a">replaces the old</text>
+
+  <text x="300" y="440" text-anchor="middle" font-size="12.5" fill="#5c5648" font-style="italic">Kuhn: science doesn't creep forward smoothly — it cycles through stability and revolution.</text>
+</svg>

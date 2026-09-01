@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="540" height="340" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="120" width="150" height="90" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="95" y="155" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Messy input</text>
+  <text x="95" y="174" text-anchor="middle" font-size="11" fill="#5c5648">incomplete, error-filled</text>
+  <text x="95" y="190" text-anchor="middle" font-size="11" fill="#5c5648">everyday speech</text>
+
+  <rect x="195" y="105" width="150" height="120" rx="10" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2.5"/>
+  <text x="270" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#a15c3e">Innate</text>
+  <text x="270" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#a15c3e">language faculty</text>
+  <text x="270" y="190" text-anchor="middle" font-size="11" fill="#5c5648">"Universal Grammar"</text>
+
+  <rect x="370" y="120" width="150" height="90" rx="10" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="445" y="155" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Structured output</text>
+  <text x="445" y="174" text-anchor="middle" font-size="11" fill="#5c5648">grammatical sentences</text>
+  <text x="445" y="190" text-anchor="middle" font-size="11" fill="#5c5648">never heard before</text>
+
+  <line x1="170" y1="165" x2="195" y2="165" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#arrow4)"/>
+  <line x1="345" y1="165" x2="370" y2="165" stroke="#a15c3e" stroke-width="2.5" marker-end="url(#arrow4)"/>
+
+  <text x="270" y="290" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Rich, rule-governed output from surprisingly limited, messy input — the "poverty of the stimulus."</text>
+</svg>

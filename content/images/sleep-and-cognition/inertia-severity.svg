@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="520" height="380" fill="#ffffff"/>
+
+  <line x1="80" y1="320" x2="470" y2="320" stroke="#2b2620" stroke-width="1.5"/>
+  <line x1="80" y1="320" x2="80" y2="50" stroke="#2b2620" stroke-width="1.5"/>
+
+  <path d="M80,70 C150,130 220,230 460,280" fill="none" stroke="#a15c3e" stroke-width="3"/>
+  <text x="130" y="60" font-size="11.5" fill="#a15c3e" font-weight="bold">waking from deep sleep</text>
+
+  <path d="M80,200 C150,220 220,260 460,300" fill="none" stroke="#8a7f6a" stroke-width="3" stroke-dasharray="6,4"/>
+  <text x="130" y="190" font-size="11.5" fill="#8a7f6a">waking from light / REM</text>
+
+  <text x="270" y="360" text-anchor="middle" font-size="12" fill="#2b2620">minutes since waking &#8594;</text>
+  <text x="30" y="190" text-anchor="middle" font-size="12" fill="#2b2620" transform="rotate(-90 30 190)">grogginess &#8594;</text>
+
+  <text x="270" y="30" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">The stage you wake from predicts inertia severity better than total sleep time does.</text>
+</svg>

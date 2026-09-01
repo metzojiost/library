@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2: Why Some Brains Won't Power Down — Sleep and Cognition</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Psychology</span> / <a href="index.html">Sleep and Cognition</a> / <span>Chapter 2: Why Some Brains Won't Power Down</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 2: Why Some Brains Won't Power Down</h1>
+<p class="chapter-meta">~4 min read</p>
+<p>Chapter 1 covered what sleep does once it starts. This chapter covers a different, equally important question: why does falling asleep come so easily for some people and so badly for others, even with identical opportunity and identical exhaustion?</p>
+
+<h2>Hyperarousal: a measurable state, not a character flaw</h2>
+
+<p>Sleep researchers use the term <span class="term">hyperarousal</span> to describe a documented physiological state in people who struggle to fall asleep: elevated heart rate, higher body temperature, increased stress hormone levels, and — measurable directly on EEG — more high-frequency <span class="term">beta wave</span> <span class="gloss">(fast brain-wave activity associated with alert, active waking thought — the opposite of the slow waves that dominate deep sleep)</span> activity at bedtime, compared to people who fall asleep easily. This is a real, physically measurable difference, not simply "bad habits" or "not being tired enough" — it's closer to the nervous system running an alert-mode idle speed that doesn't downshift as readily as it does for other people, even when everything else (exhaustion, bedtime, environment) is controlled for.</p>
+
+<h2>Cognitive versus somatic arousal</h2>
+
+<p>Researchers further split this into two related but distinguishable types. <span class="term">Somatic arousal</span> is physical — a racing heart, muscle tension, restlessness in the body itself. <span class="term">Cognitive arousal</span> is mental — racing thoughts, replaying the day, planning tomorrow, a mind that keeps generating new threads exactly when it's supposed to be quieting down. Most people who describe themselves as unable to "turn their brain off" at bedtime are describing cognitive arousal specifically, and it's worth noting this connects directly back to Chapter 1's memory consolidation process: falling asleep is partly the brain handing off the day's unprocessed material to be consolidated during sleep itself. A mind that's still actively, consciously working through that same material at bedtime is arguably doing a live, effortful version of a job that's supposed to run automatically, unconsciously, later — which would help explain why it feels so specifically effortful and unresolved, rather than just generally restless.</p>
+
+<figure>
+  <img src="../../../assets/images/sleep-and-cognition/arousal-types.svg" alt="A diagram splitting hyperarousal into two branches, somatic arousal (racing heart, muscle tension) and cognitive arousal (racing thoughts, mental replay), both delaying sleep onset.">
+  <figcaption>Hyperarousal isn't one thing — cognitive and somatic arousal are related but distinguishable, and often need different countermeasures.</figcaption>
+</figure>
+
+<h2>Why "just relax" doesn't work, and what actually does</h2>
+
+<p>This framing matters practically, not just academically: telling someone with genuine cognitive hyperarousal to "just relax" is a bit like telling someone with a genuinely fast-running clock to "just slow down" through willpower alone — the state is measurably real, not a simple choice being stubbornly refused. What the research-backed treatments actually target is specific and structural, not vague relaxation advice: offloading the racing cognitive content earlier in the evening, rather than at the exact moment sleep is supposed to start, and building strong environmental and behavioral associations between "bed" and "sleep" specifically, rather than "bed" and "wired, active thinking." Both of these become the practical core of Chapter 5's toolkit — the point of this chapter is establishing that the problem is real and specific enough to have a real, specific answer, not a character trait to just push through.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Notice which type of arousal you're actually experiencing tonight:</strong> as you're trying to fall asleep, check whether it's more physical (restless body, can't get comfortable) or more mental (thoughts looping) — they're different problems, and naming which one you're facing is the first useful step.</li>
+<li><strong>Try externalizing one racing thought before bed:</strong> if your mind keeps returning to an unfinished task or worry, write one sentence about it on paper before lying down — a small, low-effort test of whether offloading it earlier reduces how much it shows up once you're trying to sleep.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Hyperarousal at bedtime and hyperarousal in general anxiety share some of the same physiological markers</strong>, which is part of why chronic sleep-onset difficulty and anxiety disorders are so frequently linked in the research, in both directions.</li>
+<li><strong>Waking easily to external stimuli is a related but genuinely separate mechanism from falling-asleep difficulty.</strong>
+<span class="hook-target">→ Chapter 3 covers exactly that: what actually determines how easily a sleeping brain lets outside noise or light back in.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="sleep-and-cognition" data-chapter="chapter-2"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-1.html">&larr; Chapter 1: Sleep Is Not Downtime</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div><a class="nav-link" href="chapter-3.html">Chapter 3: The Gatekeepers That Decide What Wakes You Up &rarr;</a></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

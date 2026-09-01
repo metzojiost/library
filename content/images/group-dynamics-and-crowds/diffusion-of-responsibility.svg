@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="540" height="360" fill="#ffffff"/>
+
+  <circle cx="110" cy="120" r="22" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="110" y="126" text-anchor="middle" font-size="13" fill="#a15c3e">1</text>
+  <text x="110" y="175" text-anchor="middle" font-size="22" font-weight="bold" fill="#a15c3e">100%</text>
+  <text x="110" y="196" text-anchor="middle" font-size="11.5" fill="#5c5648">felt responsibility</text>
+  <text x="110" y="230" text-anchor="middle" font-size="12" fill="#2b2620">one bystander</text>
+
+  <g>
+    <circle cx="340" cy="100" r="18" fill="#efe6d8" stroke="#8a7f6a" stroke-width="1.5"/>
+    <circle cx="390" cy="100" r="18" fill="#efe6d8" stroke="#8a7f6a" stroke-width="1.5"/>
+    <circle cx="440" cy="100" r="18" fill="#efe6d8" stroke="#8a7f6a" stroke-width="1.5"/>
+    <circle cx="365" cy="140" r="18" fill="#efe6d8" stroke="#8a7f6a" stroke-width="1.5"/>
+    <circle cx="415" cy="140" r="18" fill="#efe6d8" stroke="#8a7f6a" stroke-width="1.5"/>
+  </g>
+  <text x="390" y="175" text-anchor="middle" font-size="22" font-weight="bold" fill="#5c5648">~20% each</text>
+  <text x="390" y="196" text-anchor="middle" font-size="11.5" fill="#5c5648">felt responsibility</text>
+  <text x="390" y="230" text-anchor="middle" font-size="12" fill="#2b2620">a crowd of five bystanders</text>
+
+  <text x="270" y="300" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">More witnesses, less individually felt duty to act — a person is often safer with fewer bystanders nearby.</text>
+</svg>

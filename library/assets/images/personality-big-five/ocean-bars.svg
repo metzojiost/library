@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="540" height="340" fill="#ffffff"/>
+
+  <g font-size="13" fill="#2b2620">
+    <text x="10" y="50">Openness</text>
+    <line x1="150" y1="45" x2="510" y2="45" stroke="#e6ddd0" stroke-width="10"/>
+    <circle cx="360" cy="45" r="9" fill="#a15c3e"/>
+
+    <text x="10" y="95">Conscientiousness</text>
+    <line x1="150" y1="90" x2="510" y2="90" stroke="#e6ddd0" stroke-width="10"/>
+    <circle cx="280" cy="90" r="9" fill="#a15c3e"/>
+
+    <text x="10" y="140">Extraversion</text>
+    <line x1="150" y1="135" x2="510" y2="135" stroke="#e6ddd0" stroke-width="10"/>
+    <circle cx="220" cy="135" r="9" fill="#a15c3e"/>
+
+    <text x="10" y="185">Agreeableness</text>
+    <line x1="150" y1="180" x2="510" y2="180" stroke="#e6ddd0" stroke-width="10"/>
+    <circle cx="400" cy="180" r="9" fill="#a15c3e"/>
+
+    <text x="10" y="230">Neuroticism</text>
+    <line x1="150" y1="225" x2="510" y2="225" stroke="#e6ddd0" stroke-width="10"/>
+    <circle cx="310" cy="225" r="9" fill="#a15c3e"/>
+  </g>
+
+  <text x="150" y="255" text-anchor="middle" font-size="11" fill="#8a7f6a">low</text>
+  <text x="510" y="255" text-anchor="middle" font-size="11" fill="#8a7f6a">high</text>
+
+  <text x="270" y="295" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Five continuous spectrums — most people score somewhere in the middle, not at either extreme.</text>
+</svg>

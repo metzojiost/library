@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="320" fill="#ffffff"/>
+
+  <rect x="20" y="40" width="245" height="90" rx="10" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="142" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Stimulus control</text>
+  <text x="142" y="95" text-anchor="middle" font-size="10.5" fill="#5c5648">bed = sleep only (Ch.2)</text>
+
+  <rect x="295" y="40" width="245" height="90" rx="10" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="417" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Scheduled worry time</text>
+  <text x="417" y="95" text-anchor="middle" font-size="10.5" fill="#5c5648">offload cognitive load (Ch.2)</text>
+
+  <rect x="20" y="160" width="245" height="90" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="142" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Environmental control</text>
+  <text x="142" y="215" text-anchor="middle" font-size="10.5" fill="#5c5648">noise/light/vibration (Ch.3)</text>
+
+  <rect x="295" y="160" width="245" height="90" rx="10" fill="#e0d5c5" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="417" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Consistent wake time</text>
+  <text x="417" y="215" text-anchor="middle" font-size="10.5" fill="#5c5648">stabilizes stage timing (Ch.4)</text>
+
+  <text x="280" y="290" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Four tools, each targeting a mechanism explained earlier in this arc.</text>
+</svg>

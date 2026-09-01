@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="500" height="380" fill="#ffffff"/>
+
+  <rect x="170" y="30" width="160" height="70" rx="10" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2.5"/>
+  <text x="250" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#a15c3e">Hyperarousal</text>
+  <text x="250" y="83" text-anchor="middle" font-size="11" fill="#5c5648">delays sleep onset</text>
+
+  <rect x="40" y="170" width="180" height="100" rx="10" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="130" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Somatic</text>
+  <text x="130" y="225" text-anchor="middle" font-size="11" fill="#5c5648">racing heart</text>
+  <text x="130" y="242" text-anchor="middle" font-size="11" fill="#5c5648">muscle tension</text>
+
+  <rect x="280" y="170" width="180" height="100" rx="10" fill="#e6ddd0" stroke="#8a7f6a" stroke-width="2"/>
+  <text x="370" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b2620">Cognitive</text>
+  <text x="370" y="225" text-anchor="middle" font-size="11" fill="#5c5648">racing thoughts</text>
+  <text x="370" y="242" text-anchor="middle" font-size="11" fill="#5c5648">mental replay</text>
+
+  <line x1="220" y1="100" x2="130" y2="170" stroke="#a15c3e" stroke-width="2"/>
+  <line x1="280" y1="100" x2="370" y2="170" stroke="#a15c3e" stroke-width="2"/>
+
+  <text x="250" y="340" text-anchor="middle" font-size="12.5" fill="#8a7f6a" font-style="italic">Related but distinguishable — and often needing different countermeasures.</text>
+</svg>

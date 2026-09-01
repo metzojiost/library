@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1: You, Plus a Crowd, Minus You — Group Dynamics and Crowds</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Psychology</span> / <a href="index.html">Group Dynamics and Crowds</a> / <span>Chapter 1: You, Plus a Crowd, Minus You</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 1: You, Plus a Crowd, Minus You</h1>
+<p class="chapter-meta">~3 min read</p>
+<p>A single commuter steps over a stranger having a medical emergency on a busy sidewalk. The same commuter, alone on an empty street, is far more likely to stop and help. This isn't callousness — it's one of the most consistently replicated findings in social psychology, and it only shows up <em>because</em> other people are present.</p>
+
+<h2>The bystander effect: more witnesses, less help</h2>
+
+<p>Psychologists John Darley and Bibb Latané began studying this after the widely reported 1964 murder of Kitty Genovese in New York, initially described (somewhat inaccurately, later reporting found) as having been witnessed by dozens of neighbors who did nothing. Their experiments identified a specific mechanism behind what's now called the <span class="term">bystander effect</span>: <span class="term">diffusion of responsibility</span> <span class="gloss">(diffusion = spreading something thin across a group, so no single part carries much of it)</span> — when many people witness the same emergency, each individual feels less personally responsible for acting, since surely someone else will. Counterintuitively, a person in genuine danger is often statistically safer with one witness nearby than with a crowd of them.</p>
+
+<h2>Groupthink: when agreement becomes the actual goal</h2>
+
+<p>A separate, related failure happens inside decision-making groups themselves. Psychologist Irving Janis coined <span class="term">groupthink</span> to describe what happens when a tight-knit group's desire for harmony and consensus quietly overrides its members' willingness to realistically evaluate alternatives — dissenting views get self-censored before they're even voiced, doubts get reframed as disloyalty, and the group ends up more confident in a bad decision than any individual member would have been alone. Janis originally developed the concept studying major U.S. foreign policy failures, where experienced, intelligent officials collectively approved plans that, examined individually, most of them privately doubted.</p>
+
+<figure>
+  <img src="../../../assets/images/group-dynamics-and-crowds/diffusion-of-responsibility.svg" alt="A diagram showing a single bystander with high felt responsibility next to a crowd of bystanders each with proportionally lower felt responsibility.">
+  <figcaption>Diffusion of responsibility: more witnesses, less individually felt duty to act.</figcaption>
+</figure>
+
+<h2>Deindividuation: losing yourself in the crowd</h2>
+
+<p>A third, more extreme effect happens when a person feels anonymous inside a large group — a state researchers call <span class="term">deindividuation</span>. Stripped of individual identity and individual accountability (a uniform, a mask, simply being one face in a large crowd), people become measurably more likely to act on impulses — aggressive, destructive, or otherwise — that they would normally suppress as individuals. This isn't really the crowd "bringing out" some hidden true self; it's closer to the crowd temporarily removing the social brakes (self-consciousness, fear of individual judgment) that keep behavior in check the rest of the time. Elliot Aronson's <em>The Social Animal</em>, a foundational textbook in this area, ties these crowd effects back to a broader theme: an enormous amount of behavior that feels deeply personal and freely chosen is, in practice, powerfully shaped by whichever social situation a person happens to be standing in.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Try the specific-person fix, if you're ever in an emergency with bystanders around</strong> — point at one specific person and give them a specific task ("you, call an ambulance"). It's the single best-tested fix for the bystander effect.</li>
+<li><strong>Notice groupthink in your next group decision:</strong> watch whether disagreement is genuinely getting heard, or quietly smoothed over for the sake of consensus.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>A simple, well-tested fix for the bystander effect exists</strong> — if you're ever the one needing help in public, pointing at a specific individual ("you, in the blue jacket, call an ambulance") reliably breaks diffusion of responsibility, because it converts a vague, shared duty into a specific, personal one.</li>
+<li><strong>Groupthink and the pressure to obey an authority figure are closely related but distinct forces.</strong>
+<span class="hook-target">→ Already in the library: <a href="../obedience-and-conformity/index.html">Obedience, Conformity & Situational Power</a> covers the authority-driven version of this; groupthink is more about peer consensus than a single authority figure.</span></li>
+<li><strong>Online anonymity has been studied as a modern deindividuation trigger</strong> — the same mechanism researchers found in physical crowds shows up in comment sections and anonymous platforms, which is one of the more direct real-world applications of decades-old crowd psychology research.</li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="group-dynamics-and-crowds" data-chapter="chapter-1"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="340" fill="#ffffff"/>
+
+  <!-- Dualism panel -->
+  <text x="150" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#a15c3e">Dualism</text>
+  <ellipse cx="150" cy="100" rx="80" ry="42" fill="#f1e3d8" stroke="#a15c3e" stroke-width="2"/>
+  <text x="150" y="105" text-anchor="middle" font-size="14" fill="#2b2620">Mind</text>
+  <rect x="95" y="190" width="110" height="70" rx="8" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="150" y="230" text-anchor="middle" font-size="14" fill="#2b2620">Brain</text>
+  <line x1="150" y1="142" x2="150" y2="190" stroke="#8a7f6a" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="150" y="300" text-anchor="middle" font-size="12.5" fill="#8a7f6a">two different substances,</text>
+  <text x="150" y="316" text-anchor="middle" font-size="12.5" fill="#8a7f6a">somehow linked</text>
+
+  <!-- divider -->
+  <line x1="320" y1="20" x2="320" y2="320" stroke="#e6ddd0" stroke-width="1.5"/>
+
+  <!-- Physicalism panel -->
+  <text x="490" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#a15c3e">Physicalism</text>
+  <rect x="415" y="150" width="150" height="110" rx="8" fill="#efe6d8" stroke="#5c5648" stroke-width="2"/>
+  <text x="490" y="200" text-anchor="middle" font-size="14" fill="#2b2620">Brain</text>
+  <text x="490" y="220" text-anchor="middle" font-size="13" fill="#a15c3e" font-style="italic">(mind = brain activity)</text>
+  <text x="490" y="300" text-anchor="middle" font-size="12.5" fill="#8a7f6a">one substance —</text>
+  <text x="490" y="316" text-anchor="middle" font-size="12.5" fill="#8a7f6a">the mind just IS what the brain does</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
