@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="280" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Flow Channel</text>
+
+  <line x1="70" y1="230" x2="70" y2="60" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="70" y1="230" x2="500" y2="230" stroke="#8a7f6a" stroke-width="1.5"/>
+  <text x="40" y="145" text-anchor="middle" font-size="10" fill="#5c5648" transform="rotate(-90 40 145)">Challenge</text>
+  <text x="285" y="255" text-anchor="middle" font-size="10" fill="#5c5648">Skill</text>
+
+  <polygon points="70,230 500,70 460,60 70,200" fill="#a15c3e" opacity="0.2"/>
+  <text x="290" y="130" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">flow</text>
+
+  <text x="120" y="90" text-anchor="middle" font-size="11" fill="#5c5648">anxiety</text>
+  <text x="420" y="215" text-anchor="middle" font-size="11" fill="#5c5648">boredom</text>
+
+  <text x="280" y="270" text-anchor="middle" font-size="10" fill="#8a7f6a">A narrow diagonal where challenge and skill rise together, both pushed high.</text>
+</svg>

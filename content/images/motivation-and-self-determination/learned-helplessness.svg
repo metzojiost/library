@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">A Belief That Outlives Its Cause</text>
+
+  <rect x="30" y="55" width="200" height="80" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="130" y="82" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Uncontrollable</text>
+  <text x="130" y="98" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">negative outcomes</text>
+  <text x="130" y="120" text-anchor="middle" font-size="9" fill="#5c5648">(repeated)</text>
+
+  <path d="M 235 95 L 275 95" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armO)"/>
+
+  <rect x="280" y="55" width="240" height="80" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="400" y="82" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">"Effort doesn't matter"</text>
+  <text x="400" y="105" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">generalizes forward</text>
+  <text x="400" y="120" text-anchor="middle" font-size="9" fill="#5c5648">even once control returns</text>
+
+  <text x="280" y="195" text-anchor="middle" font-size="11" fill="#8a7f6a">The lesson learned in one situation persists past its own expiration date.</text>
+
+  <defs>
+    <marker id="armO" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
