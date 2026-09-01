@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Moral Dumbfounding</text>
+
+  <rect x="200" y="50" width="160" height="45" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="280" y="77" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Verdict: "wrong"</text>
+
+  <path d="M 280 95 L 280 120" stroke="#8a7f6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <rect x="90" y="125" width="120" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="152" text-anchor="middle" font-size="10" fill="#2b2620">reason 1 — fails</text>
+
+  <rect x="220" y="125" width="120" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="152" text-anchor="middle" font-size="10" fill="#2b2620">reason 2 — fails</text>
+
+  <rect x="350" y="125" width="120" height="45" rx="6" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="410" y="152" text-anchor="middle" font-size="10" fill="#2b2620">reason 3 — fails</text>
+
+  <path d="M 280 170 L 280 55" stroke="#a15c3e" stroke-width="1.5" stroke-dasharray="2,3" fill="none"/>
+  <text x="330" y="195" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">verdict never moves</text>
+
+  <text x="280" y="220" text-anchor="middle" font-size="11" fill="#8a7f6a">Each reason fails — the verdict, arrived at first, stays exactly where it started.</text>
+</svg>

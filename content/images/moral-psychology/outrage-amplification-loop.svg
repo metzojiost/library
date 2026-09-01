@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Outrage Loop</text>
+
+  <rect x="30" y="60" width="150" height="60" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="105" y="85" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Foundation-</text>
+  <text x="105" y="101" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">triggering post</text>
+
+  <path d="M 180 90 L 220 90" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armM)"/>
+
+  <rect x="225" y="60" width="150" height="60" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="300" y="85" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Fast elephant</text>
+  <text x="300" y="101" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">reaction, shared</text>
+
+  <path d="M 375 90 L 415 90" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armM)"/>
+
+  <rect x="420" y="60" width="120" height="60" rx="8" fill="#a15c3e" opacity="0.2" stroke="#a15c3e"/>
+  <text x="480" y="85" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Algorithmic</text>
+  <text x="480" y="101" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">amplification</text>
+
+  <path d="M 300 120 L 300 165" stroke="#8a7f6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="225" y="170" width="150" height="50" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#5c5648">slower rider evaluation</text>
+  <text x="300" y="207" text-anchor="middle" font-size="10" fill="#5c5648">arrives too late</text>
+
+  <text x="280" y="245" text-anchor="middle" font-size="11" fill="#8a7f6a">Reach gets rewarded before evaluation has a chance to catch up.</text>
+
+  <defs>
+    <marker id="armM" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
