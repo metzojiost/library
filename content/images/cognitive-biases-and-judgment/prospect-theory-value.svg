@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="280" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Prospect Theory's Value Curve</text>
+
+  <line x1="60" y1="140" x2="500" y2="140" stroke="#8a7f6a" stroke-width="1.5"/>
+  <line x1="280" y1="50" x2="280" y2="230" stroke="#8a7f6a" stroke-width="1.5"/>
+  <text x="280" y="245" text-anchor="middle" font-size="10" fill="#5c5648">reference point</text>
+
+  <path d="M 280 140 Q 380 110, 480 90" stroke="#a15c3e" stroke-width="2.5" fill="none"/>
+  <text x="470" y="75" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">gains</text>
+
+  <path d="M 280 140 Q 200 190, 90 225" stroke="#2b2620" stroke-width="2.5" fill="none"/>
+  <text x="110" y="240" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">losses (steeper)</text>
+
+  <text x="280" y="265" text-anchor="middle" font-size="11" fill="#8a7f6a">The loss side falls off more steeply than the gain side rises.</text>
+</svg>

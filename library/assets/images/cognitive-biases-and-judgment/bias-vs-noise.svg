@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="300" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Bias vs. Noise</text>
+
+  <g transform="translate(75,60)">
+    <circle cx="55" cy="55" r="50" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="30" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="10" fill="none" stroke="#e6ddd0"/>
+    <circle cx="50" cy="52" r="3" fill="#2b2620"/><circle cx="58" cy="58" r="3" fill="#2b2620"/>
+    <circle cx="53" cy="60" r="3" fill="#2b2620"/><circle cx="60" cy="50" r="3" fill="#2b2620"/>
+    <text x="55" y="130" text-anchor="middle" font-size="10" fill="#5c5648">accurate</text>
+  </g>
+  <g transform="translate(215,60)">
+    <circle cx="55" cy="55" r="50" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="30" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="10" fill="none" stroke="#e6ddd0"/>
+    <circle cx="85" cy="30" r="3" fill="#a15c3e"/><circle cx="90" cy="38" r="3" fill="#a15c3e"/>
+    <circle cx="88" cy="25" r="3" fill="#a15c3e"/><circle cx="82" cy="35" r="3" fill="#a15c3e"/>
+    <text x="55" y="130" text-anchor="middle" font-size="10" fill="#5c5648">biased</text>
+  </g>
+  <g transform="translate(355,60)">
+    <circle cx="55" cy="55" r="50" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="30" fill="none" stroke="#e6ddd0"/>
+    <circle cx="55" cy="55" r="10" fill="none" stroke="#e6ddd0"/>
+    <circle cx="20" cy="30" r="3" fill="#5c5648"/><circle cx="90" cy="80" r="3" fill="#5c5648"/>
+    <circle cx="30" cy="90" r="3" fill="#5c5648"/><circle cx="85" cy="25" r="3" fill="#5c5648"/>
+    <text x="55" y="130" text-anchor="middle" font-size="10" fill="#5c5648">noisy</text>
+  </g>
+
+  <text x="280" y="220" text-anchor="middle" font-size="11" fill="#8a7f6a">Bias pulls consistently off-target. Noise scatters unpredictably — and can still average out to look fine.</text>
+</svg>
