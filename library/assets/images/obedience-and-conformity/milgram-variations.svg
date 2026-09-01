@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Obedience Across Variations</text>
+
+  <line x1="70" y1="210" x2="520" y2="210" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="90" y="70" width="60" height="140" fill="#a15c3e" opacity="0.6"/>
+  <text x="120" y="230" text-anchor="middle" font-size="9" fill="#5c5648">standard</text>
+  <text x="120" y="62" text-anchor="middle" font-size="10" fill="#2b2620">~65%</text>
+
+  <rect x="190" y="120" width="60" height="90" fill="#a15c3e" opacity="0.4"/>
+  <text x="220" y="230" text-anchor="middle" font-size="9" fill="#5c5648">same room</text>
+  <text x="220" y="112" text-anchor="middle" font-size="10" fill="#2b2620">lower</text>
+
+  <rect x="290" y="165" width="60" height="45" fill="#a15c3e" opacity="0.25"/>
+  <text x="320" y="230" text-anchor="middle" font-size="9" fill="#5c5648">touch proximity</text>
+  <text x="320" y="157" text-anchor="middle" font-size="10" fill="#2b2620">much lower</text>
+
+  <rect x="390" y="150" width="60" height="60" fill="#8a7f6a" opacity="0.35"/>
+  <text x="420" y="230" text-anchor="middle" font-size="9" fill="#5c5648">phone authority</text>
+  <text x="420" y="142" text-anchor="middle" font-size="10" fill="#2b2620">much lower</text>
+
+  <text x="280" y="250" text-anchor="middle" font-size="11" fill="#8a7f6a">Closeness to the victim lowered compliance; closeness to authority raised it.</text>
+</svg>
