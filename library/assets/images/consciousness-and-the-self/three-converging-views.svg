@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="240" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">Three Routes, One Destination</text>
+
+  <rect x="20" y="60" width="150" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="95" y="88" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Hume</text>
+  <text x="95" y="108" text-anchor="middle" font-size="10" fill="#5c5648">bundle theory</text>
+  <text x="95" y="124" text-anchor="middle" font-size="9" fill="#5c5648">1730s philosophy</text>
+
+  <rect x="205" y="60" width="150" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="88" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Buddhist anattā</text>
+  <text x="280" y="108" text-anchor="middle" font-size="10" fill="#5c5648">contemplative</text>
+  <text x="280" y="124" text-anchor="middle" font-size="9" fill="#5c5648">2,000+ years old</text>
+
+  <rect x="390" y="60" width="150" height="90" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="465" y="88" text-anchor="middle" font-size="11" fill="#2b2620" font-weight="600">Default mode</text>
+  <text x="465" y="108" text-anchor="middle" font-size="10" fill="#5c5648">network</text>
+  <text x="465" y="124" text-anchor="middle" font-size="9" fill="#5c5648">modern neuroscience</text>
+
+  <path d="M 95 150 L 280 190" stroke="#8a7f6a" stroke-width="1.5"/>
+  <path d="M 280 150 L 280 190" stroke="#8a7f6a" stroke-width="1.5"/>
+  <path d="M 465 150 L 280 190" stroke="#8a7f6a" stroke-width="1.5"/>
+
+  <rect x="180" y="190" width="200" height="35" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="280" y="212" text-anchor="middle" font-size="10" fill="#2b2620" font-weight="600">self as ongoing process</text>
+</svg>
