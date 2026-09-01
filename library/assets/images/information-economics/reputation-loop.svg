@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="300" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">Three Fixes, One Target</text>
+
+  <circle cx="280" cy="150" r="60" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="280" y="145" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">The lemons</text>
+  <text x="280" y="161" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">problem</text>
+
+  <rect x="30" y="55" width="130" height="50" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="95" y="85" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Signaling</text>
+  <path d="M 130 105 L 235 135" stroke="#a15c3e" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <rect x="30" y="200" width="130" height="50" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="95" y="230" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Screening</text>
+  <path d="M 130 205 L 235 170" stroke="#a15c3e" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <rect x="400" y="120" width="140" height="60" rx="8" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="470" y="145" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">Reputation &amp;</text>
+  <text x="470" y="161" text-anchor="middle" font-size="12" fill="#2b2620" font-weight="600">intermediaries</text>
+  <path d="M 400 150 L 345 150" stroke="#a15c3e" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <text x="280" y="280" text-anchor="middle" font-size="12" fill="#8a7f6a">None erase the information gap — each gives the market a working substitute for it.</text>
+
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a15c3e"/>
+    </marker>
+  </defs>
+</svg>

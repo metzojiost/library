@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="290" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="17" fill="#2b2620" font-weight="600">One Menu, Two Self-Selected Groups</text>
+
+  <rect x="40" y="55" width="220" height="100" rx="10" fill="#f1e3d8" stroke="#e6ddd0"/>
+  <text x="150" y="80" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">Low premium,</text>
+  <text x="150" y="98" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">high deductible</text>
+  <text x="150" y="128" text-anchor="middle" font-size="11" fill="#5c5648">chosen by low-risk</text>
+  <text x="150" y="143" text-anchor="middle" font-size="11" fill="#5c5648">applicants</text>
+
+  <rect x="300" y="55" width="220" height="100" rx="10" fill="#a15c3e" opacity="0.15" stroke="#a15c3e"/>
+  <text x="410" y="80" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">High premium,</text>
+  <text x="410" y="98" text-anchor="middle" font-size="13" fill="#2b2620" font-weight="600">low deductible</text>
+  <text x="410" y="128" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">chosen by high-risk</text>
+  <text x="410" y="143" text-anchor="middle" font-size="11" fill="#a15c3e" font-weight="600">applicants</text>
+
+  <circle cx="150" cy="200" r="8" fill="#f1e3d8" stroke="#5c5648"/>
+  <circle cx="410" cy="200" r="8" fill="#a15c3e" opacity="0.5"/>
+  <path d="M 150 190 L 150 165" stroke="#5c5648" stroke-width="2" marker-end="url(#arrow3)"/>
+  <path d="M 410 190 L 410 165" stroke="#a15c3e" stroke-width="2" marker-end="url(#arrow3)"/>
+  <text x="150" y="222" text-anchor="middle" font-size="11" fill="#5c5648">low-risk applicant</text>
+  <text x="410" y="222" text-anchor="middle" font-size="11" fill="#a15c3e">high-risk applicant</text>
+
+  <text x="280" y="260" text-anchor="middle" font-size="12" fill="#8a7f6a">No one discloses risk level — the choice itself sorts the pool.</text>
+
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5c5648"/>
+    </marker>
+  </defs>
+</svg>

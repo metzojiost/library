@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 5: How Markets Patch Broken Information — Information Economics</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../../../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../../../index.html">Library</a> / <span>Economics</span> / <a href="index.html">Information Economics</a> / <span>Chapter 5: How Markets Patch Broken Information</span></nav>
+</header>
+<main>
+
+<article class="chapter">
+<h1 class="page-title">Chapter 5: How Markets Patch Broken Information</h1>
+<p class="chapter-meta">~5 min read</p>
+<p>Four chapters have laid out ways hidden information can quietly break a market — Chapter 1's unraveling spiral, Chapter 4's misaligned incentives — and two ways the parties inside a single deal can partly fix it themselves, signaling and screening. But some of the most effective fixes were never really about the two parties in one transaction at all. They're institutions that sit on top of a whole market, built specifically to make repeated dealing possible where hidden information would otherwise make it fall apart. Akerlof's original 1970 paper already named several of these directly — this chapter is about how they actually work.</p>
+
+<h2>Reputation turns a one-shot game into a repeated one</h2>
+
+<p>The lemons spiral from Chapter 1 assumes, implicitly, that each transaction is a one-shot event — sell one bad car, disappear, no consequences. Almost nothing in a functioning economy actually works that way. A seller who expects to keep selling, to the same market, over time, faces a very different calculation: cheat one buyer today, and word gets around, prices offered for everything you sell from then on reflect that reputation, and the one-time gain from misrepresenting quality gets outweighed by the ongoing cost of a damaged reputation. <span class="term">Reputation</span> works here as a substitute for perfect information: the buyer still can't inspect the specific item perfectly, but they can rely on the seller's accumulated track record as a reasonable proxy, because the seller has real skin in the game in maintaining it. This is precisely why online marketplaces invested so heavily, from the start, in seller rating systems — eBay's feedback score, Uber's driver and rider ratings, Airbnb's reviews — these are not a nice-to-have feature bolted onto e-commerce, they're the specific mechanism making a marketplace of total strangers function at all, replacing the in-person trust that used to come from a shopkeeper you'd known for years.</p>
+
+<h2>Warranties: a signal that only a genuine peach owner can afford to offer</h2>
+
+<p>A product warranty is a direct hybrid of Chapter 2's signaling logic and Chapter 5's institutional framing. Offering a strong warranty is expensive specifically for a low-quality seller — a manufacturer producing genuinely defective goods will be paying out claims constantly, making a generous warranty a money-losing promise for them to make. A manufacturer confident in their own quality can offer the same warranty at very low expected cost, because they rarely need to honor it. The warranty terms themselves become an observable, comparable proxy for a quality level the buyer could never directly verify before purchase — exactly the differential-cost mechanism from Chapter 2, just packaged as a standard commercial instrument rather than an individual choice like a degree or a credential.</p>
+
+<h2>Middlemen who specialize in exactly this problem</h2>
+
+<p>Some businesses exist almost entirely to solve one market's specific information asymmetry. Vehicle history report services exist because the single biggest piece of hidden information in a used car sale — has this exact car been in a major accident, flooded, or had its odometer rolled back — can now be checked against records the seller doesn't control, directly attacking the specific uncertainty Akerlof's original paper was built around. Professional home inspectors, credit rating agencies, and independent auditors all occupy the same functional role: a specialized third party, with no stake in either side of the specific transaction, whose entire business model depends on being reliably accurate, because their own reputation (Chapter 5's mechanism, one level up) is the thing being sold.</p>
+
+<figure>
+  <img src="../../../assets/images/information-economics/reputation-loop.svg" alt="A diagram showing the lemons problem at the center, with three arrows pointing into it from signaling, screening, and reputation and intermediaries, converging on a labeled outcome of a functioning market despite hidden information.">
+  <figcaption>None of the three fixes eliminates hidden information — each just gives the market a working substitute for it.</figcaption>
+</figure>
+
+<h2>What none of this actually eliminates</h2>
+
+<p>It's worth being honest about what these institutions do and don't do. None of them make information symmetric — the seller still knows more than the buyer, the agent still knows more than the principal. What reputation, warranties, and specialized intermediaries actually provide is a cheaper, scalable <em>substitute</em> for direct knowledge, one that works well enough, most of the time, for a market to function close to how it would if information were perfect. That's also exactly why these mechanisms can fail in specific, predictable ways: a new seller with no reputation yet, a warranty from a company that goes bankrupt before honoring it, a rating system that can itself be gamed. The theme running through this entire topic isn't that markets solved the hidden-information problem — it's that they built a whole ecosystem of workarounds, each with its own cost and its own failure mode, because the underlying problem never actually goes away.</p>
+
+<section class="try-this">
+<h2>Try this</h2>
+<p class="try-this-intro">Ideas for noticing or testing this in your own life.</p>
+<ul class="try-list">
+<li><strong>Pick a market or platform where you trust the reputation system (ratings, reviews, history reports) enough to transact with a total stranger, and one where you don't — and ask specifically what's different about the two.</strong></li>
+<li><strong>Notice the next warranty, guarantee, or return policy you're offered, and ask what it would actually cost the seller if the product were low quality</strong> — a strong signal should be genuinely expensive for a bad seller to offer, not just reassuring-sounding.</li>
+</ul>
+</section>
+
+<section class="hooks">
+<h2>Worth pulling on?</h2>
+<p class="hooks-intro">A few loose threads from this chapter — if any of these genuinely grab you, that's a good sign of where to go next.</p>
+<ul class="hook-list">
+<li><strong>Reputation working as a deterrent because of future consequences is really a repeated-game result — the same underlying logic behind why cooperation can be rational even among purely self-interested actors.</strong>
+<span class="hook-target">→ A natural next topic if this is the thread that grabbed you most: game theory, including repeated games and strategies like tit-for-tat.</span></li>
+<li><strong>Reputation itself functions as a kind of durable, compounding asset — built slowly, and a real form of leverage once established.</strong>
+<span class="hook-target">→ Already in the library: <a href="../leverage-and-income/index.html">Leverage and Income</a> covers how assets like this compound over time.</span></li>
+</ul>
+</section>
+
+</article>
+
+<div class="read-toggle">
+  <div class="read-toggle-row">
+    <label class="read-toggle-label">
+      <input type="checkbox" class="read-checkbox" data-topic="information-economics" data-chapter="chapter-5"  >
+      Mark this chapter as read
+    </label>
+    <button type="button" class="confirm-read-btn ">Confirm</button>
+    <a href="#" class="change-read-link is-hidden">change</a>
+  </div>
+</div>
+<script>
+(function() {
+  var wrap = document.currentScript.previousElementSibling;
+  var box = wrap.querySelector('.read-checkbox');
+  var confirmBtn = wrap.querySelector('.confirm-read-btn');
+  var changeLink = wrap.querySelector('.change-read-link');
+
+  function save() {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({topic: box.dataset.topic, chapter: box.dataset.chapter, read: box.checked})
+    }).catch(function() {});
+  }
+
+  confirmBtn.addEventListener('click', function() {
+    save();
+    box.disabled = true;
+    confirmBtn.classList.add('is-hidden');
+    changeLink.classList.remove('is-hidden');
+  });
+
+  changeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    box.disabled = false;
+    confirmBtn.classList.remove('is-hidden');
+    changeLink.classList.add('is-hidden');
+  });
+
+  if (location.protocol === 'file:') {
+    var note = document.createElement('p');
+    note.className = 'read-toggle-note';
+    note.textContent = "This won't be saved permanently \u2014 open the library via Start Library.bat instead of double-clicking the page to keep your progress.";
+    wrap.appendChild(note);
+  }
+})();
+</script>
+
+<div class="chapter-footer-nav">
+  <div><a class="nav-link" href="chapter-4.html">&larr; Chapter 4: Moral Hazard — What Changes Once You're Covered</a></div>
+  <a class="nav-link" href="index.html">All chapters</a>
+  <div></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>
