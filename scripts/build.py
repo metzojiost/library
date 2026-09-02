@@ -229,6 +229,13 @@ def build_library_index(manifest, idx, progress):
       <span class="badge">game</span>
     </div>
   </a>
+  <a class="topic-card" href="tools/habit-calendar.html">
+    <div class="topic-card-title">Habit Calendar</div>
+    <div class="topic-card-desc">Stamp work-level, workout, and coffee stickers on any day. Saves locally, and it's printable.</div>
+    <div class="topic-card-meta">
+      <span class="badge">tool</span>
+    </div>
+  </a>
   </div>
 </section>"""
 
@@ -551,6 +558,13 @@ def copy_static_assets():
         if dst_games.exists():
             shutil.rmtree(dst_games)
         shutil.copytree(src_games, dst_games)
+
+    src_tools = CONTENT / "tools"
+    if src_tools.exists():
+        dst_tools = LIBRARY / "tools"
+        if dst_tools.exists():
+            shutil.rmtree(dst_tools)
+        shutil.copytree(src_tools, dst_tools)
 
 
 def main():
