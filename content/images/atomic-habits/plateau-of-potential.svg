@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="220" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Plateau of Latent Potential</text>
+
+  <line x1="60" y1="180" x2="500" y2="180" stroke="#8a7f6a" stroke-width="1"/>
+  <line x1="60" y1="55" x2="60" y2="180" stroke="#8a7f6a" stroke-width="1"/>
+
+  <path d="M 60,175 L 150,172 L 240,168 L 330,160 L 380,130 L 420,80 L 460,50"
+    fill="none" stroke="#a15c3e" stroke-width="2.5"/>
+
+  <line x1="330" y1="55" x2="330" y2="180" stroke="#e6ddd0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="330" y="200" text-anchor="middle" font-size="8" fill="#5c5648">most people quit here</text>
+
+  <text x="35" y="115" text-anchor="end" font-size="8" fill="#8a7f6a">Visible</text>
+  <text x="35" y="127" text-anchor="end" font-size="8" fill="#8a7f6a">results</text>
+  <text x="280" y="200" text-anchor="middle" font-size="8" fill="#8a7f6a" opacity="0"> </text>
+  <text x="480" y="200" text-anchor="middle" font-size="9" fill="#5c5648">Time, consistent effort</text>
+</svg>

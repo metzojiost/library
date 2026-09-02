@@ -4,7 +4,8 @@
     "philosophy": "Philosophy",
     "mythology": "Mythology & Old Beliefs",
     "psychology": "Psychology",
-    "consciousness-studies": "Consciousness Studies"
+    "consciousness-studies": "Consciousness Studies",
+    "book-summaries": "Book Summaries"
   },
   "topics": [
     {
@@ -922,6 +923,30 @@
         {
           "slug": "field-guide",
           "title": "The Neuroplasticity Field Guide: How to Actually Practice It"
+        }
+      ]
+    },
+    {
+      "slug": "atomic-habits",
+      "title": "Atomic Habits (James Clear)",
+      "category": "book-summaries",
+      "description": "The habit-building bestseller \u2014 summarized in a casual, conversational voice built for someone who wants to actually get it, not slog through it.",
+      "chapters": [
+        {
+          "slug": "chapter-1",
+          "title": "Atomic Habits \u2014 James Clear"
+        }
+      ]
+    },
+    {
+      "slug": "mindset",
+      "title": "Mindset (Carol Dweck)",
+      "category": "book-summaries",
+      "description": "Whether you believe your abilities are fixed or can grow turns out to change how you handle failure, challenge, and criticism \u2014 Dweck's core research, summarized.",
+      "chapters": [
+        {
+          "slug": "chapter-1",
+          "title": "Mindset \u2014 Carol Dweck"
         }
       ]
     }

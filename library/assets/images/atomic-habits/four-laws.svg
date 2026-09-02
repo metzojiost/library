@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" fill="#2b2620" font-weight="600">The Habit Loop and the Four Laws</text>
+
+  <g font-size="9" fill="#2b2620">
+    <rect x="30" y="50" width="115" height="44" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="87" y="68" text-anchor="middle" font-weight="600">Cue</text>
+    <text x="87" y="82" text-anchor="middle" font-size="8" fill="#5c5648">Make it obvious</text>
+
+    <rect x="160" y="50" width="115" height="44" rx="8" fill="#f1e3d8" stroke="#e6ddd0"/>
+    <text x="217" y="68" text-anchor="middle" font-weight="600">Craving</text>
+    <text x="217" y="82" text-anchor="middle" font-size="8" fill="#5c5648">Make it attractive</text>
+
+    <rect x="290" y="50" width="115" height="44" rx="8" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+    <text x="347" y="68" text-anchor="middle" font-weight="600">Response</text>
+    <text x="347" y="82" text-anchor="middle" font-size="8" fill="#5c5648">Make it easy</text>
+
+    <rect x="420" y="50" width="115" height="44" rx="8" fill="#a15c3e" opacity="0.18" stroke="#a15c3e"/>
+    <text x="477" y="68" text-anchor="middle" font-weight="600">Reward</text>
+    <text x="477" y="82" text-anchor="middle" font-size="8" fill="#5c5648">Make it satisfying</text>
+  </g>
+
+  <path d="M 145 72 L 158 72" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armH)"/>
+  <path d="M 275 72 L 288 72" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armH)"/>
+  <path d="M 405 72 L 418 72" stroke="#8a7f6a" stroke-width="2" marker-end="url(#armH)"/>
+  <path d="M 477 94 C 477 140, 87 140, 87 94" stroke="#8a7f6a" stroke-width="1.5" fill="none" stroke-dasharray="3,3" marker-end="url(#armH)"/>
+  <text x="280" y="150" text-anchor="middle" font-size="8" fill="#8a7f6a">the loop repeats, and the habit strengthens each time</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="10" fill="#a15c3e" font-weight="600">Reverse each law to break a bad habit instead.</text>
+
+  <defs>
+    <marker id="armH" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a7f6a"/>
+    </marker>
+  </defs>
+</svg>
