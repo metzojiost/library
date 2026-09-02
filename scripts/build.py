@@ -222,6 +222,13 @@ def build_library_index(manifest, idx, progress):
       <span class="badge">game</span>
     </div>
   </a>
+  <a class="topic-card" href="games/2048.html">
+    <div class="topic-card-title">2048</div>
+    <div class="topic-card-desc">Slide and merge tiles to reach 2048 — on-screen buttons, no keyboard needed.</div>
+    <div class="topic-card-meta">
+      <span class="badge">game</span>
+    </div>
+  </a>
   </div>
 </section>"""
 
