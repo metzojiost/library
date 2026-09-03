@@ -85,6 +85,16 @@
   font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; color: var(--accent); font-weight: 600;
 }
 .jp-kana-romaji.hidden { visibility: hidden; }
+.jp-kana-romaji-text { font-weight: 600; }
+.jp-kana-mnemonic {
+  font-weight: 400; font-style: italic; color: var(--ink-soft); font-size: 0.78rem;
+  margin-top: 6px; line-height: 1.4; text-align: left;
+}
+
+/* Learn-mode kana cards get more room for the mnemonic text */
+.jp-kana-grid-learn { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.jp-kana-card-learn { min-height: 120px; padding: 16px 14px; }
+.jp-kana-card-learn .jp-kana-romaji { max-width: 100%; }
 .jp-kana-mastery {
   position: absolute; top: 4px; right: 6px; font-size: 0.62rem;
   font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft);

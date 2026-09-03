@@ -314,19 +314,26 @@
     });
     container.appendChild(dots);
 
-    var grid = el("div", "jp-kana-grid");
+    var grid = el("div", "jp-kana-grid jp-kana-grid-learn");
     chunks[currentChunkIdx].forEach(function (item) {
       var id = "kana:" + kind + ":" + item.char;
       var box = getProgress(id).box || 0;
-      var card = el("div", "jp-kana-card");
+      var card = el("div", "jp-kana-card jp-kana-card-learn");
       card.appendChild(el("div", "jp-kana-char", item.char));
-      var back = el("div", "jp-kana-romaji hidden", item.romaji);
+      var backHtml = '<div class="jp-kana-romaji-text">' + item.romaji + '</div>' +
+        (item.mnemonic ? '<div class="jp-kana-mnemonic">' + item.mnemonic + '</div>' : '');
+      var back = el("div", "jp-kana-romaji hidden", backHtml);
       card.appendChild(back);
       card.appendChild(el("div", "jp-kana-mastery mastery-" + box, masteryLabel(box)));
       card.addEventListener("click", function () { back.classList.toggle("hidden"); });
       grid.appendChild(card);
     });
     container.appendChild(grid);
+    if (chunks[currentChunkIdx].some(function (item) { return item.mnemonic; })) {
+      container.appendChild(el("p", "jp-tab-intro", "Tip: the mnemonics are memory hooks, not literal etymology — whatever image actually sticks for you beats the \"correct\" one."));
+    } else if (kind === "hira") {
+      container.appendChild(el("p", "jp-tab-intro", "No new mnemonic needed here — these are all systematic variations of characters you already know: two small marks (゛) add voicing (か→が), a small circle (゜) does the same for the h-row (は→ぱ), and a small ゃ/ゅ/ょ fuses onto an i-column character to make one combined sound (き+ゃ→きゃ). Recognizing the base character is the whole trick."));
+    }
 
     container.appendChild(el("h4", "jp-drills-title", "Test chunk " + learned + " (cumulative — includes everything learned so far)"));
     var cumulative = [].concat.apply([], chunks.slice(0, learned)).map(function (it) { return kanaNorm(it, kind); });
