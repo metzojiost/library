@@ -1,0 +1,79 @@
+.drone-cheat-table {
+  width: 100%; border-collapse: collapse; margin: 14px 0 20px;
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+}
+.drone-cheat-table th, .drone-cheat-table td {
+  border: 1px solid var(--border); padding: 8px 12px; text-align: left;
+}
+.drone-cheat-table th { background: var(--badge-bg); color: var(--ink-soft); }
+.drone-cheat-table td:last-child { white-space: nowrap; }
+
+.jp-tab-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 14px; }
+.jp-tab-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink-soft); cursor: pointer;
+}
+.jp-tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+.jp-tab-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.jp-tab-intro { font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 16px; max-width: 680px; }
+.hidden { display: none !important; }
+
+.drone-static-panel h2 {
+  font-size: 1.25rem; margin-top: 1.8em; color: var(--ink); border-bottom: 1px solid var(--border); padding-bottom: 6px;
+}
+.drone-static-panel h2:first-child { margin-top: 0; }
+.drone-static-panel .term { color: var(--accent); font-weight: 600; }
+.drone-static-panel .gloss { color: var(--gloss); font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85em; font-style: italic; }
+.drone-static-panel ul { padding-left: 1.4em; }
+.drone-static-panel li { margin: 0.5em 0; }
+
+.drone-section-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.drone-section-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+  padding: 7px 14px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.drone-section-btn:hover { border-color: var(--accent); }
+.drone-section-btn.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+.jp-controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.jp-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+  padding: 9px 18px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.jp-btn:hover { border-color: var(--accent); }
+.jp-btn-accent { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.jp-btn-accent:hover { opacity: 0.9; }
+
+.drone-quiz-wrap { max-width: 640px; margin: 0 auto; }
+.drone-quiz-progress { font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 6px; }
+.drone-quiz-tag {
+  display: inline-block; font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.72rem;
+  background: var(--badge-bg); color: var(--ink-soft); padding: 2px 9px; border-radius: 999px; margin-bottom: 12px;
+}
+.drone-quiz-tag.is-variant { background: var(--accent-soft); color: var(--accent); }
+.drone-quiz-question { font-size: 1.08rem; margin: 0 0 18px; line-height: 1.5; }
+.drone-quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.drone-quiz-option {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem; text-align: left;
+  padding: 12px 16px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.drone-quiz-option:hover:not(:disabled) { border-color: var(--accent); }
+.drone-quiz-option:disabled { cursor: default; }
+.drone-quiz-option.is-correct { background: #dfeee0; border-color: #3f7a45; color: #2e5c33; font-weight: 700; }
+.drone-quiz-option.is-wrong { background: #f6e0dc; border-color: #b1503f; color: #8a3a2c; }
+.drone-quiz-explain {
+  margin-top: 18px; padding: 14px 16px; background: var(--accent-soft); border-radius: var(--radius);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem; line-height: 1.6;
+}
+.drone-quiz-explain.is-low-confidence { border: 1px dashed #b98a3d; }
+.drone-low-confidence-note {
+  font-size: 0.78rem; color: #b98a3d; margin-top: 8px; font-style: italic;
+}
+.drone-quiz-next { margin-top: 16px; }
+.drone-quiz-result { max-width: 420px; margin: 40px auto; text-align: center; }
+.drone-quiz-result-score { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+.drone-quiz-result-msg { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft); margin-bottom: 24px; }

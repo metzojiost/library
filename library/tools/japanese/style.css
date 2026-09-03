@@ -1,0 +1,178 @@
+.jp-tab-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+  border-bottom: 1px solid var(--border); padding-bottom: 14px;
+}
+.jp-tab-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink-soft); cursor: pointer;
+}
+.jp-tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+.jp-tab-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+.jp-tab-intro {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
+  color: var(--ink-soft); margin-bottom: 16px; max-width: 640px;
+}
+.jp-controls { display: flex; gap: 10px; margin-bottom: 20px; }
+.jp-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+  padding: 9px 18px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.jp-btn:hover { border-color: var(--accent); }
+.jp-btn-accent { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.jp-btn-accent:hover { opacity: 0.9; }
+.jp-back-btn { margin-bottom: 16px; }
+
+/* Kana grid */
+.jp-kana-row-section { margin-bottom: 28px; }
+.jp-kana-row-title {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+  text-transform: capitalize; color: var(--accent); letter-spacing: 0.03em;
+  margin: 0 0 10px;
+}
+.jp-kana-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px;
+}
+.jp-kana-card {
+  background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 8px; text-align: center; cursor: pointer; position: relative;
+  min-height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.jp-kana-card:hover { border-color: var(--accent); }
+.jp-kana-char { font-size: 1.9rem; line-height: 1; }
+.jp-kana-romaji {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; color: var(--accent); font-weight: 600;
+}
+.jp-kana-romaji.hidden { visibility: hidden; }
+.jp-kana-mastery {
+  position: absolute; top: 4px; right: 6px; font-size: 0.62rem;
+  font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 0.03em;
+}
+.mastery-0 { color: var(--gloss); }
+.mastery-1, .mastery-2 { color: #b98a3d; }
+.mastery-3, .mastery-4 { color: var(--accent); }
+.mastery-5 { color: #3f7a45; }
+
+/* Quiz */
+.jp-quiz-wrap { max-width: 480px; margin: 20px auto; text-align: center; }
+.jp-quiz-progress {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 18px;
+}
+.jp-quiz-char { font-size: 3.4rem; margin-bottom: 6px; }
+.jp-quiz-char-word { font-size: 2rem; }
+.jp-quiz-subtext { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft); margin-bottom: 6px; }
+.jp-quiz-prompt {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem; color: var(--ink-soft); margin: 10px 0 20px;
+}
+.jp-quiz-options {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.jp-quiz-option {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+  padding: 14px 10px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.jp-quiz-option:hover:not(:disabled) { border-color: var(--accent); }
+.jp-quiz-option:disabled { cursor: default; }
+.jp-quiz-option.is-correct { background: #dfeee0; border-color: #3f7a45; color: #2e5c33; font-weight: 700; }
+.jp-quiz-option.is-wrong { background: #f6e0dc; border-color: #b1503f; color: #8a3a2c; }
+
+.jp-quiz-result { max-width: 420px; margin: 40px auto; text-align: center; }
+.jp-quiz-result-score { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+.jp-quiz-result-msg {
+  font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft); margin-bottom: 24px;
+}
+
+/* Vocab */
+.jp-set-grid { margin-top: 4px; }
+.jp-set-card { cursor: pointer; }
+.jp-set-title { font-size: 1.3rem; margin: 0 0 18px; }
+.jp-vocab-list { display: flex; flex-direction: column; gap: 12px; }
+.jp-vocab-card {
+  background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; position: relative;
+}
+.jp-vocab-main { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.jp-vocab-kana { font-size: 1.3rem; }
+.jp-vocab-kanji { font-size: 1.3rem; color: var(--accent); }
+.jp-vocab-romaji {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; color: var(--ink-soft); font-style: italic;
+}
+.jp-vocab-en {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem; margin-bottom: 10px;
+}
+.jp-vocab-example {
+  display: flex; flex-direction: column; gap: 2px; padding-top: 10px; border-top: 1px dashed var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+}
+.jp-vocab-example-jp { color: var(--ink); }
+.jp-vocab-example-romaji { color: var(--ink-soft); font-style: italic; }
+.jp-vocab-example-en { color: var(--gloss); }
+.jp-vocab-card .jp-kana-mastery { top: 14px; right: 16px; }
+
+/* Grammar */
+.jp-grammar-explanation { margin-bottom: 26px; }
+.jp-grammar-explanation p { margin: 1em 0; }
+.jp-drills-title {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--accent); margin-bottom: 14px;
+}
+.jp-drill {
+  background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 14px;
+}
+.jp-drill-prompt { font-weight: 600; margin: 0 0 12px; }
+.jp-drill-options { grid-template-columns: 1fr; max-width: 460px; }
+.jp-fill-row { display: flex; gap: 10px; }
+.jp-fill-input {
+  flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+}
+.jp-fill-check { white-space: nowrap; }
+.jp-fill-feedback {
+  margin-top: 10px; font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem; font-weight: 600;
+}
+.jp-fill-feedback.is-correct { color: #3f7a45; }
+.jp-fill-feedback.is-wrong { color: #a1503f; }
+.jp-drill-explain {
+  margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.88rem; color: var(--ink-soft);
+}
+.hidden { display: none !important; }
+
+/* Review */
+.jp-review-count {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 1.1rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 18px;
+}
+
+/* Sentence builder */
+.jp-builder-target { font-size: 1.4rem; margin-bottom: 4px; }
+.jp-builder-en {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.88rem; color: var(--ink-soft);
+  margin-bottom: 20px; font-style: italic;
+}
+.jp-builder-slots {
+  display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; margin-bottom: 18px;
+  padding: 10px; border: 1px dashed var(--border); border-radius: var(--radius);
+}
+.jp-builder-bank { display: flex; flex-wrap: wrap; gap: 8px; }
+.jp-builder-chip {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+  padding: 8px 14px; border-radius: 8px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.jp-builder-chip:hover { border-color: var(--accent); }
+.jp-builder-chip.is-chosen { background: var(--accent); border-color: var(--accent); color: #fff; }
+.jp-builder-blank {
+  display: inline-block; min-width: 40px; border-bottom: 2px solid var(--border);
+  color: var(--gloss); font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+@media (max-width: 560px) {
+  .jp-quiz-options { grid-template-columns: 1fr; }
+  .jp-kana-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+}

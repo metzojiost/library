@@ -12,7 +12,7 @@
       "slug": "behavioral-economics",
       "title": "Behavioral Economics",
       "category": "economics",
-      "description": "Why humans consistently break the 'rational actor' model \u2014 and what predictable patterns replace it.",
+      "description": "Why humans consistently break the 'rational actor' model — and what predictable patterns replace it.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -50,7 +50,7 @@
       "slug": "leverage-and-income",
       "title": "Leverage and Income",
       "category": "economics",
-      "description": "Why some people's income scales and others' doesn't \u2014 the real mechanics of leverage, negotiation, and building durable financial ground, aimed at your own situation rather than the market.",
+      "description": "Why some people's income scales and others' doesn't — the real mechanics of leverage, negotiation, and building durable financial ground, aimed at your own situation rather than the market.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -78,7 +78,7 @@
         },
         {
           "slug": "chapter-7",
-          "title": "Chapter 7: Debt as Leverage \u2014 The Double-Edged Mechanism"
+          "title": "Chapter 7: Debt as Leverage — The Double-Edged Mechanism"
         },
         {
           "slug": "chapter-8",
@@ -98,7 +98,7 @@
       "slug": "managerial-economics",
       "title": "Managerial Economics",
       "category": "economics",
-      "description": "The inward-facing half of economics \u2014 decision tools for a single business, team, or person, with no markets, competitors, or prices to model.",
+      "description": "The inward-facing half of economics — decision tools for a single business, team, or person, with no markets, competitors, or prices to model.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -110,7 +110,7 @@
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Breakeven \u2014 The Number That Actually Tells You Something"
+          "title": "Chapter 3: Breakeven — The Number That Actually Tells You Something"
         },
         {
           "slug": "chapter-4",
@@ -146,23 +146,23 @@
       "slug": "information-economics",
       "title": "Information Economics",
       "category": "economics",
-      "description": "What happens when one side of a deal knows more than the other \u2014 and the surprisingly specific tricks markets developed to cope with it.",
+      "description": "What happens when one side of a deal knows more than the other — and the surprisingly specific tricks markets developed to cope with it.",
       "chapters": [
         {
           "slug": "chapter-1",
-          "title": "Chapter 1: The Lemons Problem \u2014 When Nobody Can Tell Good From Bad"
+          "title": "Chapter 1: The Lemons Problem — When Nobody Can Tell Good From Bad"
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Signaling \u2014 Proving It Without Just Saying It"
+          "title": "Chapter 2: Signaling — Proving It Without Just Saying It"
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Screening \u2014 Making the Other Side Reveal Itself"
+          "title": "Chapter 3: Screening — Making the Other Side Reveal Itself"
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Moral Hazard \u2014 What Changes Once You're Covered"
+          "title": "Chapter 4: Moral Hazard — What Changes Once You're Covered"
         },
         {
           "slug": "chapter-5",
@@ -186,7 +186,7 @@
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: The Chinese Room \u2014 Can a Program Understand Anything?"
+          "title": "Chapter 3: The Chinese Room — Can a Program Understand Anything?"
         },
         {
           "slug": "chapter-4",
@@ -218,7 +218,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Frankfurt Cases \u2014 Does Responsibility Need Alternate Possibilities?"
+          "title": "Chapter 4: Frankfurt Cases — Does Responsibility Need Alternate Possibilities?"
         },
         {
           "slug": "chapter-5",
@@ -238,15 +238,15 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Foundationalism vs. Coherentism \u2014 Stopping the Regress"
+          "title": "Chapter 2: Foundationalism vs. Coherentism — Stopping the Regress"
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Reliabilism \u2014 Gettier's Cleanest Escape Route"
+          "title": "Chapter 3: Reliabilism — Gettier's Cleanest Escape Route"
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Testimony \u2014 Why Almost Everything You Know, You Know Secondhand"
+          "title": "Chapter 4: Testimony — Why Almost Everything You Know, You Know Secondhand"
         },
         {
           "slug": "chapter-5",
@@ -258,7 +258,7 @@
       "slug": "philosophy-of-science",
       "title": "Philosophy of Science",
       "category": "philosophy",
-      "description": "What actually makes a theory scientific \u2014 and why science doesn't progress the way textbooks imply.",
+      "description": "What actually makes a theory scientific — and why science doesn't progress the way textbooks imply.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -266,11 +266,11 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Underdetermination \u2014 When the Same Evidence Fits Multiple Theories"
+          "title": "Chapter 2: Underdetermination — When the Same Evidence Fits Multiple Theories"
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: The Duhem-Quine Problem \u2014 You Never Test a Theory Alone"
+          "title": "Chapter 3: The Duhem-Quine Problem — You Never Test a Theory Alone"
         },
         {
           "slug": "chapter-4",
@@ -302,7 +302,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: The Norns \u2014 Fate That Outranks the Gods"
+          "title": "Chapter 4: The Norns — Fate That Outranks the Gods"
         },
         {
           "slug": "chapter-5",
@@ -314,7 +314,7 @@
       "slug": "cognitive-biases-and-judgment",
       "title": "Cognitive Biases & Judgment",
       "category": "psychology",
-      "description": "Why the mind takes fast, efficient shortcuts \u2014 and the predictable ways those shortcuts misfire.",
+      "description": "Why the mind takes fast, efficient shortcuts — and the predictable ways those shortcuts misfire.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -350,7 +350,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Harlow's Monkeys \u2014 Proving Attachment Isn't About Food"
+          "title": "Chapter 2: Harlow's Monkeys — Proving Attachment Isn't About Food"
         },
         {
           "slug": "chapter-3",
@@ -370,7 +370,7 @@
       "slug": "trauma-and-the-body",
       "title": "Trauma and the Body",
       "category": "psychology",
-      "description": "Why overwhelming experience gets stored as physical sensation, not just memory \u2014 and why talking about it isn't always enough.",
+      "description": "Why overwhelming experience gets stored as physical sensation, not just memory — and why talking about it isn't always enough.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -378,7 +378,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Polyvagal Theory \u2014 Three Nervous System States, Not One Switch"
+          "title": "Chapter 2: Polyvagal Theory — Three Nervous System States, Not One Switch"
         },
         {
           "slug": "chapter-3",
@@ -386,11 +386,11 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: EMDR and Somatic Therapies \u2014 What the Evidence Actually Says"
+          "title": "Chapter 4: EMDR and Somatic Therapies — What the Evidence Actually Says"
         },
         {
           "slug": "chapter-5",
-          "title": "Chapter 5: Post-Traumatic Growth \u2014 Real, Contested, and Often Confused with Resilience"
+          "title": "Chapter 5: Post-Traumatic Growth — Real, Contested, and Often Confused with Resilience"
         }
       ]
     },
@@ -406,15 +406,15 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Asch's Line Task \u2014 Conforming to an Obviously Wrong Answer"
+          "title": "Chapter 2: Asch's Line Task — Conforming to an Obviously Wrong Answer"
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Milgram's Variations \u2014 What Actually Changes Obedience"
+          "title": "Chapter 3: Milgram's Variations — What Actually Changes Obedience"
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Whistleblowers and Resisters \u2014 What Predicts Disobedience"
+          "title": "Chapter 4: Whistleblowers and Resisters — What Predicts Disobedience"
         },
         {
           "slug": "chapter-5",
@@ -426,15 +426,15 @@
       "slug": "memory-and-unreliability",
       "title": "Memory and Its Unreliability",
       "category": "psychology",
-      "description": "Memory doesn't play back like a recording \u2014 it's rebuilt every time, and that rebuilding can go wrong in predictable ways.",
+      "description": "Memory doesn't play back like a recording — it's rebuilt every time, and that rebuilding can go wrong in predictable ways.",
       "chapters": [
         {
           "slug": "chapter-1",
-          "title": "Chapter 1: You Don't Remember \u2014 You Reconstruct"
+          "title": "Chapter 1: You Don't Remember — You Reconstruct"
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Flashbulb Memories \u2014 Vivid, Confident, and Often Wrong"
+          "title": "Chapter 2: Flashbulb Memories — Vivid, Confident, and Often Wrong"
         },
         {
           "slug": "chapter-3",
@@ -454,7 +454,7 @@
       "slug": "moral-psychology",
       "title": "Moral Psychology",
       "category": "psychology",
-      "description": "Why good people who disagree politically usually aren't reasoning differently \u2014 they're valuing different things.",
+      "description": "Why good people who disagree politically usually aren't reasoning differently — they're valuing different things.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -462,7 +462,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Moral Dumbfounding \u2014 When Reasons Run Out But Judgment Doesn't"
+          "title": "Chapter 2: Moral Dumbfounding — When Reasons Run Out But Judgment Doesn't"
         },
         {
           "slug": "chapter-3",
@@ -510,7 +510,7 @@
       "slug": "motivation-and-self-determination",
       "title": "Motivation and Self-Determination",
       "category": "psychology",
-      "description": "Why rewards can quietly kill the motivation they're meant to boost \u2014 and what actually sustains it long-term.",
+      "description": "Why rewards can quietly kill the motivation they're meant to boost — and what actually sustains it long-term.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -518,7 +518,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: When Incentives Backfire \u2014 Motivation Crowding Theory"
+          "title": "Chapter 2: When Incentives Backfire — Motivation Crowding Theory"
         },
         {
           "slug": "chapter-3",
@@ -538,7 +538,7 @@
       "slug": "expertise-and-deliberate-practice",
       "title": "Expertise and Deliberate Practice",
       "category": "psychology",
-      "description": "What genuinely separates world-class skill from 10,000 hours of just showing up \u2014 and the case that specializing early can backfire.",
+      "description": "What genuinely separates world-class skill from 10,000 hours of just showing up — and the case that specializing early can backfire.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -574,7 +574,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: The Critical Period \u2014 What Genie's Case Revealed"
+          "title": "Chapter 2: The Critical Period — What Genie's Case Revealed"
         },
         {
           "slug": "chapter-3",
@@ -582,7 +582,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: The Bilingual Advantage \u2014 Rise, Scrutiny, and a Narrower Claim"
+          "title": "Chapter 4: The Bilingual Advantage — Rise, Scrutiny, and a Narrower Claim"
         },
         {
           "slug": "chapter-5",
@@ -602,7 +602,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Social Loafing \u2014 Ringelmann's Rope and Latan\u00e9's Blindfold"
+          "title": "Chapter 2: Social Loafing — Ringelmann's Rope and Latané's Blindfold"
         },
         {
           "slug": "chapter-3",
@@ -622,7 +622,7 @@
       "slug": "sleep-and-cognition",
       "title": "Sleep and Cognition",
       "category": "psychology",
-      "description": "What your brain is actually doing for a third of your life \u2014 and why skipping it costs more than tiredness.",
+      "description": "What your brain is actually doing for a third of your life — and why skipping it costs more than tiredness.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -638,11 +638,11 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: The Fog Most People Feel \u2014 and Why Some Don't"
+          "title": "Chapter 4: The Fog Most People Feel — and Why Some Don't"
         },
         {
           "slug": "chapter-5",
-          "title": "Chapter 5: A Practical Toolkit \u2014 CBT-I and Working With Your Own Pattern"
+          "title": "Chapter 5: A Practical Toolkit — CBT-I and Working With Your Own Pattern"
         },
         {
           "slug": "chapter-6",
@@ -664,7 +664,7 @@
       "slug": "personality-big-five",
       "title": "Personality (The Big Five)",
       "category": "psychology",
-      "description": "The trait model with actual predictive power \u2014 and why it quietly replaced MBTI in serious psychology.",
+      "description": "The trait model with actual predictive power — and why it quietly replaced MBTI in serious psychology.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -692,7 +692,7 @@
       "slug": "meditation-and-contemplative-practice",
       "title": "Meditation & Contemplative Practice",
       "category": "consciousness-studies",
-      "description": "Real, measurable effects on attention and stress \u2014 but the popular claims often run well ahead of what's actually proven.",
+      "description": "Real, measurable effects on attention and stress — but the popular claims often run well ahead of what's actually proven.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -704,7 +704,7 @@
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: The Dark Night \u2014 When Meditation Goes Wrong"
+          "title": "Chapter 3: The Dark Night — When Meditation Goes Wrong"
         },
         {
           "slug": "chapter-4",
@@ -720,7 +720,7 @@
       "slug": "lucid-dreaming",
       "title": "Lucid Dreaming",
       "category": "consciousness-studies",
-      "description": "Confirmed in the lab in 1975 via a prearranged eye signal sent from inside a dream \u2014 genuine conscious control during REM sleep.",
+      "description": "Confirmed in the lab in 1975 via a prearranged eye signal sent from inside a dream — genuine conscious control during REM sleep.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -728,7 +728,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Training the Doubt \u2014 Reality Testing and Dream Signs"
+          "title": "Chapter 2: Training the Doubt — Reality Testing and Dream Signs"
         },
         {
           "slug": "chapter-3",
@@ -736,7 +736,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Once You're In \u2014 Stability, Control, and False Awakenings"
+          "title": "Chapter 4: Once You're In — Stability, Control, and False Awakenings"
         },
         {
           "slug": "chapter-5",
@@ -748,7 +748,7 @@
         },
         {
           "slug": "chapter-7",
-          "title": "Chapter 7: Dream Yoga \u2014 A Thousand Years Before the EEG"
+          "title": "Chapter 7: Dream Yoga — A Thousand Years Before the EEG"
         },
         {
           "slug": "chapter-8",
@@ -764,7 +764,7 @@
       "slug": "out-of-body-experiences",
       "title": "Out-of-Body Experiences",
       "category": "consciousness-studies",
-      "description": "The experience is real and can now be triggered in a lab \u2014 but what it actually means is where agreement ends.",
+      "description": "The experience is real and can now be triggered in a lab — but what it actually means is where agreement ends.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -772,7 +772,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Sleep Paralysis \u2014 the Everyday Trigger"
+          "title": "Chapter 2: Sleep Paralysis — the Everyday Trigger"
         },
         {
           "slug": "chapter-3",
@@ -792,7 +792,7 @@
       "slug": "near-death-experiences",
       "title": "Near-Death Experiences",
       "category": "consciousness-studies",
-      "description": "A strikingly consistent set of reported experiences during medical crisis \u2014 with genuinely competing explanations for what's producing them.",
+      "description": "A strikingly consistent set of reported experiences during medical crisis — with genuinely competing explanations for what's producing them.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -804,7 +804,7 @@
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Survivor Aftereffects \u2014 Measurable, Durable Change"
+          "title": "Chapter 3: Survivor Aftereffects — Measurable, Durable Change"
         },
         {
           "slug": "chapter-4",
@@ -820,7 +820,7 @@
       "slug": "hypnosis",
       "title": "Hypnosis",
       "category": "consciousness-studies",
-      "description": "The effects are real and measurable \u2014 but the classic \"trance state\" explanation behind them has mostly been abandoned by researchers.",
+      "description": "The effects are real and measurable — but the classic \"trance state\" explanation behind them has mostly been abandoned by researchers.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -828,11 +828,11 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Susceptibility \u2014 A Real, Stable, Measurable Trait"
+          "title": "Chapter 2: Susceptibility — A Real, Stable, Measurable Trait"
         },
         {
           "slug": "chapter-3",
-          "title": "Chapter 3: Hypnoanesthesia \u2014 Surgery Without Chemical Anesthesia"
+          "title": "Chapter 3: Hypnoanesthesia — Surgery Without Chemical Anesthesia"
         },
         {
           "slug": "chapter-4",
@@ -840,7 +840,7 @@
         },
         {
           "slug": "chapter-5",
-          "title": "Chapter 5: Stage Hypnosis Debunked \u2014 Compliance, Selection, and Showmanship"
+          "title": "Chapter 5: Stage Hypnosis Debunked — Compliance, Selection, and Showmanship"
         }
       ]
     },
@@ -848,7 +848,7 @@
       "slug": "placebo-and-nocebo-effects",
       "title": "Placebo & Nocebo Effects",
       "category": "consciousness-studies",
-      "description": "A fake treatment can produce real physiological change \u2014 and a feared one can produce real harm. Neither is \"just in your head\" in the dismissive sense.",
+      "description": "A fake treatment can produce real physiological change — and a feared one can produce real harm. Neither is \"just in your head\" in the dismissive sense.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -856,7 +856,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Open-Label Placebo \u2014 When Honesty Doesn't Kill the Effect"
+          "title": "Chapter 2: Open-Label Placebo — When Honesty Doesn't Kill the Effect"
         },
         {
           "slug": "chapter-3",
@@ -864,7 +864,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Placebo Surgery \u2014 Sham Controls and the Knee That Wasn't Fixed"
+          "title": "Chapter 4: Placebo Surgery — Sham Controls and the Knee That Wasn't Fixed"
         },
         {
           "slug": "chapter-5",
@@ -876,7 +876,7 @@
       "slug": "neuroplasticity",
       "title": "Neuroplasticity",
       "category": "psychology",
-      "description": "Belief and deliberate effort aren't just motivational talk \u2014 under the right conditions, they correspond to real, measurable, if modest, physical changes in brain structure.",
+      "description": "Belief and deliberate effort aren't just motivational talk — under the right conditions, they correspond to real, measurable, if modest, physical changes in brain structure.",
       "chapters": [
         {
           "slug": "chapter-1",
@@ -884,7 +884,7 @@
         },
         {
           "slug": "chapter-2",
-          "title": "Chapter 2: Synaptic Plasticity \u2014 How Neurons Actually Rewire"
+          "title": "Chapter 2: Synaptic Plasticity — How Neurons Actually Rewire"
         },
         {
           "slug": "chapter-3",
@@ -892,7 +892,7 @@
         },
         {
           "slug": "chapter-4",
-          "title": "Chapter 4: Cortical Remapping \u2014 Phantom Limbs and the Mirror Box"
+          "title": "Chapter 4: Cortical Remapping — Phantom Limbs and the Mirror Box"
         },
         {
           "slug": "chapter-5",
@@ -904,7 +904,7 @@
         },
         {
           "slug": "chapter-7",
-          "title": "Chapter 7: Growth Mindset \u2014 What Survives Scrutiny"
+          "title": "Chapter 7: Growth Mindset — What Survives Scrutiny"
         },
         {
           "slug": "chapter-8",
@@ -930,11 +930,11 @@
       "slug": "atomic-habits",
       "title": "Atomic Habits (James Clear)",
       "category": "book-summaries",
-      "description": "The habit-building bestseller \u2014 summarized in a casual, conversational voice built for someone who wants to actually get it, not slog through it.",
+      "description": "The habit-building bestseller — summarized in a casual, conversational voice built for someone who wants to actually get it, not slog through it.",
       "chapters": [
         {
           "slug": "chapter-1",
-          "title": "Atomic Habits \u2014 James Clear"
+          "title": "Atomic Habits — James Clear"
         }
       ]
     },
@@ -942,11 +942,11 @@
       "slug": "mindset",
       "title": "Mindset (Carol Dweck)",
       "category": "book-summaries",
-      "description": "Whether you believe your abilities are fixed or can grow turns out to change how you handle failure, challenge, and criticism \u2014 Dweck's core research, summarized.",
+      "description": "Whether you believe your abilities are fixed or can grow turns out to change how you handle failure, challenge, and criticism — Dweck's core research, summarized.",
       "chapters": [
         {
           "slug": "chapter-1",
-          "title": "Mindset \u2014 Carol Dweck"
+          "title": "Mindset — Carol Dweck"
         }
       ]
     }
