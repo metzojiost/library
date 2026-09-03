@@ -10,6 +10,45 @@
 .jp-tab-btn:hover { border-color: var(--accent); color: var(--accent); }
 .jp-tab-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 
+/* Mode toggle (Learn / Browse) */
+.jp-mode-row { display: flex; gap: 8px; margin-bottom: 18px; }
+.jp-mode-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+  padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink-soft); cursor: pointer;
+}
+.jp-mode-btn:hover { border-color: var(--accent); }
+.jp-mode-btn.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+/* Chunk progress dots */
+.jp-chunk-dots { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+.jp-chunk-dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--border); display: inline-block;
+}
+.jp-chunk-dot.is-done { background: #3f7a45; }
+.jp-chunk-dot.is-current { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.jp-next-chunk-btn { margin-top: 18px; display: block; }
+
+/* Matching game */
+.jp-match-wrap { max-width: 640px; margin: 0 auto; }
+.jp-match-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;
+}
+.jp-match-card {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+  min-height: 64px; padding: 10px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  transition: background 0.15s, border-color 0.15s, opacity 0.3s;
+}
+.jp-match-card:hover:not(:disabled) { border-color: var(--accent); }
+.jp-match-card.is-selected { background: var(--accent-soft); border-color: var(--accent); }
+.jp-match-card.is-matched { opacity: 0; pointer-events: none; }
+.jp-match-card.is-wrong-flash { background: #f6e0dc; border-color: #b1503f; }
+@media (max-width: 560px) {
+  .jp-match-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 .jp-tab-intro {
   font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
   color: var(--ink-soft); margin-bottom: 16px; max-width: 640px;

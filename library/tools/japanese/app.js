@@ -1,5 +1,16 @@
 /* Japanese learning tool — interactive engine.
-   Expects HIRAGANA, KATAKANA, VOCAB_SETS, GRAMMAR_LESSONS to be defined by data.js, loaded before this file. */
+   Expects HIRAGANA, KATAKANA, VOCAB_SETS, GRAMMAR_LESSONS to be defined by data.js, loaded before this file.
+
+   Design notes (why it's built this way):
+   - New material is introduced in chunks of ~5 (matches working-memory chunk-capacity research),
+     tested immediately per chunk, then chunks accumulate — blocked-then-interleaved, not one giant
+     test at the end and not pure interleaving from the start either.
+   - Three retrieval formats (multiple choice, typed recall, matching-pairs game) rather than one
+     repeated format — varied retrieval formats measurably improve retention/transfer over a single
+     repeated format, and typed recall specifically engages the generation effect (producing an
+     answer builds a stronger trace than recognizing one).
+   - A Leitner-box spaced-repetition queue (Review tab) mixes everything that's actually due,
+     old and new together, once individual items are established. */
 
 (function () {
   "use strict";
@@ -7,6 +18,7 @@
   var STORAGE_KEY = "jp-tool-progress-v2";
   var DAY = 86400000;
   var BOX_INTERVALS = [0, DAY, 3 * DAY, 7 * DAY, 14 * DAY, 30 * DAY];
+  var CHUNK_SIZE = 5;
 
   var state = loadState();
 
@@ -15,7 +27,7 @@
       var raw = localStorage.getItem(STORAGE_KEY);
       if (raw) return JSON.parse(raw);
     } catch (e) {}
-    return { items: {}, grammarDone: {} };
+    return { items: {}, grammarDone: {}, chunksLearned: {} };
   }
   function saveState() {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
@@ -44,6 +56,14 @@
     var labels = ["New", "Learning", "Familiar", "Known", "Strong", "Mastered"];
     return labels[box] || "New";
   }
+  function getChunksLearned(key) {
+    return (state.chunksLearned && state.chunksLearned[key]) || 1;
+  }
+  function setChunksLearned(key, n) {
+    if (!state.chunksLearned) state.chunksLearned = {};
+    state.chunksLearned[key] = n;
+    saveState();
+  }
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -56,6 +76,11 @@
   function sample(arr, n) {
     return shuffle(arr).slice(0, n);
   }
+  function chunkList(list, size) {
+    var chunks = [];
+    for (var i = 0; i < list.length; i += size) chunks.push(list.slice(i, i + size));
+    return chunks;
+  }
   function el(tag, cls, html) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -63,107 +88,11 @@
     return e;
   }
 
-  // ---------------- Kana practice (Hiragana / Katakana share this) ----------------
-
-  function buildKanaSet(list, kind) {
-    return list.map(function (item) {
-      return { id: "kana:" + kind + ":" + item.char, char: item.char, romaji: item.romaji, row: item.row };
-    });
+  function kanaNorm(it, kind) {
+    return { id: "kana:" + kind + ":" + it.char, display: it.char, sub: "", answer: it.romaji, promptLabel: "What's the reading?" };
   }
-
-  function renderKanaTab(container, list, kind, label) {
-    container.innerHTML = "";
-    var wrap = el("div", "jp-kana-wrap");
-    container.appendChild(wrap);
-
-    var rows = {};
-    list.forEach(function (it) {
-      if (!rows[it.row]) rows[it.row] = [];
-      rows[it.row].push(it);
-    });
-
-    var intro = el("p", "jp-tab-intro",
-      "Click a character to flip it and see the reading. Progress per character is tracked automatically — " +
-      "characters you get wrong come back sooner, ones you consistently get right come back less often. " +
-      "Use “Quiz me” once a row feels familiar.");
-    wrap.appendChild(intro);
-
-    var controls = el("div", "jp-controls");
-    var quizBtn = el("button", "jp-btn jp-btn-accent", "Quiz me on " + label);
-    controls.appendChild(quizBtn);
-    wrap.appendChild(controls);
-
-    Object.keys(rows).forEach(function (rowKey) {
-      var section = el("div", "jp-kana-row-section");
-      section.appendChild(el("h3", "jp-kana-row-title", rowKey.replace(/-/g, " ")));
-      var grid = el("div", "jp-kana-grid");
-      rows[rowKey].forEach(function (item) {
-        var id = "kana:" + kind + ":" + item.char;
-        var card = el("div", "jp-kana-card");
-        card.dataset.id = id;
-        var box = getProgress(id).box || 0;
-        card.appendChild(el("div", "jp-kana-char", item.char));
-        var back = el("div", "jp-kana-romaji hidden", item.romaji);
-        card.appendChild(back);
-        card.appendChild(el("div", "jp-kana-mastery mastery-" + box, masteryLabel(box)));
-        card.addEventListener("click", function () {
-          back.classList.toggle("hidden");
-        });
-        grid.appendChild(card);
-      });
-      section.appendChild(grid);
-      wrap.appendChild(section);
-    });
-
-    quizBtn.addEventListener("click", function () {
-      runKanaQuiz(container, list, kind, label);
-    });
-  }
-
-  function runKanaQuiz(container, list, kind, label) {
-    var pool = shuffle(list);
-    var idx = 0;
-    var correctCount = 0;
-    var total = Math.min(pool.length, 20);
-
-    function next() {
-      if (idx >= total) {
-        showQuizResult(container, correctCount, total, function () {
-          renderKanaTab(container, list, kind, label);
-        });
-        return;
-      }
-      var item = pool[idx];
-      var id = "kana:" + kind + ":" + item.char;
-      var distractors = sample(list.filter(function (x) { return x.romaji !== item.romaji; }), 3)
-        .map(function (x) { return x.romaji; });
-      var options = shuffle(distractors.concat([item.romaji]));
-
-      container.innerHTML = "";
-      var quizWrap = el("div", "jp-quiz-wrap");
-      quizWrap.appendChild(el("div", "jp-quiz-progress", (idx + 1) + " / " + total));
-      quizWrap.appendChild(el("div", "jp-quiz-char", item.char));
-      quizWrap.appendChild(el("p", "jp-quiz-prompt", "What's the reading?"));
-      var optWrap = el("div", "jp-quiz-options");
-      options.forEach(function (opt) {
-        var btn = el("button", "jp-quiz-option", opt);
-        btn.addEventListener("click", function () {
-          var isCorrect = opt === item.romaji;
-          if (isCorrect) correctCount++;
-          recordAnswer(id, isCorrect);
-          Array.prototype.forEach.call(optWrap.children, function (b) {
-            if (b.textContent === item.romaji) b.classList.add("is-correct");
-            else if (b === btn && !isCorrect) b.classList.add("is-wrong");
-            b.disabled = true;
-          });
-          setTimeout(function () { idx++; next(); }, 650);
-        });
-        optWrap.appendChild(btn);
-      });
-      quizWrap.appendChild(optWrap);
-      container.appendChild(quizWrap);
-    }
-    next();
+  function vocabNorm(w, setId) {
+    return { id: "vocab:" + setId + ":" + w.kana, display: w.kana + (w.kanji ? " (" + w.kanji + ")" : ""), sub: w.romaji, answer: w.en, promptLabel: "What does it mean?" };
   }
 
   function showQuizResult(container, correct, total, onContinue) {
@@ -179,6 +108,269 @@
     btn.addEventListener("click", onContinue);
     wrap.appendChild(btn);
     container.appendChild(wrap);
+  }
+
+  // ---------------- Generic retrieval-format engines (used by Kana, Vocab, Review) ----------------
+
+  function runMCQuiz(container, items, answerPool, onDone) {
+    var idx = 0, correctCount = 0, total = items.length;
+    function next() {
+      if (idx >= total) { showQuizResult(container, correctCount, total, onDone); return; }
+      var item = items[idx];
+      var distractors = sample(answerPool.filter(function (a) { return a !== item.answer; }), 3);
+      var options = shuffle(distractors.concat([item.answer]));
+      container.innerHTML = "";
+      var quizWrap = el("div", "jp-quiz-wrap");
+      quizWrap.appendChild(el("div", "jp-quiz-progress", (idx + 1) + " / " + total));
+      quizWrap.appendChild(el("div", "jp-quiz-char", item.display));
+      if (item.sub) quizWrap.appendChild(el("div", "jp-quiz-subtext", item.sub));
+      quizWrap.appendChild(el("p", "jp-quiz-prompt", item.promptLabel));
+      var optWrap = el("div", "jp-quiz-options");
+      options.forEach(function (opt) {
+        var btn = el("button", "jp-quiz-option", opt);
+        btn.addEventListener("click", function () {
+          var isCorrect = opt === item.answer;
+          if (isCorrect) correctCount++;
+          recordAnswer(item.id, isCorrect);
+          Array.prototype.forEach.call(optWrap.children, function (b) {
+            if (b.textContent === item.answer) b.classList.add("is-correct");
+            else if (b === btn && !isCorrect) b.classList.add("is-wrong");
+            b.disabled = true;
+          });
+          setTimeout(function () { idx++; next(); }, 700);
+        });
+        optWrap.appendChild(btn);
+      });
+      quizWrap.appendChild(optWrap);
+      container.appendChild(quizWrap);
+    }
+    next();
+  }
+
+  function runTypedQuiz(container, items, onDone) {
+    var idx = 0, correctCount = 0, total = items.length;
+    function next() {
+      if (idx >= total) { showQuizResult(container, correctCount, total, onDone); return; }
+      var item = items[idx];
+      container.innerHTML = "";
+      var quizWrap = el("div", "jp-quiz-wrap");
+      quizWrap.appendChild(el("div", "jp-quiz-progress", (idx + 1) + " / " + total));
+      quizWrap.appendChild(el("div", "jp-quiz-char", item.display));
+      quizWrap.appendChild(el("p", "jp-quiz-prompt", item.promptLabel + " (type it — romaji, or English for meaning)"));
+      var inputRow = el("div", "jp-fill-row");
+      var input = document.createElement("input");
+      input.type = "text"; input.className = "jp-fill-input"; input.autocomplete = "off"; input.spellcheck = false;
+      var checkBtn = el("button", "jp-btn jp-fill-check", "Check");
+      inputRow.appendChild(input); inputRow.appendChild(checkBtn);
+      quizWrap.appendChild(inputRow);
+      var feedback = el("div", "jp-fill-feedback hidden");
+      quizWrap.appendChild(feedback);
+      var answered = false;
+      function submit() {
+        if (answered) return;
+        answered = true;
+        var val = input.value.trim().toLowerCase();
+        var isCorrect = val === item.answer.toLowerCase();
+        recordAnswer(item.id, isCorrect);
+        if (isCorrect) correctCount++;
+        input.disabled = true; checkBtn.disabled = true;
+        feedback.classList.remove("hidden");
+        feedback.className = "jp-fill-feedback " + (isCorrect ? "is-correct" : "is-wrong");
+        feedback.textContent = isCorrect ? "Correct." : "Correct answer: " + item.answer;
+        setTimeout(function () { idx++; next(); }, 1000);
+      }
+      checkBtn.addEventListener("click", submit);
+      input.addEventListener("keydown", function (e) { if (e.key === "Enter") submit(); });
+      container.appendChild(quizWrap);
+      input.focus();
+    }
+    next();
+  }
+
+  function runMatchingGame(container, items, onDone) {
+    var pairSet = shuffle(items).slice(0, Math.min(items.length, 8));
+    if (pairSet.length < 2) {
+      container.innerHTML = "";
+      container.appendChild(el("p", "jp-tab-intro", "Not enough items in this chunk for a matching game — try the quiz modes instead."));
+      var backBtn = el("button", "jp-btn jp-btn-accent", "Back");
+      backBtn.addEventListener("click", onDone);
+      container.appendChild(backBtn);
+      return;
+    }
+    var cards = [];
+    pairSet.forEach(function (item, i) {
+      cards.push({ pairId: i, side: "prompt", text: item.display, itemId: item.id });
+      cards.push({ pairId: i, side: "answer", text: item.answer, itemId: item.id });
+    });
+    cards = shuffle(cards);
+    var matchedCount = 0;
+    var selectedIdx = null;
+    var mistakes = 0;
+
+    container.innerHTML = "";
+    var wrap = el("div", "jp-match-wrap");
+    wrap.appendChild(el("p", "jp-quiz-progress", "Match each pair — " + pairSet.length + " pairs."));
+    var grid = el("div", "jp-match-grid");
+    wrap.appendChild(grid);
+    container.appendChild(wrap);
+
+    var cardEls = [];
+    cards.forEach(function (c, idx) {
+      var btn = el("button", "jp-match-card", c.text);
+      btn.addEventListener("click", function () {
+        if (btn.classList.contains("is-matched") || btn.classList.contains("is-selected") || btn.disabled) return;
+        if (selectedIdx === null) {
+          selectedIdx = idx;
+          btn.classList.add("is-selected");
+          return;
+        }
+        var first = cards[selectedIdx];
+        var firstEl = cardEls[selectedIdx];
+        if (selectedIdx === idx) return;
+        if (first.pairId === c.pairId && first.side !== c.side) {
+          firstEl.classList.remove("is-selected");
+          firstEl.classList.add("is-matched");
+          btn.classList.add("is-matched");
+          firstEl.disabled = true; btn.disabled = true;
+          recordAnswer(first.itemId, true);
+          matchedCount++;
+          selectedIdx = null;
+          if (matchedCount === pairSet.length) {
+            setTimeout(function () {
+              showQuizResult(container, pairSet.length, pairSet.length + mistakes, onDone);
+            }, 500);
+          }
+        } else {
+          mistakes++;
+          if (first.pairId === c.pairId) { /* same word both sides clicked, not a real miss */ } else {
+            recordAnswer(first.itemId, false);
+          }
+          firstEl.classList.add("is-wrong-flash");
+          btn.classList.add("is-wrong-flash");
+          (function (fEl, bEl) {
+            setTimeout(function () {
+              fEl.classList.remove("is-selected", "is-wrong-flash");
+              bEl.classList.remove("is-wrong-flash");
+            }, 550);
+          })(firstEl, btn);
+          selectedIdx = null;
+        }
+      });
+      grid.appendChild(btn);
+      cardEls.push(btn);
+    });
+  }
+
+  function renderDrillPicker(container, items, answerPool, onDone) {
+    var picker = el("div", "jp-controls");
+    var mcBtn = el("button", "jp-btn jp-btn-accent", "Multiple choice");
+    var typeBtn = el("button", "jp-btn", "Type it");
+    var matchBtn = el("button", "jp-btn", "Matching game");
+    picker.appendChild(mcBtn); picker.appendChild(typeBtn); picker.appendChild(matchBtn);
+    mcBtn.addEventListener("click", function () { runMCQuiz(container, shuffle(items), answerPool, onDone); });
+    typeBtn.addEventListener("click", function () { runTypedQuiz(container, shuffle(items), onDone); });
+    matchBtn.addEventListener("click", function () { runMatchingGame(container, items, onDone); });
+    return picker;
+  }
+
+  // ---------------- Kana practice (Hiragana / Katakana share this) ----------------
+
+  function renderKanaTab(container, list, kind, label) {
+    container.innerHTML = "";
+    var wrap = el("div", "jp-kana-wrap");
+    var modeRow = el("div", "jp-mode-row");
+    var learnBtn = el("button", "jp-mode-btn is-active", "Learn (progressive)");
+    var browseBtn = el("button", "jp-mode-btn", "Browse all / reference");
+    modeRow.appendChild(learnBtn); modeRow.appendChild(browseBtn);
+    wrap.appendChild(modeRow);
+    var body = el("div", "jp-kana-body");
+    wrap.appendChild(body);
+    container.appendChild(wrap);
+
+    learnBtn.addEventListener("click", function () {
+      learnBtn.classList.add("is-active"); browseBtn.classList.remove("is-active");
+      renderKanaLearn(body, list, kind, label);
+    });
+    browseBtn.addEventListener("click", function () {
+      browseBtn.classList.add("is-active"); learnBtn.classList.remove("is-active");
+      renderKanaBrowse(body, list, kind, label);
+    });
+    renderKanaLearn(body, list, kind, label);
+  }
+
+  function renderKanaLearn(container, list, kind, label) {
+    container.innerHTML = "";
+    var chunks = chunkList(list, CHUNK_SIZE);
+    var learned = Math.min(getChunksLearned(kind), chunks.length);
+    var currentChunkIdx = learned - 1;
+
+    container.appendChild(el("p", "jp-tab-intro",
+      "Chunk " + learned + " of " + chunks.length + " — " + chunks[currentChunkIdx].length + " new characters. " +
+      "Flip each to check the reading, then test yourself before moving on. Small, frequent tests beat one big one at the end."));
+
+    var dots = el("div", "jp-chunk-dots");
+    chunks.forEach(function (c, i) {
+      dots.appendChild(el("span", "jp-chunk-dot" + (i < learned - 1 ? " is-done" : i === currentChunkIdx ? " is-current" : "")));
+    });
+    container.appendChild(dots);
+
+    var grid = el("div", "jp-kana-grid");
+    chunks[currentChunkIdx].forEach(function (item) {
+      var id = "kana:" + kind + ":" + item.char;
+      var box = getProgress(id).box || 0;
+      var card = el("div", "jp-kana-card");
+      card.appendChild(el("div", "jp-kana-char", item.char));
+      var back = el("div", "jp-kana-romaji hidden", item.romaji);
+      card.appendChild(back);
+      card.appendChild(el("div", "jp-kana-mastery mastery-" + box, masteryLabel(box)));
+      card.addEventListener("click", function () { back.classList.toggle("hidden"); });
+      grid.appendChild(card);
+    });
+    container.appendChild(grid);
+
+    container.appendChild(el("h4", "jp-drills-title", "Test chunk " + learned + " (cumulative — includes everything learned so far)"));
+    var cumulative = [].concat.apply([], chunks.slice(0, learned)).map(function (it) { return kanaNorm(it, kind); });
+    var answerPool = list.map(function (it) { return it.romaji; });
+    container.appendChild(renderDrillPicker(container, cumulative, answerPool, function () { renderKanaLearn(container, list, kind, label); }));
+
+    if (currentChunkIdx + 1 < chunks.length) {
+      var nextBtn = el("button", "jp-btn jp-next-chunk-btn", "Next chunk (" + chunks[currentChunkIdx + 1].length + " more) →");
+      nextBtn.addEventListener("click", function () {
+        setChunksLearned(kind, learned + 1);
+        renderKanaLearn(container, list, kind, label);
+      });
+      container.appendChild(nextBtn);
+    } else {
+      container.appendChild(el("p", "jp-tab-intro", "That's all of " + label + ". Keep using Review to keep it fresh."));
+    }
+  }
+
+  function renderKanaBrowse(container, list, kind, label) {
+    container.innerHTML = "";
+    var rows = {};
+    list.forEach(function (it) {
+      if (!rows[it.row]) rows[it.row] = [];
+      rows[it.row].push(it);
+    });
+    container.appendChild(el("p", "jp-tab-intro", "The full " + label + " chart for reference — click any character to flip it."));
+    Object.keys(rows).forEach(function (rowKey) {
+      var section = el("div", "jp-kana-row-section");
+      section.appendChild(el("h3", "jp-kana-row-title", rowKey.replace(/-/g, " ")));
+      var grid = el("div", "jp-kana-grid");
+      rows[rowKey].forEach(function (item) {
+        var id = "kana:" + kind + ":" + item.char;
+        var box = getProgress(id).box || 0;
+        var card = el("div", "jp-kana-card");
+        card.appendChild(el("div", "jp-kana-char", item.char));
+        var back = el("div", "jp-kana-romaji hidden", item.romaji);
+        card.appendChild(back);
+        card.appendChild(el("div", "jp-kana-mastery mastery-" + box, masteryLabel(box)));
+        card.addEventListener("click", function () { back.classList.toggle("hidden"); });
+        grid.appendChild(card);
+      });
+      section.appendChild(grid);
+      container.appendChild(section);
+    });
   }
 
   // ---------------- Vocabulary ----------------
@@ -215,83 +407,92 @@
     wrap.appendChild(back);
     wrap.appendChild(el("h3", "jp-set-title", set.title));
 
-    var controls = el("div", "jp-controls");
-    var quizBtn = el("button", "jp-btn jp-btn-accent", "Quiz me on this set");
-    controls.appendChild(quizBtn);
-    wrap.appendChild(controls);
-
-    var list = el("div", "jp-vocab-list");
-    set.words.forEach(function (w) {
-      var id = "vocab:" + set.id + ":" + w.kana;
-      var box = getProgress(id).box || 0;
-      var card = el("div", "jp-vocab-card");
-      card.innerHTML =
-        '<div class="jp-vocab-main">' +
-          '<span class="jp-vocab-kana">' + w.kana + '</span>' +
-          (w.kanji ? '<span class="jp-vocab-kanji">' + w.kanji + '</span>' : '') +
-          '<span class="jp-vocab-romaji">' + w.romaji + '</span>' +
-        '</div>' +
-        '<div class="jp-vocab-en">' + w.en + '</div>' +
-        '<div class="jp-vocab-example">' +
-          '<span class="jp-vocab-example-jp">' + w.example_jp + '</span>' +
-          '<span class="jp-vocab-example-romaji">' + w.example_romaji + '</span>' +
-          '<span class="jp-vocab-example-en">' + w.example_en + '</span>' +
-        '</div>' +
-        '<div class="jp-kana-mastery mastery-' + box + '">' + masteryLabel(box) + '</div>';
-      list.appendChild(card);
-    });
-    wrap.appendChild(list);
+    var modeRow = el("div", "jp-mode-row");
+    var learnBtn = el("button", "jp-mode-btn is-active", "Learn (progressive)");
+    var browseBtn = el("button", "jp-mode-btn", "Browse all");
+    modeRow.appendChild(learnBtn); modeRow.appendChild(browseBtn);
+    wrap.appendChild(modeRow);
+    var body = el("div", "jp-vocab-body");
+    wrap.appendChild(body);
     container.appendChild(wrap);
 
-    quizBtn.addEventListener("click", function () {
-      runVocabQuiz(container, set);
+    learnBtn.addEventListener("click", function () {
+      learnBtn.classList.add("is-active"); browseBtn.classList.remove("is-active");
+      renderVocabLearn(body, set);
     });
+    browseBtn.addEventListener("click", function () {
+      browseBtn.classList.add("is-active"); learnBtn.classList.remove("is-active");
+      renderVocabBrowse(body, set);
+    });
+    renderVocabLearn(body, set);
   }
 
-  function runVocabQuiz(container, set) {
-    var pool = shuffle(set.words);
-    var idx = 0;
-    var correctCount = 0;
-    var total = pool.length;
-    var allWords = VOCAB_SETS.reduce(function (acc, s) { return acc.concat(s.words); }, []);
+  function vocabCard(w, id) {
+    var box = getProgress(id).box || 0;
+    var card = el("div", "jp-vocab-card");
+    card.innerHTML =
+      '<div class="jp-vocab-main">' +
+        '<span class="jp-vocab-kana">' + w.kana + '</span>' +
+        (w.kanji ? '<span class="jp-vocab-kanji">' + w.kanji + '</span>' : '') +
+        '<span class="jp-vocab-romaji">' + w.romaji + '</span>' +
+      '</div>' +
+      '<div class="jp-vocab-en">' + w.en + '</div>' +
+      '<div class="jp-vocab-example">' +
+        '<span class="jp-vocab-example-jp">' + w.example_jp + '</span>' +
+        '<span class="jp-vocab-example-romaji">' + w.example_romaji + '</span>' +
+        '<span class="jp-vocab-example-en">' + w.example_en + '</span>' +
+      '</div>' +
+      '<div class="jp-kana-mastery mastery-' + box + '">' + masteryLabel(box) + '</div>';
+    return card;
+  }
 
-    function next() {
-      if (idx >= total) {
-        showQuizResult(container, correctCount, total, function () { renderVocabSet(container, set); });
-        return;
-      }
-      var w = pool[idx];
-      var id = "vocab:" + set.id + ":" + w.kana;
-      var distractors = sample(allWords.filter(function (x) { return x.en !== w.en; }), 3)
-        .map(function (x) { return x.en; });
-      var options = shuffle(distractors.concat([w.en]));
+  function renderVocabLearn(container, set) {
+    container.innerHTML = "";
+    var chunks = chunkList(set.words, CHUNK_SIZE);
+    var key = "vocab_" + set.id;
+    var learned = Math.min(getChunksLearned(key), chunks.length);
+    var currentChunkIdx = learned - 1;
 
-      container.innerHTML = "";
-      var quizWrap = el("div", "jp-quiz-wrap");
-      quizWrap.appendChild(el("div", "jp-quiz-progress", (idx + 1) + " / " + total));
-      quizWrap.appendChild(el("div", "jp-quiz-char jp-quiz-char-word", w.kana + (w.kanji ? " (" + w.kanji + ")" : "")));
-      quizWrap.appendChild(el("div", "jp-quiz-subtext", w.romaji));
-      quizWrap.appendChild(el("p", "jp-quiz-prompt", "What does it mean?"));
-      var optWrap = el("div", "jp-quiz-options");
-      options.forEach(function (opt) {
-        var btn = el("button", "jp-quiz-option", opt);
-        btn.addEventListener("click", function () {
-          var isCorrect = opt === w.en;
-          if (isCorrect) correctCount++;
-          recordAnswer(id, isCorrect);
-          Array.prototype.forEach.call(optWrap.children, function (b) {
-            if (b.textContent === w.en) b.classList.add("is-correct");
-            else if (b === btn && !isCorrect) b.classList.add("is-wrong");
-            b.disabled = true;
-          });
-          setTimeout(function () { idx++; next(); }, 750);
-        });
-        optWrap.appendChild(btn);
+    container.appendChild(el("p", "jp-tab-intro",
+      "Chunk " + learned + " of " + chunks.length + " — " + chunks[currentChunkIdx].length + " new words. Read each with its example sentence, then test before moving on."));
+
+    var dots = el("div", "jp-chunk-dots");
+    chunks.forEach(function (c, i) {
+      dots.appendChild(el("span", "jp-chunk-dot" + (i < learned - 1 ? " is-done" : i === currentChunkIdx ? " is-current" : "")));
+    });
+    container.appendChild(dots);
+
+    var list = el("div", "jp-vocab-list");
+    chunks[currentChunkIdx].forEach(function (w) {
+      list.appendChild(vocabCard(w, "vocab:" + set.id + ":" + w.kana));
+    });
+    container.appendChild(list);
+
+    container.appendChild(el("h4", "jp-drills-title", "Test chunk " + learned + " (cumulative)"));
+    var cumulative = [].concat.apply([], chunks.slice(0, learned)).map(function (w) { return vocabNorm(w, set.id); });
+    var answerPool = set.words.map(function (w) { return w.en; });
+    container.appendChild(renderDrillPicker(container, cumulative, answerPool, function () { renderVocabLearn(container, set); }));
+
+    if (currentChunkIdx + 1 < chunks.length) {
+      var nextBtn = el("button", "jp-btn jp-next-chunk-btn", "Next chunk (" + chunks[currentChunkIdx + 1].length + " more) →");
+      nextBtn.addEventListener("click", function () {
+        setChunksLearned(key, learned + 1);
+        renderVocabLearn(container, set);
       });
-      quizWrap.appendChild(optWrap);
-      container.appendChild(quizWrap);
+      container.appendChild(nextBtn);
+    } else {
+      container.appendChild(el("p", "jp-tab-intro", "That's the whole set. Keep using Review to keep it fresh."));
     }
-    next();
+  }
+
+  function renderVocabBrowse(container, set) {
+    container.innerHTML = "";
+    container.appendChild(el("p", "jp-tab-intro", "The full set for reference."));
+    var list = el("div", "jp-vocab-list");
+    set.words.forEach(function (w) {
+      list.appendChild(vocabCard(w, "vocab:" + set.id + ":" + w.kana));
+    });
+    container.appendChild(list);
   }
 
   // ---------------- Grammar ----------------
@@ -398,20 +599,26 @@
   function collectDueItems() {
     var items = [];
     HIRAGANA.forEach(function (c) {
-      var id = "kana:hira:" + c.char;
-      if (isDue(id)) items.push({ kind: "hira", id: id, char: c.char, answer: c.romaji, promptLabel: "What's the reading?" });
+      var n = kanaNorm(c, "hira");
+      if (isDue(n.id)) items.push(n);
     });
     KATAKANA.forEach(function (c) {
-      var id = "kana:kata:" + c.char;
-      if (isDue(id)) items.push({ kind: "kata", id: id, char: c.char, answer: c.romaji, promptLabel: "What's the reading?" });
+      var n = kanaNorm(c, "kata");
+      if (isDue(n.id)) items.push(n);
     });
     VOCAB_SETS.forEach(function (set) {
       set.words.forEach(function (w) {
-        var id = "vocab:" + set.id + ":" + w.kana;
-        if (isDue(id)) items.push({ kind: "vocab", id: id, char: w.kana + (w.kanji ? " (" + w.kanji + ")" : ""), answer: w.en, promptLabel: "What does it mean?" });
+        var n = vocabNorm(w, set.id);
+        if (isDue(n.id)) items.push(n);
       });
     });
     return items;
+  }
+
+  function allAnswerPool() {
+    return HIRAGANA.map(function (c) { return c.romaji; })
+      .concat(KATAKANA.map(function (c) { return c.romaji; }))
+      .concat(VOCAB_SETS.reduce(function (acc, s) { return acc.concat(s.words.map(function (w) { return w.en; })); }, []));
   }
 
   function renderReviewTab(container) {
@@ -427,57 +634,9 @@
       container.appendChild(wrap);
       return;
     }
-    var startBtn = el("button", "jp-btn jp-btn-accent", "Start review (" + Math.min(due.length, 25) + ")");
-    startBtn.addEventListener("click", function () { runReviewQuiz(container, due); });
-    wrap.appendChild(startBtn);
+    var pool = shuffle(due).slice(0, 25);
     container.appendChild(wrap);
-  }
-
-  function runReviewQuiz(container, dueItems) {
-    var pool = shuffle(dueItems).slice(0, 25);
-    var idx = 0;
-    var correctCount = 0;
-    var total = pool.length;
-    var allAnswerPools = {
-      hira: HIRAGANA.map(function (c) { return c.romaji; }),
-      kata: KATAKANA.map(function (c) { return c.romaji; }),
-      vocab: VOCAB_SETS.reduce(function (acc, s) { return acc.concat(s.words.map(function (w) { return w.en; })); }, [])
-    };
-
-    function next() {
-      if (idx >= total) {
-        showQuizResult(container, correctCount, total, function () { renderReviewTab(container); });
-        return;
-      }
-      var item = pool[idx];
-      var distractors = sample(allAnswerPools[item.kind].filter(function (a) { return a !== item.answer; }), 3);
-      var options = shuffle(distractors.concat([item.answer]));
-
-      container.innerHTML = "";
-      var quizWrap = el("div", "jp-quiz-wrap");
-      quizWrap.appendChild(el("div", "jp-quiz-progress", (idx + 1) + " / " + total));
-      quizWrap.appendChild(el("div", "jp-quiz-char", item.char));
-      quizWrap.appendChild(el("p", "jp-quiz-prompt", item.promptLabel));
-      var optWrap = el("div", "jp-quiz-options");
-      options.forEach(function (opt) {
-        var btn = el("button", "jp-quiz-option", opt);
-        btn.addEventListener("click", function () {
-          var isCorrect = opt === item.answer;
-          if (isCorrect) correctCount++;
-          recordAnswer(item.id, isCorrect);
-          Array.prototype.forEach.call(optWrap.children, function (b) {
-            if (b.textContent === item.answer) b.classList.add("is-correct");
-            else if (b === btn && !isCorrect) b.classList.add("is-wrong");
-            b.disabled = true;
-          });
-          setTimeout(function () { idx++; next(); }, 700);
-        });
-        optWrap.appendChild(btn);
-      });
-      quizWrap.appendChild(optWrap);
-      container.appendChild(quizWrap);
-    }
-    next();
+    container.appendChild(renderDrillPicker(container, pool, allAnswerPool(), function () { renderReviewTab(container); }));
   }
 
   // ---------------- Sentence Builder puzzle ----------------
