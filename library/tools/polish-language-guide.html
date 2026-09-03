@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polish Language Guide — My Library</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .lang-wrap { max-width: 820px; margin: 0 auto; font-family: "Segoe UI", system-ui, sans-serif; }
+  .lang-intro { color: var(--ink-soft); margin-bottom: 20px; }
+
+  .toc {
+    background: var(--paper); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 20px; margin-bottom: 28px;
+  }
+  .toc h2 { margin-top: 0; font-size: 1rem; }
+  .toc-module { margin-bottom: 10px; }
+  .toc-module-title { font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 4px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { font-size: 0.9rem; margin-bottom: 2px; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  .module-heading {
+    margin-top: 44px; padding-bottom: 8px; border-bottom: 2px solid var(--accent);
+    font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+  }
+
+  .hour {
+    margin-top: 30px; padding-top: 6px; scroll-margin-top: 20px;
+  }
+  .hour h3 { margin-bottom: 4px; }
+  .hour-time { font-size: 0.78rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+
+  table.lang-table {
+    width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem;
+  }
+  table.lang-table th, table.lang-table td {
+    text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border);
+  }
+  table.lang-table th { background: var(--accent-soft); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  table.lang-table td.pl { font-weight: 600; }
+  table.lang-table td.pron { color: var(--ink-soft); font-style: italic; }
+
+  .examples { margin: 14px 0; }
+  .ex-line { margin-bottom: 6px; }
+  .ex-pl { font-weight: 600; }
+  .ex-en { color: var(--ink-soft); }
+
+  .caveat {
+    background: var(--accent-soft); border-left: 4px solid var(--accent);
+    padding: 10px 14px; margin: 16px 0; font-size: 0.9rem; border-radius: 0 6px 6px 0;
+  }
+
+  .quiz { margin: 16px 0; }
+  .quiz-item {
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; margin-bottom: 8px;
+  }
+  .quiz-item summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+  .quiz-item .answer { margin-top: 8px; color: var(--accent); font-size: 0.9rem; }
+
+  .back-to-top { display: inline-block; margin-top: 8px; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../index.html">Library</a> / <span>Polish Language Guide</span></nav>
+</header>
+<main>
+<h1 class="page-title" id="top">Polish Language Guide</h1>
+<p class="lang-intro">A beginner's first ~20 hours with Polish — pronunciation, the core grammar that makes Polish famously tricky (and how to survive it), everyday vocabulary, and enough real sentence patterns to actually function. Polish is a genuinely hard language for English speakers, mostly because of its case system — this guide doesn't hide that, it just breaks it into pieces small enough to actually stick.</p>
+
+<nav class="toc">
+  <h2>Contents — 20 hours across 5 modules</h2>
+  <div class="toc-module">
+    <div class="toc-module-title">A. Foundations (Hours 1–4)</div>
+    <ol>
+      <li><a href="#hour1">Hour 1: The Alphabet &amp; Pronunciation</a></li>
+      <li><a href="#hour2">Hour 2: Greetings &amp; Politeness</a></li>
+      <li><a href="#hour3">Hour 3: Numbers &amp; Time</a></li>
+      <li><a href="#hour4">Hour 4: Pronouns, "To Be" &amp; "To Have"</a></li>
+    </ol>
+  </div>
+  <div class="toc-module">
+    <div class="toc-module-title">B. Grammar Core (Hours 5–8)</div>
+    <ol>
+      <li><a href="#hour5">Hour 5: Noun Gender</a></li>
+      <li><a href="#hour6">Hour 6: The Case System — Why It Exists</a></li>
+      <li><a href="#hour7">Hour 7: Nominative &amp; Accusative in Practice</a></li>
+      <li><a href="#hour8">Hour 8: Genitive Case &amp; Negation</a></li>
+    </ol>
+  </div>
+  <div class="toc-module">
+    <div class="toc-module-title">C. Verbs &amp; Sentences (Hours 9–12)</div>
+    <ol>
+      <li><a href="#hour9">Hour 9: Present Tense Conjugation Patterns</a></li>
+      <li><a href="#hour10">Hour 10: Common Everyday Verbs</a></li>
+      <li><a href="#hour11">Hour 11: Asking Questions</a></li>
+      <li><a href="#hour12">Hour 12: Adjectives &amp; Agreement</a></li>
+    </ol>
+  </div>
+  <div class="toc-module">
+    <div class="toc-module-title">D. Practical Situations (Hours 13–16)</div>
+    <ol>
+      <li><a href="#hour13">Hour 13: Food &amp; Restaurants</a></li>
+      <li><a href="#hour14">Hour 14: Shopping &amp; Numbers in Context</a></li>
+      <li><a href="#hour15">Hour 15: Directions &amp; Prepositions</a></li>
+      <li><a href="#hour16">Hour 16: Family &amp; Describing People</a></li>
+    </ol>
+  </div>
+  <div class="toc-module">
+    <div class="toc-module-title">E. Putting It Together (Hours 17–20)</div>
+    <ol>
+      <li><a href="#hour17">Hour 17: Past Tense (and Why It's Gendered)</a></li>
+      <li><a href="#hour18">Hour 18: Future Tense &amp; a Warning About Aspect</a></li>
+      <li><a href="#hour19">Hour 19: Small Talk &amp; Weather</a></li>
+      <li><a href="#hour20">Hour 20: Survival Phrase Pack &amp; Self-Test</a></li>
+    </ol>
+  </div>
+</nav>
+
+<h2 class="module-heading" id="moduleA">A. Foundations</h2>
+
+<section class="hour" id="hour1">
+<h3>Hour 1: The Alphabet &amp; Pronunciation</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Polish uses the Latin alphabet plus nine extra letters, and — unlike English — its spelling is almost completely regular: once you learn the rules, you can pronounce nearly any Polish word correctly on sight. There's no q, v, or x (they only show up in foreign names). The good news up front: <strong>stress is almost always on the second-to-last syllable</strong>, with very few exceptions. You basically never have to guess.</p>
+
+<table class="lang-table">
+<tr><th>Letter/digraph</th><th>Sounds like</th><th>Example</th></tr>
+<tr><td class="pl">c</td><td>"ts" as in ca<u>ts</u></td><td>co (what)</td></tr>
+<tr><td class="pl">cz</td><td>"ch" as in <u>ch</u>urch (hard)</td><td>czas (time)</td></tr>
+<tr><td class="pl">ć / ci</td><td>soft "ch", like <u>ch</u>eese but gentler</td><td>ćwiczenie (exercise)</td></tr>
+<tr><td class="pl">sz</td><td>"sh" as in <u>sh</u>op</td><td>szkoła (school)</td></tr>
+<tr><td class="pl">ś / si</td><td>soft "sh"</td><td>proszę (please)</td></tr>
+<tr><td class="pl">rz / ż</td><td>like the "s" in plea<u>s</u>ure</td><td>rzeka (river), żona (wife)</td></tr>
+<tr><td class="pl">ź / zi</td><td>soft version of rz/ż</td><td>źle (badly)</td></tr>
+<tr><td class="pl">dz</td><td>"ds" as in la<u>ds</u></td><td>dzwon (bell)</td></tr>
+<tr><td class="pl">dź / dzi</td><td>soft "j" as in <u>j</u>eans</td><td>dziękuję (thank you)</td></tr>
+<tr><td class="pl">dż</td><td>hard "j" as in <u>j</u>ungle</td><td>dżem (jam)</td></tr>
+<tr><td class="pl">ch / h</td><td>same sound — like Scottish "lo<u>ch</u>"</td><td>chleb (bread), herbata (tea)</td></tr>
+<tr><td class="pl">ł</td><td>English "w"</td><td>ładny (pretty) — sounds like "wadny"</td></tr>
+<tr><td class="pl">w</td><td>English "v"</td><td>woda (water) — sounds like "voda"</td></tr>
+<tr><td class="pl">ą</td><td>nasal "on", like French "bon"</td><td>są (they are)</td></tr>
+<tr><td class="pl">ę</td><td>nasal "en", softer at word end</td><td>proszę (please)</td></tr>
+<tr><td class="pl">ó</td><td>same as "u" — sounds like "oo"</td><td>ósmy (eighth)</td></tr>
+<tr><td class="pl">ń</td><td>soft "ny" as in ca<u>ny</u>on</td><td>koń (horse)</td></tr>
+</table>
+
+<p>Notice the pattern: a letter with an accent (ć, ś, ź, ń) is the "soft" version of its plain counterpart, and the two-letter versions (ci, si, zi, ni) are the same soft sound written differently depending on what follows. You don't need to memorize the rule for which spelling to use yet — just recognize both forms sound the same.</p>
+
+<div class="quiz">
+<details class="quiz-item"><summary>How would you pronounce "Warszawa" (the Polish name for Warsaw)?</summary><span class="answer">var-SHA-va — sz = "sh", w = "v", stress on the second-to-last syllable.</span></details>
+<details class="quiz-item"><summary>What does "ł" sound like, and what does that make "Łódź" (a Polish city) sound like?</summary><span class="answer">"ł" = English "w". Łódź sounds roughly like "wooj" (the ó = "oo", dź = soft "j").</span></details>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour2">
+<h3>Hour 2: Greetings &amp; Politeness</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Polish has a formality distinction English lost centuries ago: you address strangers, elders, and anyone you're not close with using <strong>pan</strong> (sir/Mr.) or <strong>pani</strong> (madam/Mrs./Ms.) instead of "you" — roughly like the French <em>vous</em> or Spanish <em>usted</em>. Getting this right matters more in Polish social etiquette than most beginners expect.</p>
+
+<table class="lang-table">
+<tr><th>Polish</th><th>Pronunciation</th><th>English</th></tr>
+<tr><td class="pl">Cześć</td><td class="pron">cheshch</td><td>Hi / Bye (informal)</td></tr>
+<tr><td class="pl">Dzień dobry</td><td class="pron">jen DOH-bri</td><td>Good day (formal hello, any time before evening)</td></tr>
+<tr><td class="pl">Dobry wieczór</td><td class="pron">DOH-bri VYE-choor</td><td>Good evening</td></tr>
+<tr><td class="pl">Do widzenia</td><td class="pron">doh veed-ZEN-ya</td><td>Goodbye (formal)</td></tr>
+<tr><td class="pl">Proszę</td><td class="pron">PROH-sheh</td><td>Please / here you go / you're welcome</td></tr>
+<tr><td class="pl">Dziękuję</td><td class="pron">jen-KOO-yeh</td><td>Thank you</td></tr>
+<tr><td class="pl">Przepraszam</td><td class="pron">psheh-PRAH-sham</td><td>Excuse me / I'm sorry</td></tr>
+<tr><td class="pl">Tak / Nie</td><td class="pron">tahk / nyeh</td><td>Yes / No</td></tr>
+<tr><td class="pl">Pan / Pani</td><td class="pron">pahn / PAH-nee</td><td>Sir / Madam (formal "you")</td></tr>
+<tr><td class="pl">Miło mi</td><td class="pron">MEE-woh mee</td><td>Nice to meet you</td></tr>
+</table>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Dzień dobry, jak się pan/pani ma?</span> — <span class="ex-en">Good day, how are you? (formal, to a man/woman)</span></div>
+<div class="ex-line"><span class="ex-pl">Cześć, jak się masz?</span> — <span class="ex-en">Hi, how are you? (informal)</span></div>
+<div class="ex-line"><span class="ex-pl">Dziękuję, dobrze. A ty?</span> — <span class="ex-en">Thanks, good. And you?</span></div>
+</div>
+
+<div class="caveat"><strong>Honest heads-up:</strong> Polish formality isn't just "pan/pani vs. you" — the whole sentence often restructures around it (verbs go into third person, as if talking <em>about</em> someone rather than to them: "jak się <em>pani</em> <em>ma</em>?" literally "how does the madam have herself?"). You don't need to master this yet — just recognize it and default to formal with strangers.</div>
+
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour3">
+<h3>Hour 3: Numbers &amp; Time</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Number</th><th>Polish</th><th>Number</th><th>Polish</th></tr>
+<tr><td>0</td><td class="pl">zero</td><td>10</td><td class="pl">dziesięć</td></tr>
+<tr><td>1</td><td class="pl">jeden</td><td>11</td><td class="pl">jedenaście</td></tr>
+<tr><td>2</td><td class="pl">dwa</td><td>12</td><td class="pl">dwanaście</td></tr>
+<tr><td>3</td><td class="pl">trzy</td><td>13</td><td class="pl">trzynaście</td></tr>
+<tr><td>4</td><td class="pl">cztery</td><td>20</td><td class="pl">dwadzieścia</td></tr>
+<tr><td>5</td><td class="pl">pięć</td><td>30</td><td class="pl">trzydzieści</td></tr>
+<tr><td>6</td><td class="pl">sześć</td><td>40</td><td class="pl">czterdzieści</td></tr>
+<tr><td>7</td><td class="pl">siedem</td><td>50</td><td class="pl">pięćdziesiąt</td></tr>
+<tr><td>8</td><td class="pl">osiem</td><td>100</td><td class="pl">sto</td></tr>
+<tr><td>9</td><td class="pl">dziewięć</td><td>1000</td><td class="pl">tysiąc</td></tr>
+</table>
+
+<p>Numbers above 20 stack the way English does (dwadzieścia jeden = "twenty one"). One quirk worth flagging now, gently: the noun after a number changes form depending on the number — "1 dom" (one house) but "2 domy" (two houses) but "5 domów" (five houses). You'll get comfortable with this gradually across the case-related hours ahead; for now just recognize that nouns after numbers 5 and up often end differently than you'd expect.</p>
+
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">poniedziałek, wtorek, środa, czwartek, piątek, sobota, niedziela</td><td>Monday–Sunday</td></tr>
+<tr><td class="pl">dziś / jutro / wczoraj</td><td>today / tomorrow / yesterday</td></tr>
+<tr><td class="pl">Która godzina?</td><td>What time is it?</td></tr>
+<tr><td class="pl">Jest ósma.</td><td>It's eight o'clock.</td></tr>
+</table>
+
+<div class="quiz">
+<details class="quiz-item"><summary>How would you say "three houses" — dom (house) becomes domy in the plural?</summary><span class="answer">trzy domy — numbers 2, 3, 4 (and compounds ending in them) take this plural form.</span></details>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour4">
+<h3>Hour 4: Pronouns, "To Be" &amp; "To Have"</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Two verbs to learn cold before anything else, because they're everywhere: <strong>być</strong> (to be) and <strong>mieć</strong> (to have). One genuinely convenient Polish feature: subject pronouns (ja, ty, on...) are usually dropped, because the verb ending already tells you who's doing the action — much like Spanish or Italian.</p>
+
+<table class="lang-table">
+<tr><th>Pronoun</th><th>być (to be)</th><th>mieć (to have)</th></tr>
+<tr><td class="pl">ja (I)</td><td>jestem</td><td>mam</td></tr>
+<tr><td class="pl">ty (you, sg.)</td><td>jesteś</td><td>masz</td></tr>
+<tr><td class="pl">on/ona/ono (he/she/it)</td><td>jest</td><td>ma</td></tr>
+<tr><td class="pl">my (we)</td><td>jesteśmy</td><td>mamy</td></tr>
+<tr><td class="pl">wy (you, pl.)</td><td>jesteście</td><td>macie</td></tr>
+<tr><td class="pl">oni/one (they)</td><td>są</td><td>mają</td></tr>
+</table>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Jestem zmęczony.</span> — <span class="ex-en">I am tired. (a man speaking — note the -y ending, more on adjective gender in Hour 12)</span></div>
+<div class="ex-line"><span class="ex-pl">Mam psa.</span> — <span class="ex-en">I have a dog.</span></div>
+<div class="ex-line"><span class="ex-pl">Czy masz czas?</span> — <span class="ex-en">Do you have time? ("czy" flags a yes/no question — see Hour 11)</span></div>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<h2 class="module-heading" id="moduleB">B. Grammar Core</h2>
+
+<section class="hour" id="hour5">
+<h3>Hour 5: Noun Gender</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Every Polish noun has a gender — masculine, feminine, or neuter — and gender affects the endings of adjectives, past-tense verbs, and more, so it's worth building the instinct early. The good news: gender is usually predictable from the noun's ending.</p>
+
+<table class="lang-table">
+<tr><th>Gender</th><th>Usually ends in</th><th>Examples</th></tr>
+<tr><td class="pl">Masculine</td><td>a consonant</td><td>dom (house), pies (dog), stół (table)</td></tr>
+<tr><td class="pl">Feminine</td><td>-a (mostly)</td><td>kobieta (woman), szkoła (school), książka (book)</td></tr>
+<tr><td class="pl">Neuter</td><td>-o, -e, or -ę</td><td>dziecko (child), mieszkanie (apartment), imię (first name)</td></tr>
+</table>
+
+<p>Exceptions exist (a handful of masculine nouns end in -a, like "mężczyzna" — man — because they refer to male people), but the pattern above correctly predicts gender for the large majority of nouns you'll meet early on.</p>
+
+<div class="quiz">
+<details class="quiz-item"><summary>What gender is "kawa" (coffee), and how do you know?</summary><span class="answer">Feminine — it ends in -a.</span></details>
+<details class="quiz-item"><summary>What gender is "okno" (window)?</summary><span class="answer">Neuter — it ends in -o.</span></details>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour6">
+<h3>Hour 6: The Case System — Why It Exists</h3>
+<p class="hour-time">~60 minutes</p>
+<p>This is the hour most guides skip past too quickly, and it's the single biggest reason Polish has a reputation for being hard. Polish nouns, pronouns, and adjectives change their <em>ending</em> depending on their grammatical role in the sentence — a system called <span class="term">cases</span>. English does a faint version of this with pronouns ("I" vs "me" vs "my"), but Polish does it to every noun, all the time, across seven cases.</p>
+
+<table class="lang-table">
+<tr><th>Case</th><th>Rough job</th><th>Example question it answers</th></tr>
+<tr><td class="pl">Mianownik (Nominative)</td><td>the subject — who/what is doing the action</td><td>Who? What?</td></tr>
+<tr><td class="pl">Dopełniacz (Genitive)</td><td>possession, negation, "of"</td><td>Whose? Of what?</td></tr>
+<tr><td class="pl">Celownik (Dative)</td><td>the indirect object — who something is given/said to</td><td>To whom?</td></tr>
+<tr><td class="pl">Biernik (Accusative)</td><td>the direct object — who/what receives the action</td><td>Whom? What?</td></tr>
+<tr><td class="pl">Narzędnik (Instrumental)</td><td>"by means of," "with"</td><td>With what/whom?</td></tr>
+<tr><td class="pl">Miejscownik (Locative)</td><td>location, always after certain prepositions</td><td>Where?</td></tr>
+<tr><td class="pl">Wołacz (Vocative)</td><td>directly addressing someone</td><td>(calling out to someone)</td></tr>
+</table>
+
+<div class="caveat"><strong>Honest heads-up:</strong> you will not master all seven cases in 20 hours, and no beginner guide that promises that is being straight with you. What you <em>can</em> do in this time is get genuinely comfortable with the three most useful ones — Nominative, Accusative, and Genitive — which cover a huge share of everyday sentences. The next two hours focus entirely on those three; the rest can wait.</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour7">
+<h3>Hour 7: Nominative &amp; Accusative in Practice</h3>
+<p class="hour-time">~75 minutes</p>
+<p><strong>Nominative</strong> is the "dictionary form" — the form you'll find in a phrasebook, and the one used for the subject of a sentence. <strong>Accusative</strong> is used for the direct object (the thing receiving the action) and is one of the more frequently used cases day to day, e.g. after verbs like "mieć" (to have), "lubić" (to like), "widzieć" (to see).</p>
+
+<p>The good news: for most feminine and neuter nouns, and virtually all masculine <em>inanimate</em> nouns, the accusative form is <strong>identical to the nominative</strong>. The one place it reliably changes is feminine nouns ending in -a, where -a becomes -ę, and masculine <em>animate</em> nouns (people, animals), which take a different accusative ending.</p>
+
+<table class="lang-table">
+<tr><th>Nominative</th><th>Accusative</th><th>Example sentence</th></tr>
+<tr><td class="pl">książka (book, fem.)</td><td>książkę</td><td>Czytam książkę. (I'm reading a book.)</td></tr>
+<tr><td class="pl">kawa (coffee, fem.)</td><td>kawę</td><td>Lubię kawę. (I like coffee.)</td></tr>
+<tr><td class="pl">dom (house, masc. inanimate)</td><td>dom (unchanged)</td><td>Mam dom. (I have a house.)</td></tr>
+<tr><td class="pl">pies (dog, masc. animate)</td><td>psa</td><td>Mam psa. (I have a dog.)</td></tr>
+<tr><td class="pl">okno (window, neuter)</td><td>okno (unchanged)</td><td>Widzę okno. (I see a window.)</td></tr>
+</table>
+
+<div class="quiz">
+<details class="quiz-item"><summary>How would you say "I like tea" — herbata (tea) is feminine, ending in -a?</summary><span class="answer">Lubię herbatę — the -a of herbata becomes -ę in the accusative.</span></details>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour8">
+<h3>Hour 8: Genitive Case &amp; Negation</h3>
+<p class="hour-time">~75 minutes</p>
+<p>The genitive case is worth its own hour because of one rule that trips up almost every English-speaking learner: <strong>Polish negation switches the object into the genitive case</strong>, not the accusative you'd expect. "I have a dog" uses accusative (Mam psa), but "I don't have a dog" switches to genitive (Nie mam psa — here it happens to look the same, but with feminine nouns the difference is obvious).</p>
+
+<table class="lang-table">
+<tr><th>Nominative</th><th>Genitive</th><th>Example</th></tr>
+<tr><td class="pl">kawa (coffee)</td><td>kawy</td><td>Nie mam kawy. (I don't have coffee.)</td></tr>
+<tr><td class="pl">czas (time)</td><td>czasu</td><td>Nie mam czasu. (I don't have time.)</td></tr>
+<tr><td class="pl">pieniądze (money)</td><td>pieniędzy</td><td>Nie mam pieniędzy. (I don't have money.)</td></tr>
+</table>
+
+<p>Genitive also handles possession (the equivalent of English "'s" or "of"), and is required after common prepositions like <strong>bez</strong> (without), <strong>dla</strong> (for), and <strong>do</strong> (to/toward).</p>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">dom mojej siostry</span> — <span class="ex-en">my sister's house (literally "house of my sister")</span></div>
+<div class="ex-line"><span class="ex-pl">Idę do sklepu.</span> — <span class="ex-en">I'm going to the store. (sklep → sklepu)</span></div>
+<div class="ex-line"><span class="ex-pl">Kawa bez cukru.</span> — <span class="ex-en">Coffee without sugar. (cukier → cukru)</span></div>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<h2 class="module-heading" id="moduleC">C. Verbs &amp; Sentences</h2>
+
+<section class="hour" id="hour9">
+<h3>Hour 9: Present Tense Conjugation Patterns</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Most Polish verbs fall into a handful of predictable conjugation patterns. Learning these three covers the large majority of verbs you'll use as a beginner.</p>
+
+<table class="lang-table">
+<tr><th>Pronoun</th><th>czytać (to read)</th><th>mówić (to speak)</th><th>pracować (to work)</th></tr>
+<tr><td class="pl">ja</td><td>czytam</td><td>mówię</td><td>pracuję</td></tr>
+<tr><td class="pl">ty</td><td>czytasz</td><td>mówisz</td><td>pracujesz</td></tr>
+<tr><td class="pl">on/ona</td><td>czyta</td><td>mówi</td><td>pracuje</td></tr>
+<tr><td class="pl">my</td><td>czytamy</td><td>mówimy</td><td>pracujemy</td></tr>
+<tr><td class="pl">wy</td><td>czytacie</td><td>mówicie</td><td>pracujecie</td></tr>
+<tr><td class="pl">oni/one</td><td>czytają</td><td>mówią</td><td>pracują</td></tr>
+</table>
+
+<p>Notice the pattern: infinitives ending in <strong>-ować</strong> (a huge, very common category) all conjugate like "pracować," with the -ować swapped for -uję/-ujesz/-uje etc. That one pattern alone unlocks hundreds of verbs.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour10">
+<h3>Hour 10: Common Everyday Verbs</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Infinitive</th><th>Meaning</th><th>"I ___" form</th></tr>
+<tr><td class="pl">chcieć</td><td>to want</td><td>chcę</td></tr>
+<tr><td class="pl">iść</td><td>to go (on foot)</td><td>idę</td></tr>
+<tr><td class="pl">jechać</td><td>to go (by vehicle)</td><td>jadę</td></tr>
+<tr><td class="pl">robić</td><td>to do/make</td><td>robię</td></tr>
+<tr><td class="pl">lubić</td><td>to like</td><td>lubię</td></tr>
+<tr><td class="pl">widzieć</td><td>to see</td><td>widzę</td></tr>
+<tr><td class="pl">rozumieć</td><td>to understand</td><td>rozumiem</td></tr>
+<tr><td class="pl">wiedzieć</td><td>to know (a fact)</td><td>wiem</td></tr>
+<tr><td class="pl">jeść</td><td>to eat</td><td>jem</td></tr>
+<tr><td class="pl">pić</td><td>to drink</td><td>piję</td></tr>
+</table>
+<p>Polish distinguishes "iść" (going somewhere on foot, right now) from "jechać" (going by car, bus, train) — English collapses both into "go," so this split takes a little getting used to but becomes automatic quickly.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour11">
+<h3>Hour 11: Asking Questions</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">co?</td><td>what?</td></tr>
+<tr><td class="pl">kto?</td><td>who?</td></tr>
+<tr><td class="pl">gdzie?</td><td>where?</td></tr>
+<tr><td class="pl">kiedy?</td><td>when?</td></tr>
+<tr><td class="pl">dlaczego?</td><td>why?</td></tr>
+<tr><td class="pl">jak?</td><td>how?</td></tr>
+<tr><td class="pl">ile?</td><td>how much/many?</td></tr>
+<tr><td class="pl">czy...?</td><td>(turns a statement into a yes/no question)</td></tr>
+</table>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Gdzie jest dworzec?</span> — <span class="ex-en">Where is the train station?</span></div>
+<div class="ex-line"><span class="ex-pl">Czy mówisz po angielsku?</span> — <span class="ex-en">Do you speak English?</span></div>
+<div class="ex-line"><span class="ex-pl">Ile to kosztuje?</span> — <span class="ex-en">How much does this cost?</span></div>
+</div>
+<p>"Czy" has no direct English equivalent — it just flags "a yes/no question is coming," similar to the upside-down question mark that opens a question in Spanish. Word order in Polish is also much more flexible than English, so "czy" is often the clearest signal that a question, not a statement, is being made.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour12">
+<h3>Hour 12: Adjectives &amp; Agreement</h3>
+<p class="hour-time">~60 minutes</p>
+<p>Polish adjectives change their ending to match the gender of the noun they describe — a pattern called <span class="term">agreement</span>.</p>
+
+<table class="lang-table">
+<tr><th>Gender</th><th>Typical ending</th><th>Example</th></tr>
+<tr><td class="pl">Masculine</td><td>-y (or -i)</td><td>ładny dom (a nice house)</td></tr>
+<tr><td class="pl">Feminine</td><td>-a</td><td>ładna kobieta (a nice woman)</td></tr>
+<tr><td class="pl">Neuter</td><td>-e</td><td>ładne dziecko (a nice child)</td></tr>
+</table>
+
+<p>This also applies to describing yourself: a man says "jestem zmęczony" (I'm tired), a woman says "jestem zmęczona" — same word, different ending, matching the speaker's own gender.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<h2 class="module-heading" id="moduleD">D. Practical Situations</h2>
+
+<section class="hour" id="hour13">
+<h3>Hour 13: Food &amp; Restaurants</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">Poproszę o menu.</td><td>Could I get the menu, please.</td></tr>
+<tr><td class="pl">Co pan/pani poleca?</td><td>What do you recommend? (formal)</td></tr>
+<tr><td class="pl">Poproszę [item].</td><td>I'll have [item], please.</td></tr>
+<tr><td class="pl">Smacznego!</td><td>Enjoy your meal!</td></tr>
+<tr><td class="pl">Rachunek, proszę.</td><td>The bill, please.</td></tr>
+<tr><td class="pl">chleb / woda / herbata / kawa</td><td>bread / water / tea / coffee</td></tr>
+<tr><td class="pl">smaczne / niesmaczne</td><td>tasty / not tasty</td></tr>
+</table>
+<p>"Poproszę" (literally "I would ask for") is the single most useful word for ordering anything politely — you can point at almost anything and say "poproszę" and be understood perfectly.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour14">
+<h3>Hour 14: Shopping &amp; Numbers in Context</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">Ile to kosztuje?</td><td>How much does this cost?</td></tr>
+<tr><td class="pl">To kosztuje dwadzieścia złotych.</td><td>This costs twenty złoty.</td></tr>
+<tr><td class="pl">Czy mogę zapłacić kartą?</td><td>Can I pay by card?</td></tr>
+<tr><td class="pl">gotówka / karta</td><td>cash / card</td></tr>
+<tr><td class="pl">za drogie / tanie</td><td>too expensive / cheap</td></tr>
+</table>
+<p>Poland's currency is the złoty (zł), split into 100 grosze. Like most Polish nouns, "złoty" itself changes form after numbers: 1 złoty, 2–4 złote, 5+ złotych — the same numeral-agreement pattern from Hour 3, now in a situation you'll actually hit constantly.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour15">
+<h3>Hour 15: Directions &amp; Prepositions</h3>
+<p class="hour-time">~75 minutes</p>
+<p>Polish prepositions each demand a specific case from the noun that follows — a direct consequence of everything covered in Module B. The good news: a handful of high-frequency prepositions cover most everyday directions.</p>
+
+<table class="lang-table">
+<tr><th>Preposition</th><th>Meaning</th><th>Case it takes</th><th>Example</th></tr>
+<tr><td class="pl">w</td><td>in</td><td>Locative</td><td>w Polsce (in Poland)</td></tr>
+<tr><td class="pl">na</td><td>on/at</td><td>Locative</td><td>na stole (on the table)</td></tr>
+<tr><td class="pl">do</td><td>to, toward</td><td>Genitive</td><td>do sklepu (to the store)</td></tr>
+<tr><td class="pl">z</td><td>from / with</td><td>Genitive / Instrumental</td><td>z Polski (from Poland)</td></tr>
+<tr><td class="pl">obok</td><td>next to</td><td>Genitive</td><td>obok dworca (next to the station)</td></tr>
+</table>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Idź prosto.</span> — <span class="ex-en">Go straight ahead.</span></div>
+<div class="ex-line"><span class="ex-pl">Skręć w lewo / w prawo.</span> — <span class="ex-en">Turn left / right.</span></div>
+<div class="ex-line"><span class="ex-pl">To jest blisko / daleko.</span> — <span class="ex-en">It's close / far.</span></div>
+</div>
+<div class="caveat"><strong>Honest heads-up:</strong> the Locative and Instrumental cases haven't been formally introduced yet — you're seeing their endings here in fixed, memorizable phrases before the underlying grammar. That's a deliberate, common language-teaching shortcut: useful patterns first, full system later.</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour16">
+<h3>Hour 16: Family &amp; Describing People</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">matka / ojciec</td><td>mother / father</td></tr>
+<tr><td class="pl">siostra / brat</td><td>sister / brother</td></tr>
+<tr><td class="pl">żona / mąż</td><td>wife / husband</td></tr>
+<tr><td class="pl">syn / córka</td><td>son / daughter</td></tr>
+<tr><td class="pl">babcia / dziadek</td><td>grandma / grandpa</td></tr>
+<tr><td class="pl">przyjaciel / przyjaciółka</td><td>friend (male / female)</td></tr>
+</table>
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">To jest moja siostra.</span> — <span class="ex-en">This is my sister.</span></div>
+<div class="ex-line"><span class="ex-pl">Mam dwóch braci.</span> — <span class="ex-en">I have two brothers.</span></div>
+<div class="ex-line"><span class="ex-pl">On jest wysoki, ona jest niska.</span> — <span class="ex-en">He is tall, she is short.</span></div>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<h2 class="module-heading" id="moduleE">E. Putting It Together</h2>
+
+<section class="hour" id="hour17">
+<h3>Hour 17: Past Tense (and Why It's Gendered)</h3>
+<p class="hour-time">~75 minutes</p>
+<p>Here's a genuinely distinctive Polish feature: the past tense agrees with the <em>speaker's own gender</em>, not just the grammatical gender of a noun. Formed from the infinitive stem plus -ł- and a personal ending.</p>
+
+<table class="lang-table">
+<tr><th>Pronoun</th><th>robić (to do) — past</th><th>Meaning</th></tr>
+<tr><td class="pl">ja (man speaking)</td><td>robiłem</td><td>I did</td></tr>
+<tr><td class="pl">ja (woman speaking)</td><td>robiłam</td><td>I did</td></tr>
+<tr><td class="pl">ty (to a man)</td><td>robiłeś</td><td>you did</td></tr>
+<tr><td class="pl">ty (to a woman)</td><td>robiłaś</td><td>you did</td></tr>
+<tr><td class="pl">on</td><td>robił</td><td>he did</td></tr>
+<tr><td class="pl">ona</td><td>robiła</td><td>she did</td></tr>
+</table>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Byłem w Polsce.</span> — <span class="ex-en">I was in Poland. (a man speaking)</span></div>
+<div class="ex-line"><span class="ex-pl">Byłam w Polsce.</span> — <span class="ex-en">I was in Poland. (a woman speaking)</span></div>
+</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour18">
+<h3>Hour 18: Future Tense &amp; a Warning About Aspect</h3>
+<p class="hour-time">~60 minutes</p>
+<p>For everyday plans, the simplest future is <strong>będę + infinitive</strong>: "będę czytać" (I will read), "będę pracować" (I will work) — this pattern works for any verb of this type and is enough to get you through most beginner conversations about the future.</p>
+
+<div class="examples">
+<div class="ex-line"><span class="ex-pl">Będę czytać książkę.</span> — <span class="ex-en">I will read a book.</span></div>
+<div class="ex-line"><span class="ex-pl">Jutro będziemy pracować.</span> — <span class="ex-en">Tomorrow we will work.</span></div>
+</div>
+
+<div class="caveat"><strong>Honest heads-up — this is the biggest thing left out of this guide on purpose:</strong> Polish verbs come in pairs called <span class="term">aspect</span> — an "imperfective" version (ongoing/repeated actions, like czytać) and a "perfective" version (a single completed action, like przeczytać) — and which one you use changes the meaning in ways English simply doesn't mark. Mastering aspect is widely considered the hardest part of Polish grammar, genuinely takes years, and can't be meaningfully compressed into a beginner guide. The będę + infinitive pattern above will get you through 20 hours' worth of conversations just fine — treat aspect as the next real mountain once this guide is done, not something to worry about yet.</div>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour19">
+<h3>Hour 19: Small Talk &amp; Weather</h3>
+<p class="hour-time">~60 minutes</p>
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">Jaka jest dzisiaj pogoda?</td><td>What's the weather like today?</td></tr>
+<tr><td class="pl">Jest słonecznie / pada deszcz / jest zimno</td><td>It's sunny / it's raining / it's cold</td></tr>
+<tr><td class="pl">Skąd jesteś?</td><td>Where are you from?</td></tr>
+<tr><td class="pl">Jestem z [country].</td><td>I'm from [country].</td></tr>
+<tr><td class="pl">Ile masz lat?</td><td>How old are you? (literally "how many years do you have")</td></tr>
+<tr><td class="pl">Mam [number] lat.</td><td>I am [number] years old.</td></tr>
+</table>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="hour" id="hour20">
+<h3>Hour 20: Survival Phrase Pack &amp; Self-Test</h3>
+<p class="hour-time">~60 minutes</p>
+<p>A last, dense round-up of the phrases most worth having ready without thinking, plus a mixed self-test pulling from everything above.</p>
+
+<table class="lang-table">
+<tr><th>Polish</th><th>English</th></tr>
+<tr><td class="pl">Nie rozumiem.</td><td>I don't understand.</td></tr>
+<tr><td class="pl">Czy mówi pan/pani po angielsku?</td><td>Do you speak English? (formal)</td></tr>
+<tr><td class="pl">Proszę mówić wolniej.</td><td>Please speak more slowly.</td></tr>
+<tr><td class="pl">Pomocy!</td><td>Help!</td></tr>
+<tr><td class="pl">Gdzie jest toaleta?</td><td>Where is the bathroom?</td></tr>
+<tr><td class="pl">Wszystko w porządku.</td><td>Everything is fine / OK.</td></tr>
+<tr><td class="pl">Na zdrowie!</td><td>Cheers! / Bless you! (both uses)</td></tr>
+</table>
+
+<div class="quiz">
+<details class="quiz-item"><summary>How do you say "I don't have money" — using negation + genitive from Hour 8?</summary><span class="answer">Nie mam pieniędzy.</span></details>
+<details class="quiz-item"><summary>A woman wants to say "I was tired" — what's the correct past-tense, gender-agreeing form?</summary><span class="answer">Byłam zmęczona. (byłam = past "to be," feminine; zmęczona = feminine adjective ending)</span></details>
+<details class="quiz-item"><summary>How would you politely order a coffee?</summary><span class="answer">Poproszę kawę. (accusative: kawa → kawę, from Hour 7)</span></details>
+<details class="quiz-item"><summary>What's the honest, non-oversold summary of what's left after these 20 hours?</summary><span class="answer">Solid instincts for the three most useful cases, present tense, gendered past tense, and everyday conversation — with Dative, Instrumental, Locative in full, and verb aspect, as the real next mountains. That's a genuinely strong beginner foundation, not a finish line.</span></details>
+</div>
+
+<p class="lang-intro">That's the first 20 hours. Powodzenia — good luck.</p>
+<a class="back-to-top" href="#top">↑ Back to top</a>
+</section>
+
+</main>
+</div>
+</body>
+</html>

@@ -236,6 +236,13 @@ def build_library_index(manifest, idx, progress):
       <span class="badge">tool</span>
     </div>
   </a>
+  <a class="topic-card" href="tools/polish-language-guide.html">
+    <div class="topic-card-title">Polish Language Guide</div>
+    <div class="topic-card-desc">A beginner's first ~20 hours with Polish — pronunciation, core grammar, and everyday phrases.</div>
+    <div class="topic-card-meta">
+      <span class="badge">guide</span>
+    </div>
+  </a>
   </div>
 </section>"""
 
