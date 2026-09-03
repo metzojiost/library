@@ -251,10 +251,17 @@ def build_library_index(manifest, idx, progress):
     </div>
   </a>
   <a class="topic-card" href="tools/polish-language-guide.html">
-    <div class="topic-card-title">Polish Language Guide</div>
-    <div class="topic-card-desc">A beginner's first ~20 hours with Polish — pronunciation, core grammar, and everyday phrases.</div>
+    <div class="topic-card-title">Polish Language Guide (static)</div>
+    <div class="topic-card-desc">A beginner's first ~20 hours with Polish, as a read-through guide — pronunciation, core grammar, and everyday phrases.</div>
     <div class="topic-card-meta">
       <span class="badge">guide</span>
+    </div>
+  </a>
+  <a class="topic-card" href="tools/polish/index.html">
+    <div class="topic-card-title">Polish, From Zero (interactive)</div>
+    <div class="topic-card-desc">The same 20-hour curriculum as chunked drilling — multiple choice, typed recall, matching games, and spaced-repetition review.</div>
+    <div class="topic-card-meta">
+      <span class="badge">tool</span>
     </div>
   </a>
   </div>

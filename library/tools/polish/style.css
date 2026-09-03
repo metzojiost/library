@@ -1,0 +1,214 @@
+.pl-tab-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+  border-bottom: 1px solid var(--border); padding-bottom: 14px;
+}
+.pl-tab-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink-soft); cursor: pointer;
+}
+.pl-tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+.pl-tab-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+/* Mode toggle (Learn / Browse) */
+.pl-mode-row { display: flex; gap: 8px; margin-bottom: 18px; }
+.pl-mode-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+  padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink-soft); cursor: pointer;
+}
+.pl-mode-btn:hover { border-color: var(--accent); }
+.pl-mode-btn.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+/* Chunk progress dots */
+.pl-chunk-dots { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+.pl-chunk-dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--border); display: inline-block;
+}
+.pl-chunk-dot.is-done { background: #3f7a45; }
+.pl-chunk-dot.is-current { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.pl-next-chunk-btn { margin-top: 18px; display: block; }
+
+/* Matching game */
+.pl-match-wrap { max-width: 640px; margin: 0 auto; }
+.pl-match-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;
+}
+.pl-match-card {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+  min-height: 64px; padding: 10px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  transition: background 0.15s, border-color 0.15s, opacity 0.3s;
+}
+.pl-match-card:hover:not(:disabled) { border-color: var(--accent); }
+.pl-match-card.is-selected { background: var(--accent-soft); border-color: var(--accent); }
+.pl-match-card.is-matched { opacity: 0; pointer-events: none; }
+.pl-match-card.is-wrong-flash { background: #f6e0dc; border-color: #b1503f; }
+@media (max-width: 560px) {
+  .pl-match-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.pl-tab-intro {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.92rem;
+  color: var(--ink-soft); margin-bottom: 16px; max-width: 640px;
+}
+.pl-controls { display: flex; gap: 10px; margin-bottom: 20px; }
+.pl-btn {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+  padding: 9px 18px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.pl-btn:hover { border-color: var(--accent); }
+.pl-btn-accent { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.pl-btn-accent:hover { opacity: 0.9; }
+.pl-back-btn { margin-bottom: 16px; }
+
+/* Alphabet grid */
+.pl-kana-row-section { margin-bottom: 28px; }
+.pl-kana-row-title {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+  text-transform: capitalize; color: var(--accent); letter-spacing: 0.03em;
+  margin: 0 0 10px;
+}
+.pl-kana-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px;
+}
+.pl-kana-card {
+  background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 8px; text-align: center; cursor: pointer; position: relative;
+  min-height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.pl-kana-card:hover { border-color: var(--accent); }
+.pl-kana-char { font-size: 1.9rem; line-height: 1; }
+.pl-kana-romaji {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.8rem; color: var(--accent); font-weight: 600;
+  padding: 0 4px;
+}
+.pl-kana-romaji.hidden { visibility: hidden; }
+.pl-kana-mastery {
+  position: absolute; top: 4px; right: 6px; font-size: 0.62rem;
+  font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 0.03em;
+}
+.mastery-0 { color: var(--gloss); }
+.mastery-1, .mastery-2 { color: #b98a3d; }
+.mastery-3, .mastery-4 { color: var(--accent); }
+.mastery-5 { color: #3f7a45; }
+
+/* Quiz */
+.pl-quiz-wrap { max-width: 480px; margin: 20px auto; text-align: center; }
+.pl-quiz-progress {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 18px;
+}
+.pl-quiz-char { font-size: 2.4rem; margin-bottom: 6px; }
+.pl-quiz-subtext { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft); margin-bottom: 6px; }
+.pl-quiz-prompt {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem; color: var(--ink-soft); margin: 10px 0 20px;
+}
+.pl-quiz-options {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.pl-quiz-option {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+  padding: 14px 10px; border-radius: 10px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.pl-quiz-option:hover:not(:disabled) { border-color: var(--accent); }
+.pl-quiz-option:disabled { cursor: default; }
+.pl-quiz-option.is-correct { background: #dfeee0; border-color: #3f7a45; color: #2e5c33; font-weight: 700; }
+.pl-quiz-option.is-wrong { background: #f6e0dc; border-color: #b1503f; color: #8a3a2c; }
+
+.pl-quiz-result { max-width: 420px; margin: 40px auto; text-align: center; }
+.pl-quiz-result-score { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+.pl-quiz-result-msg {
+  font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink-soft); margin-bottom: 24px;
+}
+
+/* Vocab */
+.pl-set-grid { margin-top: 4px; }
+.pl-set-card { cursor: pointer; }
+.pl-set-title { font-size: 1.3rem; margin: 0 0 18px; }
+.pl-vocab-list { display: flex; flex-direction: column; gap: 12px; }
+.pl-vocab-card {
+  background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; position: relative;
+}
+.pl-vocab-main { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.pl-vocab-kana { font-size: 1.3rem; font-weight: 700; }
+.pl-vocab-romaji {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; color: var(--ink-soft); font-style: italic;
+}
+.pl-vocab-en {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem; margin-bottom: 10px;
+}
+.pl-vocab-example {
+  display: flex; flex-direction: column; gap: 2px; padding-top: 10px; border-top: 1px dashed var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem;
+}
+.pl-vocab-example-jp { color: var(--ink); font-weight: 600; }
+.pl-vocab-example-en { color: var(--gloss); }
+.pl-vocab-card .pl-kana-mastery { top: 14px; right: 16px; }
+
+/* Grammar */
+.pl-grammar-explanation { margin-bottom: 26px; }
+.pl-grammar-explanation p { margin: 1em 0; }
+.pl-drills-title {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--accent); margin-bottom: 14px;
+}
+.pl-drill {
+  background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 14px;
+}
+.pl-drill-prompt { font-weight: 600; margin: 0 0 12px; }
+.pl-drill-options { grid-template-columns: 1fr; max-width: 460px; }
+.pl-fill-row { display: flex; gap: 10px; }
+.pl-fill-input {
+  flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.95rem;
+}
+.pl-fill-check { white-space: nowrap; }
+.pl-fill-feedback {
+  margin-top: 10px; font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem; font-weight: 600;
+}
+.pl-fill-feedback.is-correct { color: #3f7a45; }
+.pl-fill-feedback.is-wrong { color: #a1503f; }
+.pl-drill-explain {
+  margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border);
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.88rem; color: var(--ink-soft);
+}
+.hidden { display: none !important; }
+
+/* Review */
+.pl-review-count {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 1.1rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 18px;
+}
+
+/* Sentence builder */
+.pl-builder-en {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 1.05rem; color: var(--ink);
+  margin-bottom: 20px; font-style: italic;
+}
+.pl-builder-slots {
+  display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; margin-bottom: 18px;
+  padding: 10px; border: 1px dashed var(--border); border-radius: var(--radius);
+}
+.pl-builder-bank { display: flex; flex-wrap: wrap; gap: 8px; }
+.pl-builder-chip {
+  font-family: "Segoe UI", system-ui, sans-serif; font-size: 0.9rem;
+  padding: 8px 14px; border-radius: 8px; border: 1.5px solid var(--border);
+  background: var(--paper); color: var(--ink); cursor: pointer;
+}
+.pl-builder-chip:hover { border-color: var(--accent); }
+.pl-builder-chip.is-chosen { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pl-builder-blank {
+  display: inline-block; min-width: 40px; border-bottom: 2px solid var(--border);
+  color: var(--gloss); font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+@media (max-width: 560px) {
+  .pl-quiz-options { grid-template-columns: 1fr; }
+  .pl-kana-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+}
