@@ -266,7 +266,7 @@ def build_library_index(manifest, idx, progress):
   </a>
   <a class="topic-card" href="tools/crete-home-savings-guide.html">
     <div class="topic-card-title">Home Savings Guide (Crete)</div>
-    <div class="topic-card-desc">DIY and paid home upgrades to cut electricity, water, and cooling costs — with cost and payback estimates.</div>
+    <div class="topic-card-desc">Home upgrades, a village garden plan with realistic (not theoretical) savings, and DIY household products.</div>
     <div class="topic-card-meta">
       <span class="badge">guide</span>
     </div>
