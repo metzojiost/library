@@ -271,6 +271,13 @@ def build_library_index(manifest, idx, progress):
       <span class="badge">guide</span>
     </div>
   </a>
+  <a class="topic-card" href="tools/garden-robot-plan.html">
+    <div class="topic-card-title">Garden Automation Robot</div>
+    <div class="topic-card-desc">A navigation + compute architecture plan for a real garden robot, sized to the 6,000m² plot — hardware, software diagrams, and a Design Studio to plan each robot together.</div>
+    <div class="topic-card-meta">
+      <span class="badge">guide</span>
+    </div>
+  </a>
   </div>
 </section>"""
 

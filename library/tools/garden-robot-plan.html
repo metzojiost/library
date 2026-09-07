@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garden Automation Robot — My Library</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .grb-wrap { max-width: 900px; margin: 0 auto; font-family: "Segoe UI", system-ui, sans-serif; }
+  .grb-intro { color: var(--ink-soft); margin-bottom: 14px; }
+
+  .caveat {
+    background: var(--accent-soft); border-left: 4px solid var(--accent);
+    padding: 10px 14px; margin: 16px 0 24px; font-size: 0.9rem; border-radius: 0 6px 6px 0;
+  }
+
+  .section-heading {
+    margin-top: 44px; padding-bottom: 8px; border-bottom: 2px solid var(--accent);
+    font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+  }
+
+  .item { margin-top: 26px; }
+  .item h3 { margin-bottom: 4px; }
+  .item h4 { margin: 20px 0 4px; font-size: 1rem; }
+  .item h4:first-child { margin-top: 0; }
+  .item-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
+  .stat-badge {
+    font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;
+    background: var(--paper); border: 1px solid var(--border); color: var(--ink-soft);
+  }
+  .stat-badge.cost { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .stat-badge.spec { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .stat-badge.optional { background: #efe6d8; border-color: var(--gloss); color: var(--ink-soft); }
+
+  table.summary-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+  table.summary-table th, table.summary-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  table.summary-table th { background: var(--accent-soft); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  table.summary-table td.num { white-space: nowrap; }
+  .overflow-x { overflow-x: auto; }
+  .rules-note { font-size: 0.85rem; color: var(--ink-soft); margin-top: 24px; }
+
+  .diagram-wrap {
+    background: var(--paper); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px; margin: 20px 0; overflow-x: auto;
+  }
+  .diagram-wrap svg { display: block; margin: 0 auto; min-width: 640px; }
+  .diagram-caption { text-align: center; font-size: 0.8rem; color: var(--ink-soft); margin-top: 8px; }
+
+  /* Design Studio */
+  .robot-card {
+    background: var(--paper); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 20px; margin: 20px 0;
+  }
+  .robot-card-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+  .robot-card-head h3 { margin: 0; }
+  .status-badge {
+    font-size: 0.72rem; padding: 4px 10px; border-radius: 999px; white-space: nowrap;
+    text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600;
+  }
+  .status-badge.designing { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+  .status-badge.idea { background: var(--badge-bg); color: var(--ink-soft); border: 1px solid var(--border); }
+  .status-badge.future { background: #efe6d8; color: var(--gloss); border: 1px solid var(--gloss); }
+  .status-badge.ready { background: #e2efe4; color: #2e5c33; border: 1px solid #3f7a45; }
+
+  .robot-card h4 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin: 16px 0 6px; }
+  .robot-card h4:first-of-type { margin-top: 14px; }
+  .robot-card ul { margin: 4px 0 0; padding-left: 20px; }
+  .robot-card li { margin-bottom: 4px; }
+
+  table.decision-log { width: 100%; border-collapse: collapse; margin: 6px 0 0; font-size: 0.85rem; }
+  table.decision-log th, table.decision-log td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.decision-log th { font-size: 0.72rem; text-transform: uppercase; color: var(--ink-soft); }
+  table.decision-log td.date { white-space: nowrap; color: var(--ink-soft); font-size: 0.8rem; }
+
+  .next-step {
+    margin-top: 14px; padding: 10px 14px; background: var(--accent-soft);
+    border-radius: 6px; font-size: 0.88rem;
+  }
+  .next-step strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="../index.html">📚 My Library</a>
+  <nav class="breadcrumbs"><a href="../index.html">Library</a> / <span>Garden Automation Robot</span></nav>
+</header>
+<main>
+<div class="grb-wrap">
+
+<h1 class="page-title">Garden Automation Robot — Project Plan</h1>
+<p class="grb-intro">A living plan for a garden robot built as a reusable navigation + compute foundation, not a single-task machine — so each new capability (weed cutting, then whatever comes after) reuses the driving, mapping, and command-parsing work already done instead of starting over. Grounded in the actual 6,000m² village garden from the <a href="crete-home-savings-guide.html">Home Savings Guide</a>: annual beds, a young orchard, free-ranging chickens, and a compost/cover-crop strip — separate from the vineyard and olive grove elsewhere on the property, which stay out of scope here for now.</p>
+
+<div class="caveat"><strong>How to read this page:</strong> the first sections lay out the architecture, hardware, and build order as a reference. The last section, "Design Studio," is where the actual robot-by-robot decisions get made — most of it starts as open questions on purpose, to be filled in over future sessions rather than guessed at now.</div>
+
+<h2 class="section-heading">Your Garden, As the Robot Would See It</h2>
+<div class="item">
+<p>Everything the robot does — navigation, the waypoint gazetteer, the first weeding task — is anchored to the real layout of the 6,000m² plot, not a generic garden. Roughly, from what the Home Savings Guide already established: a cluster of annual beds (tomatoes, sweet corn, pumpkin/squash, dry legumes, herbs and alliums) that get replanted each season and are the most labor-hungry part of the garden; a young orchard (lemon, orange, olive, pomegranate, almond, fig) planted in rows with wide spacing, still years from full canopy; chickens free-ranging through both rather than penned in one spot; and a cover-crop/compost strip along an edge. The vineyard and existing olive grove live elsewhere on the property and aren't part of this robot's territory.</p>
+
+<div class="diagram-wrap">
+<svg viewBox="0 0 900 560" role="img" aria-labelledby="gardenmap-title gardenmap-desc">
+<title id="gardenmap-title">Schematic map of the 6,000m² garden plot</title>
+<desc id="gardenmap-desc">A bird's-eye schematic showing the house and brain server in one corner, annual vegetable beds, a young orchard with tree rows, a free-range chicken zone overlapping both, a compost/cover-crop strip along one edge, two WiFi access points with overlapping coverage circles, and a charging dock roughly central.</desc>
+
+<rect x="10" y="10" width="880" height="540" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+
+<!-- Plot boundary -->
+<rect x="40" y="40" width="820" height="480" rx="6" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="2 0"/>
+
+<!-- WiFi coverage circles (drawn first, under everything) -->
+<circle cx="150" cy="120" r="220" fill="var(--accent)" opacity="0.06"/>
+<circle cx="700" cy="440" r="220" fill="var(--accent)" opacity="0.06"/>
+
+<!-- House + brain server, top-left -->
+<rect x="55" y="55" width="130" height="80" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+<text x="120" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">House</text>
+<text x="120" y="103" text-anchor="middle" font-size="11" fill="var(--ink-soft)">brain server</text>
+<text x="120" y="118" text-anchor="middle" font-size="11" fill="var(--ink-soft)">+ WiFi AP #1</text>
+
+<!-- WiFi AP 1 dot -->
+<circle cx="150" cy="120" r="5" fill="var(--accent)"/>
+
+<!-- Annual beds cluster -->
+<rect x="55" y="160" width="330" height="130" rx="6" fill="var(--paper)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="220" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Annual beds</text>
+<rect x="68" y="190" width="90" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="113" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Tomatoes</text>
+<rect x="165" y="190" width="90" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="210" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Sweet corn</text>
+<rect x="262" y="190" width="105" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="314" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Pumpkin/squash</text>
+<rect x="68" y="242" width="90" height="38" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="113" y="264" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Legumes</text>
+<rect x="165" y="242" width="200" height="38" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="265" y="264" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Herbs / onions / garlic</text>
+
+<!-- waypoint dots on beds -->
+<circle cx="113" cy="190" r="4" fill="#a1503f"/>
+<circle cx="210" cy="190" r="4" fill="#a1503f"/>
+<circle cx="314" cy="190" r="4" fill="#a1503f"/>
+<text x="380" y="176" font-size="9" fill="var(--ink-soft)" font-style="italic">● = recorded waypoint</text>
+
+<!-- Compost / cover-crop strip -->
+<rect x="55" y="450" width="330" height="55" rx="6" fill="#e2efe4" stroke="#3f7a45" stroke-width="1.5"/>
+<text x="220" y="482" text-anchor="middle" font-size="12" font-weight="700" fill="#2e5c33">Compost / cover-crop strip</text>
+
+<!-- Orchard, right side -->
+<rect x="420" y="160" width="440" height="270" rx="6" fill="var(--paper)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="640" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Young orchard (wide-spaced rows, canopy not closed)</text>
+<!-- tree rows as circles -->
+<g fill="#c9dfc0" stroke="#3f7a45">
+<circle cx="460" cy="215" r="16"/><circle cx="520" cy="215" r="16"/><circle cx="580" cy="215" r="16"/><circle cx="640" cy="215" r="16"/><circle cx="700" cy="215" r="16"/><circle cx="760" cy="215" r="16"/><circle cx="820" cy="215" r="16"/>
+<circle cx="460" cy="280" r="16"/><circle cx="520" cy="280" r="16"/><circle cx="580" cy="280" r="16"/><circle cx="640" cy="280" r="16"/><circle cx="700" cy="280" r="16"/><circle cx="760" cy="280" r="16"/><circle cx="820" cy="280" r="16"/>
+<circle cx="460" cy="345" r="16"/><circle cx="520" cy="345" r="16"/><circle cx="580" cy="345" r="16"/><circle cx="640" cy="345" r="16"/><circle cx="700" cy="345" r="16"/><circle cx="760" cy="345" r="16"/><circle cx="820" cy="345" r="16"/>
+</g>
+<text x="640" y="410" text-anchor="middle" font-size="10" fill="var(--ink-soft)">lemon · orange · olive · pomegranate · almond · fig — inter-row space usable while young</text>
+
+<!-- Chicken range zone, dashed, overlapping beds+orchard -->
+<rect x="30" y="150" width="850" height="290" rx="20" fill="none" stroke="var(--gloss)" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="145" text-anchor="middle" font-size="10" fill="var(--gloss)">free-range chicken zone (no fixed boundary — robot must expect them anywhere in here)</text>
+
+<!-- Charging dock, roughly central -->
+<rect x="395" y="450" width="130" height="55" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+<text x="460" y="474" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Charging dock</text>
+<text x="460" y="490" text-anchor="middle" font-size="10" fill="var(--ink-soft)">+ WiFi AP #2</text>
+<circle cx="700" cy="440" r="5" fill="var(--accent)"/>
+
+<!-- off-plot note -->
+<text x="820" y="530" text-anchor="end" font-size="10" fill="var(--ink-soft)" font-style="italic">vineyard + olive grove: elsewhere, out of scope</text>
+</svg>
+</div>
+<p class="diagram-caption">Schematic, not to scale. The dashed oval is deliberately loose — chickens roam, so the robot treats the whole worked area as "may contain a chicken" rather than mapping them as a fixed zone.</p>
+
+<p>The two things this map makes concrete: the gazetteer (named waypoints from step 3 of the build order) starts as bed corners and tree rows, not abstract coordinates — "the tomato bed," "orchard row 2," "the compost strip" are entries a person can actually say out loud. And free-ranging chickens are a real, moving obstacle the robot has to tolerate everywhere in the worked area, not something solved once and forgotten — worth treating as a basic safety requirement (slow-moving, obstacle-stopping) from day one rather than an edge case.</p>
+</div>
+
+<h2 class="section-heading">The Brain: Server Hardware</h2>
+<div class="item">
+<p>The plan's own split — a cheap always-on mini-PC for 24/7 inference, an existing GPU machine spun up only occasionally for training — is the right shape for this garden's scale (one robot, a handful of small models, low-frequency commands). The numbers below are a rough starting estimate, not a spec sheet to buy against blindly; treat them the way the Home Savings Guide treats its cost ranges.</p>
+
+<h3>Always-on brain (new purchase)</h3>
+<div class="item-stats">
+  <span class="stat-badge cost">€250-400 total</span>
+  <span class="stat-badge spec">N100/N305-class mini-PC, 16GB RAM, 512GB NVMe</span>
+</div>
+<p>An Intel N100 or N305 mini-PC (Beelink/GMKtec-type boxes, roughly €150-220 barebones with 16GB) has no real GPU, but that's fine for this job: a small quantized command-parsing LLM (1-3B parameters, via llama.cpp or similar) runs adequately on CPU at low query volume — you're issuing occasional commands, not holding a live conversation — and small detection models (YOLO-nano/small) run at a few frames per second, which is plenty for a robot that revisits waypoints every couple of days rather than needing real-time high-fps vision. Go to 32GB RAM (~€30-50 more) if running the LLM, a vision model, navigation service, and dashboard concurrently starts to feel tight — cheap insurance against swapping to disk. A 512GB-1TB NVMe SSD (~€40-70) covers model weights, the waypoint database, failure logs, and a rolling window of training images/clips before they get pulled off for the occasional training run.</p>
+
+<h3>Optional: vision accelerator</h3>
+<div class="item-stats">
+  <span class="stat-badge cost">€60-120</span>
+  <span class="stat-badge optional">optional, add later if CPU inference feels slow</span>
+</div>
+<p>A USB accelerator (Coral Edge TPU or a Hailo-8 module) offloads detection-model inference from the N100's CPU, useful once there's more than one vision task running or the "scan at transit speed" optimization from the plan's weeding section is worth doing. Not needed to get started — worth adding once step 6 (first vision task) is actually built and its real speed is known, not before.</p>
+
+<h3>Connectivity — the part the plan doesn't size, and 6,000m² makes real</h3>
+<div class="item-stats">
+  <span class="stat-badge cost">€150-300</span>
+  <span class="stat-badge spec">outdoor mesh/point-to-point + a cheap long-range fallback</span>
+</div>
+<p>A single home WiFi router will not reliably cover 6,000m² of outdoor, tree-obstructed ground — this is worth solving deliberately rather than discovering it as a dead zone once the robot is built. Two outdoor-rated access points (~€60-100 each, one at the house, one near the charging dock as sketched on the map above) with overlapping coverage handles video/telemetry over most of the property; a directional point-to-point bridge (Ubiquiti airMax-type gear, ~€50-90 a side) is the alternative if the layout is better served by one strong link than two overlapping circles. Worth adding a cheap LoRa pair (~€10-20) as an independent low-bandwidth fallback channel for basic telemetry and an emergency-stop command — it won't carry video, but it keeps working in a WiFi dead spot or AP outage, which matters more for a machine with blades or moving parts than it would for a pure sensor gadget.</p>
+
+<h3>Charging dock power</h3>
+<div class="item-stats">
+  <span class="stat-badge cost">€100-300</span>
+  <span class="stat-badge optional">depends on whether mains already reaches a garden shed</span>
+</div>
+<p>If a shed or outbuilding near the dock already has mains power, this is just a weatherproof outlet and enclosure (~€50-100). If not, a small solar panel + battery trickle-charge setup (~€150-300) avoids running a mains cable across the property — genuinely worth it for a low-power charging load like this, less obviously worth it if the robot ever needs to fast-charge.</p>
+
+<h3>Existing GPU machine (training, occasional use)</h3>
+<div class="item-stats">
+  <span class="stat-badge cost">already have</span>
+  <span class="stat-badge spec">8GB+ VRAM is enough for this scale</span>
+</div>
+<p>Training small per-task detection models (YOLOv8n-scale) doesn't need a lot of VRAM — 8GB is comfortable, even 6GB works with a small batch size. Its job here is narrow: pull labeled images off the brain server occasionally, train or fine-tune one small model, push the result back into the model registry. No need to upgrade this machine before starting; revisit only if a specific future model turns out to need more.</p>
+
+<div class="overflow-x">
+<table class="summary-table">
+<tr><th>Piece</th><th>Rough cost</th><th>Priority</th></tr>
+<tr><td>Mini-PC brain (16-32GB RAM, 512GB+ SSD)</td><td class="num">€250-400</td><td>Needed first — build order step 2 onward</td></tr>
+<tr><td>Outdoor WiFi (2 APs or point-to-point bridge)</td><td class="num">€150-300</td><td>Needed once the robot leaves teleop range of the house</td></tr>
+<tr><td>LoRa fallback telemetry pair</td><td class="num">€10-20</td><td>Cheap enough to add early</td></tr>
+<tr><td>Charging dock power</td><td class="num">€100-300</td><td>Needed before the robot runs unattended</td></tr>
+<tr><td>Vision accelerator (Coral/Hailo)</td><td class="num">€60-120</td><td>Optional, add after step 6 if needed</td></tr>
+<tr><td>Existing GPU machine</td><td class="num">already have</td><td>Used occasionally, from the first vision task on</td></tr>
+</table>
+</div>
+<p class="rules-note">Total new-hardware order of magnitude for the brain + network + power, excluding the robot's own chassis/motors/camera/mechanicals (those depend entirely on which robot is being built — see Design Studio below): roughly €550-1,100.</p>
+</div>
+
+<h2 class="section-heading">Software Architecture</h2>
+<div class="item">
+<p>This is the plan's own two-layer split, drawn out with the pieces that actually run on each machine and how a command flows through the system end to end.</p>
+
+<div class="diagram-wrap">
+<svg viewBox="0 0 900 620" role="img" aria-labelledby="arch-title arch-desc">
+<title id="arch-title">Software and hardware architecture diagram</title>
+<desc id="arch-desc">The robot handles only real-time driving and low-level control, connected over WiFi or cellular to a brain server that hosts navigation, the waypoint database, an LLM command parser, a vision model registry, a failure log, and a dashboard. The brain server talks to Home Assistant as another set of callable functions, exports training data to a GPU machine used occasionally for training, and its failure log feeds an offline review loop with the developer and Claude Code. Commands come in from a phone or laptop via the dashboard.</desc>
+
+<rect x="10" y="10" width="880" height="600" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+
+<!-- Robot box -->
+<rect x="40" y="260" width="180" height="130" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+<text x="130" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Robot (onboard)</text>
+<text x="130" y="308" text-anchor="middle" font-size="10" fill="var(--ink-soft)">motors + encoders</text>
+<text x="130" y="323" text-anchor="middle" font-size="10" fill="var(--ink-soft)">camera</text>
+<text x="130" y="338" text-anchor="middle" font-size="10" fill="var(--ink-soft)">low-level control loop</text>
+<text x="130" y="353" text-anchor="middle" font-size="10" fill="var(--ink-soft)">real-time driving only</text>
+<text x="130" y="373" text-anchor="middle" font-size="10" fill="var(--gloss)" font-style="italic">no decisions made here</text>
+
+<!-- link -->
+<line x1="220" y1="325" x2="290" y2="325" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="290" y1="340" x2="220" y2="340" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="255" y="315" text-anchor="middle" font-size="9" fill="var(--ink-soft)">commands ↓</text>
+<text x="255" y="355" text-anchor="middle" font-size="9" fill="var(--ink-soft)">telemetry + video ↑</text>
+<text x="255" y="368" text-anchor="middle" font-size="9" fill="var(--gloss)" font-style="italic">WiFi / LoRa fallback</text>
+
+<!-- Brain server box -->
+<rect x="290" y="70" width="380" height="480" rx="8" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="2"/>
+<text x="480" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Brain server (mini-PC, 24/7)</text>
+
+<rect x="310" y="115" width="160" height="60" rx="6" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="390" y="140" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">Navigation service</text>
+<text x="390" y="157" text-anchor="middle" font-size="9" fill="var(--ink-soft)">deterministic routing</text>
+
+<rect x="480" y="115" width="170" height="60" rx="6" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="565" y="140" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">Waypoint database</text>
+<text x="565" y="157" text-anchor="middle" font-size="9" fill="var(--ink-soft)">the gazetteer</text>
+
+<rect x="310" y="190" width="160" height="65" rx="6" fill="#f1e3d8" stroke="var(--accent)"/>
+<text x="390" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">LLM command parser</text>
+<text x="390" y="230" text-anchor="middle" font-size="9" fill="var(--ink-soft)">fuzzy text →</text>
+<text x="390" y="243" text-anchor="middle" font-size="9" fill="var(--ink-soft)">function calls only</text>
+
+<rect x="480" y="190" width="170" height="65" rx="6" fill="#f1e3d8" stroke="var(--accent)"/>
+<text x="565" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">Vision model registry</text>
+<text x="565" y="230" text-anchor="middle" font-size="9" fill="var(--ink-soft)">small models,</text>
+<text x="565" y="243" text-anchor="middle" font-size="9" fill="var(--ink-soft)">one per task</text>
+
+<rect x="310" y="270" width="160" height="55" rx="6" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="390" y="293" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">Failure log</text>
+<text x="390" y="309" text-anchor="middle" font-size="9" fill="var(--ink-soft)">what it couldn't resolve</text>
+
+<rect x="480" y="270" width="170" height="55" rx="6" fill="var(--badge-bg)" stroke="var(--border)"/>
+<text x="565" y="293" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">Dashboard / API</text>
+<text x="565" y="309" text-anchor="middle" font-size="9" fill="var(--ink-soft)">status, manual commands</text>
+
+<rect x="310" y="345" width="340" height="55" rx="6" fill="#e2efe4" stroke="#3f7a45"/>
+<text x="480" y="368" text-anchor="middle" font-size="11" font-weight="600" fill="#2e5c33">Home Assistant link</text>
+<text x="480" y="384" text-anchor="middle" font-size="9" fill="#2e5c33">just another set of callable functions</text>
+
+<!-- internal arrows -->
+<line x1="390" y1="175" x2="390" y2="190" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="470" y1="145" x2="480" y2="145" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="390" y1="255" x2="390" y2="270" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="565" y1="255" x2="565" y2="270" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- dashboard to house/phone -->
+<rect x="700" y="270" width="150" height="55" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+<text x="775" y="293" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Phone / laptop</text>
+<text x="775" y="309" text-anchor="middle" font-size="9" fill="var(--ink-soft)">"cut weeds by the tomatoes"</text>
+<line x1="700" y1="297" x2="650" y2="297" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- GPU machine -->
+<rect x="700" y="115" width="150" height="80" rx="8" fill="#efe6d8" stroke="var(--gloss)" stroke-width="1.5"/>
+<text x="775" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Existing GPU machine</text>
+<text x="775" y="158" text-anchor="middle" font-size="9" fill="var(--ink-soft)">spun up occasionally</text>
+<text x="775" y="172" text-anchor="middle" font-size="9" fill="var(--ink-soft)">trains new vision models</text>
+<line x1="650" y1="220" x2="700" y2="175" stroke="var(--gloss)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<line x1="700" y1="150" x2="650" y2="220" stroke="var(--gloss)" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="775" y="105" text-anchor="middle" font-size="9" fill="var(--gloss)" font-style="italic">training data ↔ trained model</text>
+
+<!-- offline review loop -->
+<rect x="700" y="410" width="150" height="80" rx="8" fill="var(--badge-bg)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="775" y="435" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">You + Claude Code</text>
+<text x="775" y="453" text-anchor="middle" font-size="9" fill="var(--ink-soft)">offline review loop</text>
+<text x="775" y="467" text-anchor="middle" font-size="9" fill="var(--ink-soft)">reads the failure log</text>
+<line x1="700" y1="297" x2="775" y2="410" stroke="var(--ink-soft)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="720" y="365" font-size="9" fill="var(--ink-soft)" font-style="italic">periodic, not live</text>
+
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-soft)"/>
+</marker>
+</defs>
+</svg>
+</div>
+<p class="diagram-caption">Solid arrows = live data paths. Dashed arrows = occasional/offline paths (training, log review).</p>
+
+<p>Following one command through the system: you type or say "cut the weeds by the tomatoes" into the dashboard. The LLM command parser turns that into a function call — <code>goto("tomato_bed")</code> then <code>run_task("weed_cut")</code> — by matching against the waypoint database's gazetteer entries, nothing more. The navigation service (plain deterministic code, no AI) computes the route and streams motion commands to the robot; the robot drives and streams back telemetry and video. Whatever vision the task needs (checking stem thickness near a recorded plant coordinate, say) goes through one small model from the registry, not the LLM — the LLM never sees pixels. Anything the system can't resolve — an unrecognized location name, an ambiguous instruction — gets written to the failure log instead of guessed at, and that log is what actually drives development: reviewed offline, periodically, to decide what to hardcode next or what small model to train. Home Assistant sits at the same level as the navigation service and vision registry — just more functions the parser can call — so "turn on the drip line to the almond row" is handled the same way as a robot command, no separate system.</p>
+</div>
+
+<h2 class="section-heading">Build Order, Mapped to This Garden</h2>
+<div class="item">
+<div class="overflow-x">
+<table class="summary-table">
+<tr><th>Step</th><th>What it is</th><th>What it looks like here</th></tr>
+<tr><td>1</td><td>Mobility + teleop</td><td>Reliable driving on real garden terrain (uneven ground, tree roots, loose soil between beds), manual remote control</td></tr>
+<tr><td>2</td><td>Waypoint navigation</td><td>Record one real route once — house to a bed to the dock — and replay it, no vision yet</td></tr>
+<tr><td>3</td><td>Named-location gazetteer</td><td>Tag real coordinates: "tomato bed," "orchard row 2," "compost strip," "dock" — the labels from the map above</td></tr>
+<tr><td>4</td><td>LLM command parsing</td><td>Small local model on the mini-PC turns "go check the corn" into <code>goto("corn_bed")</code> against that gazetteer</td></tr>
+<tr><td>5</td><td>First payload capability</td><td>Weed cutting (see Design Studio below) — the plan's own suggested first task</td></tr>
+<tr><td>6</td><td>First vision task</td><td>Just enough recognition to support weeding: find a stem near a known plant coordinate</td></tr>
+<tr><td>7</td><td>Repeat 5–6</td><td>Next payload reuses steps 1-4 as-is; only new hardware + a narrow model get added</td></tr>
+</table>
+</div>
+</div>
+
+<h2 class="section-heading">Design Studio</h2>
+<div class="item">
+<p class="grb-intro">This is where the actual per-robot decisions happen, over however many future sessions it takes. Each card below has a status, what's already settled, and — the important part — the open questions still needing an actual decision. Nothing here is final; it's the working state of the design as of today.</p>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Robot 1 — The Weeder</h3>
+  <span class="status-badge designing">Designing now</span>
+</div>
+<p>The plan's own concrete first task: cut weeds among deliberately-oversized transplants in the annual beds, by revisiting known coordinates and keeping the thicker of any two nearby stems — no weed-vs-crop classification needed. This is the one to actually spec first, since it's what steps 1-6 above are all in service of.</p>
+
+<h4>Garden-specific constraints</h4>
+<ul>
+<li>Needs to operate around free-ranging chickens anywhere in the worked area — a hard stop-on-obstacle requirement, not optional.</li>
+<li>Bed spacing and soil surface (raised beds vs. flat) aren't nailed down on this page yet — affects wheel/track choice and ground clearance.</li>
+<li>Revisits every ~2 days per the plan — cadence affects battery/charging-dock sizing.</li>
+</ul>
+
+<h4>Open questions to settle together</h4>
+<ul>
+<li>Chassis: wheels vs. tracks, given actual bed terrain and path width between beds?</li>
+<li>Cutting mechanism: trimmer-head, small blade, or something else — and how it fails safely around a chicken or a foot?</li>
+<li>How is a plant's coordinate actually recorded at transplant time — a phone app, the robot itself in a "mark" mode, something else?</li>
+<li>Which beds get this first — all of them at once, or one crop (tomatoes, say) as the pilot?</li>
+</ul>
+
+<h4>Decisions so far</h4>
+<table class="decision-log">
+<tr><th>Date</th><th>Decision</th><th>Why</th></tr>
+<tr><td class="date">2026-09-07</td><td>Brain runs on a dedicated N100/N305 mini-PC, not the robot itself</td><td>Keeps the robot's onboard compute to real-time driving only, per the plan's two-layer split</td></tr>
+<tr><td class="date">2026-09-07</td><td>This is the first robot to actually build</td><td>Reuses steps 1-6 of the build order directly; every later capability builds on it</td></tr>
+</table>
+<div class="next-step"><strong>Next step:</strong> pick the chassis and cutting mechanism together — bring bed dimensions and path widths next time, or we ballpark them.</div>
+</div>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Robot 2 — The Scout</h3>
+  <span class="status-badge idea">Idea, not started</span>
+</div>
+<p>The plan's own optional optimization: a lightweight, camera-only robot (no cutter, less power, cheaper) that pre-maps where attention is actually needed each pass, feeding a task list to the Weeder instead of it cutting every bed uniformly every time.</p>
+<h4>Open questions to settle together</h4>
+<ul>
+<li>Worth building at all before the Weeder's real cadence and coverage time are known from experience?</li>
+<li>Shared chassis platform with the Weeder, or deliberately different (smaller, faster, no payload mount)?</li>
+</ul>
+<div class="next-step"><strong>Next step:</strong> revisit once the Weeder has real-world runtime data — this may turn out unnecessary.</div>
+</div>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Precision Orchard Work</h3>
+  <span class="status-badge future">Future — needs the foundation first</span>
+</div>
+<p>The plan flags precision vine pruning as hard: recognition is easy, precise manipulation on a springy target is the real problem. Mapped to this garden, the nearest equivalent is bud-level work on the young lemon/orange/olive/pomegranate/almond rows once they're established enough to need it.</p>
+<h4>Open questions to settle together</h4>
+<ul>
+<li>Realistically years out given the orchard's current age — worth a placeholder now or revisiting later?</li>
+</ul>
+<div class="next-step"><strong>Next step:</strong> nothing to decide yet — parked until the Weeder and Scout are real.</div>
+</div>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Closed-Loop Precision Watering</h3>
+  <span class="status-badge future">Future</span>
+</div>
+<p>Per the plan, this needs a flow sensor or load cell for accurate volume — not vision. Could ride on the Weeder's chassis as a second payload (step 7's "repeat" in action) once it exists, watering exactly at a recorded plant coordinate rather than a whole zone.</p>
+<h4>Open questions to settle together</h4>
+<ul>
+<li>Does this replace or complement the smart irrigation valves below?</li>
+</ul>
+<div class="next-step"><strong>Next step:</strong> hold until the Weeder's payload mount design is settled, since this would likely reuse it.</div>
+</div>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Smart Irrigation Valves</h3>
+  <span class="status-badge ready">No robot needed — can start anytime</span>
+</div>
+<p>One of the plan's own "easy wins": multi-zone valves with different schedules per bed/orchard row, solved by existing off-the-shelf tech. Genuinely worth doing before or alongside any robot work, since it needs none of the navigation/LLM foundation above.</p>
+<h4>Open questions to settle together</h4>
+<ul>
+<li>How many zones does the real layout need — one per bed cluster, one per orchard row group, plus one for the compost strip's cover crop?</li>
+<li>Tie into Home Assistant now, so it's already a callable function once the robot architecture exists?</li>
+</ul>
+<div class="next-step"><strong>Next step:</strong> worth speccing this one independently of the robot timeline — it pays off immediately either way.</div>
+</div>
+
+<div class="robot-card">
+<div class="robot-card-head">
+  <h3>Fixed Sensors + Dashboard</h3>
+  <span class="status-badge ready">No robot needed — can start anytime</span>
+</div>
+<p>The plan's other easy win: soil moisture sensors and a static camera on one area, feeding a garden-monitoring dashboard to cut down on manual checking walks. This dashboard is also exactly what step 4+ of the robot build order needs anyway — worth building once and reusing.</p>
+<h4>Open questions to settle together</h4>
+<ul>
+<li>Which spots get a fixed sensor first — the annual beds (higher water need, more attention) or the orchard (lower frequency, but a bigger area to check)?</li>
+<li>Same dashboard as the robot's status/API from the architecture above, or a separate simpler one to start?</li>
+</ul>
+<div class="next-step"><strong>Next step:</strong> good candidate to build in parallel with the Weeder — shares no hardware, so it doesn't block or get blocked by robot decisions.</div>
+</div>
+
+</div>
+
+</div>
+</main>
+</div>
+</body>
+</html>
