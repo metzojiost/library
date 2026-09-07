@@ -89,89 +89,73 @@
 <div class="grb-wrap">
 
 <h1 class="page-title">Garden Automation Robot — Project Plan</h1>
-<p class="grb-intro">A living plan for a garden robot built as a reusable navigation + compute foundation, not a single-task machine — so each new capability (weed cutting, then whatever comes after) reuses the driving, mapping, and command-parsing work already done instead of starting over. Grounded in the actual 6,000m² village garden from the <a href="crete-home-savings-guide.html">Home Savings Guide</a>: annual beds, a young orchard, free-ranging chickens, and a compost/cover-crop strip — separate from the vineyard and olive grove elsewhere on the property, which stay out of scope here for now.</p>
+<p class="grb-intro">A living plan for a garden robot built as a reusable navigation + compute foundation, not a single-task machine — so each new capability (weed cutting, then whatever comes after) reuses the driving, mapping, and command-parsing work already done instead of starting over. Grounded in the actual 6,000m² garden from the <a href="crete-home-savings-guide.html">Home Savings Guide</a>: annual beds, a young orchard, rotationally-grazed chickens, and a compost/cover-crop strip, terraced across a slope on a separate plot from home — the vineyard and olive grove elsewhere on the property stay out of scope here for now.</p>
 
 <div class="caveat"><strong>How to read this page:</strong> the first sections lay out the architecture, hardware, and build order as a reference. The last section, "Design Studio," is where the actual robot-by-robot decisions get made — most of it starts as open questions on purpose, to be filled in over future sessions rather than guessed at now.</div>
 
+<div class="caveat"><strong>Corrected as of today:</strong> the terrace layout isn't planned yet, so no specific bed/orchard map exists below — only the general shape of the problem (stepped terraces, not flat ground). Chickens are rotated through fenced sections one at a time, not free-ranging over the whole plot — robot and chickens are assumed to never share a section at once. And the plot is separate land, not adjacent to home — connectivity between the two is a real open question, deliberately left unsolved on this page for now.</div>
+
 <h2 class="section-heading">Your Garden, As the Robot Would See It</h2>
 <div class="item">
-<p>Everything the robot does — navigation, the waypoint gazetteer, the first weeding task — is anchored to the real layout of the 6,000m² plot, not a generic garden. Roughly, from what the Home Savings Guide already established: a cluster of annual beds (tomatoes, sweet corn, pumpkin/squash, dry legumes, herbs and alliums) that get replanted each season and are the most labor-hungry part of the garden; a young orchard (lemon, orange, olive, pomegranate, almond, fig) planted in rows with wide spacing, still years from full canopy; chickens free-ranging through both rather than penned in one spot; and a cover-crop/compost strip along an edge. The vineyard and existing olive grove live elsewhere on the property and aren't part of this robot's territory.</p>
+<p>No real map yet — the 6,000m² plot is terraced across a slope, and which terrace gets which use (beds, orchard, chicken rotation) hasn't been planned. So this section doesn't pretend to lay out bed corners or tree rows; instead it fixes the two things that <em>are</em> already known and genuinely change the robot's design: the ground is stepped, not flat, and the chickens are rotated through one fenced section at a time rather than ranging freely everywhere. The diagram below is a generic cross-section for that reason — it shows the kind of vertical structure to design around, not a real layout.</p>
 
 <div class="diagram-wrap">
-<svg viewBox="0 0 900 560" role="img" aria-labelledby="gardenmap-title gardenmap-desc">
-<title id="gardenmap-title">Schematic map of the 6,000m² garden plot</title>
-<desc id="gardenmap-desc">A bird's-eye schematic showing the house and brain server in one corner, annual vegetable beds, a young orchard with tree rows, a free-range chicken zone overlapping both, a compost/cover-crop strip along one edge, two WiFi access points with overlapping coverage circles, and a charging dock roughly central.</desc>
+<svg viewBox="0 0 900 420" role="img" aria-labelledby="terrace-title terrace-desc">
+<title id="terrace-title">Generic terrace cross-section</title>
+<desc id="terrace-desc">A side-view schematic of four stepped terraces descending a slope, connected by a dashed candidate ramp path. One terrace is flagged as the active chicken rotation zone, off-limits to the robot while active. The other terraces are labeled as possible bed, orchard, or compost use, all still to be decided. A small robot icon sits on the ramp between the first two terraces next to a question mark, representing the open question of whether the robot crosses terraces via ramps or is repositioned by hand.</desc>
 
-<rect x="10" y="10" width="880" height="540" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+<rect x="10" y="10" width="880" height="400" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
 
-<!-- Plot boundary -->
-<rect x="40" y="40" width="820" height="480" rx="6" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="2 0"/>
+<!-- stepped ground profile -->
+<polygon points="50,150 260,150 260,220 480,220 480,290 700,290 700,360 860,360 860,395 50,395"
+  fill="#e8ddc8" stroke="var(--ink-soft)" stroke-width="2"/>
 
-<!-- WiFi coverage circles (drawn first, under everything) -->
-<circle cx="150" cy="120" r="220" fill="var(--accent)" opacity="0.06"/>
-<circle cx="700" cy="440" r="220" fill="var(--accent)" opacity="0.06"/>
+<!-- wall face accents -->
+<rect x="256" y="150" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
+<rect x="476" y="220" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
+<rect x="696" y="290" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
 
-<!-- House + brain server, top-left -->
-<rect x="55" y="55" width="130" height="80" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-<text x="120" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">House</text>
-<text x="120" y="103" text-anchor="middle" font-size="11" fill="var(--ink-soft)">brain server</text>
-<text x="120" y="118" text-anchor="middle" font-size="11" fill="var(--ink-soft)">+ WiFi AP #1</text>
+<!-- candidate ramp path, dashed, across each wall face -->
+<line x1="230" y1="150" x2="290" y2="220" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="450" y1="220" x2="510" y2="290" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="670" y1="290" x2="730" y2="360" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
 
-<!-- WiFi AP 1 dot -->
-<circle cx="150" cy="120" r="5" fill="var(--accent)"/>
+<!-- terrace labels -->
+<text x="150" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace A</text>
+<text x="150" y="120" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD — bed / orchard / compost</text>
 
-<!-- Annual beds cluster -->
-<rect x="55" y="160" width="330" height="130" rx="6" fill="var(--paper)" stroke="var(--border)" stroke-width="1.5"/>
-<text x="220" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Annual beds</text>
-<rect x="68" y="190" width="90" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
-<text x="113" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Tomatoes</text>
-<rect x="165" y="190" width="90" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
-<text x="210" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Sweet corn</text>
-<rect x="262" y="190" width="105" height="45" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
-<text x="314" y="216" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Pumpkin/squash</text>
-<rect x="68" y="242" width="90" height="38" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
-<text x="113" y="264" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Legumes</text>
-<rect x="165" y="242" width="200" height="38" rx="3" fill="var(--badge-bg)" stroke="var(--border)"/>
-<text x="265" y="264" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Herbs / onions / garlic</text>
+<!-- chicken rotation terrace -->
+<rect x="270" y="178" width="200" height="38" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+<text x="370" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--accent)">Terrace B</text>
+<text x="370" y="205" text-anchor="middle" font-size="9" fill="var(--accent)">chicken rotation zone (this cycle)</text>
+<path d="M 340 165 A 10 10 0 1 1 339 164" fill="none" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="440" y="170" text-anchor="middle" font-size="9" fill="var(--ink-soft)" font-style="italic">flagged off-limits to robot while active</text>
 
-<!-- waypoint dots on beds -->
-<circle cx="113" cy="190" r="4" fill="#a1503f"/>
-<circle cx="210" cy="190" r="4" fill="#a1503f"/>
-<circle cx="314" cy="190" r="4" fill="#a1503f"/>
-<text x="380" y="176" font-size="9" fill="var(--ink-soft)" font-style="italic">● = recorded waypoint</text>
+<text x="590" y="280" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace C</text>
+<text x="590" y="260" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD</text>
 
-<!-- Compost / cover-crop strip -->
-<rect x="55" y="450" width="330" height="55" rx="6" fill="#e2efe4" stroke="#3f7a45" stroke-width="1.5"/>
-<text x="220" y="482" text-anchor="middle" font-size="12" font-weight="700" fill="#2e5c33">Compost / cover-crop strip</text>
+<text x="780" y="350" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace D</text>
+<text x="780" y="330" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD</text>
 
-<!-- Orchard, right side -->
-<rect x="420" y="160" width="440" height="270" rx="6" fill="var(--paper)" stroke="var(--border)" stroke-width="1.5"/>
-<text x="640" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Young orchard (wide-spaced rows, canopy not closed)</text>
-<!-- tree rows as circles -->
-<g fill="#c9dfc0" stroke="#3f7a45">
-<circle cx="460" cy="215" r="16"/><circle cx="520" cy="215" r="16"/><circle cx="580" cy="215" r="16"/><circle cx="640" cy="215" r="16"/><circle cx="700" cy="215" r="16"/><circle cx="760" cy="215" r="16"/><circle cx="820" cy="215" r="16"/>
-<circle cx="460" cy="280" r="16"/><circle cx="520" cy="280" r="16"/><circle cx="580" cy="280" r="16"/><circle cx="640" cy="280" r="16"/><circle cx="700" cy="280" r="16"/><circle cx="760" cy="280" r="16"/><circle cx="820" cy="280" r="16"/>
-<circle cx="460" cy="345" r="16"/><circle cx="520" cy="345" r="16"/><circle cx="580" cy="345" r="16"/><circle cx="640" cy="345" r="16"/><circle cx="700" cy="345" r="16"/><circle cx="760" cy="345" r="16"/><circle cx="820" cy="345" r="16"/>
+<!-- robot icon on first ramp -->
+<g transform="translate(255,225)">
+  <rect x="-16" y="-10" width="32" height="18" rx="3" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.5"/>
+  <circle cx="-10" cy="10" r="5" fill="var(--ink-soft)"/>
+  <circle cx="10" cy="10" r="5" fill="var(--ink-soft)"/>
+  <text x="0" y="-16" text-anchor="middle" font-size="14" font-weight="700" fill="var(--accent)">?</text>
 </g>
-<text x="640" y="410" text-anchor="middle" font-size="10" fill="var(--ink-soft)">lemon · orange · olive · pomegranate · almond · fig — inter-row space usable while young</text>
+<text x="255" y="255" text-anchor="middle" font-size="9" fill="var(--ink-soft)" font-style="italic">ramps between terraces, or reposition by hand?</text>
 
-<!-- Chicken range zone, dashed, overlapping beds+orchard -->
-<rect x="30" y="150" width="850" height="290" rx="20" fill="none" stroke="var(--gloss)" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="450" y="145" text-anchor="middle" font-size="10" fill="var(--gloss)">free-range chicken zone (no fixed boundary — robot must expect them anywhere in here)</text>
-
-<!-- Charging dock, roughly central -->
-<rect x="395" y="450" width="130" height="55" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-<text x="460" y="474" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Charging dock</text>
-<text x="460" y="490" text-anchor="middle" font-size="10" fill="var(--ink-soft)">+ WiFi AP #2</text>
-<circle cx="700" cy="440" r="5" fill="var(--accent)"/>
-
-<!-- off-plot note -->
-<text x="820" y="530" text-anchor="end" font-size="10" fill="var(--ink-soft)" font-style="italic">vineyard + olive grove: elsewhere, out of scope</text>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 Z" fill="var(--accent)"/>
+</marker>
+</defs>
 </svg>
 </div>
-<p class="diagram-caption">Schematic, not to scale. The dashed oval is deliberately loose — chickens roam, so the robot treats the whole worked area as "may contain a chicken" rather than mapping them as a fixed zone.</p>
+<p class="diagram-caption">Generic cross-section, not a real layout. Terrace count, widths, and what's planted where are all still open — this exists to make the slope and rotation constraints concrete, not to fix a map.</p>
 
-<p>The two things this map makes concrete: the gazetteer (named waypoints from step 3 of the build order) starts as bed corners and tree rows, not abstract coordinates — "the tomato bed," "orchard row 2," "the compost strip" are entries a person can actually say out loud. And free-ranging chickens are a real, moving obstacle the robot has to tolerate everywhere in the worked area, not something solved once and forgotten — worth treating as a basic safety requirement (slow-moving, obstacle-stopping) from day one rather than an edge case.</p>
+<p>Two things this changes from a flat-ground assumption. First, mobility now has to deal with stepped terraces rather than open ground between beds — a real chassis question (ramps between levels vs. staying within one terrace and being repositioned by hand or trailer) that can't be settled until the terracing plan exists, but is worth deciding early since it drives the whole chassis design. Second, the chicken problem actually gets simpler, not harder, once it's framed correctly: since a section is either "chickens active this rotation" or "robot working," it's a scheduling/zone-flag problem — the robot just needs to know which terraces are chicken-active right now and stay out — not a live obstacle-avoidance problem needing chicken detection at all.</p>
 </div>
 
 <h2 class="section-heading">The Brain: Server Hardware</h2>
@@ -192,19 +176,18 @@
 </div>
 <p>A USB accelerator (Coral Edge TPU or a Hailo-8 module) offloads detection-model inference from the N100's CPU, useful once there's more than one vision task running or the "scan at transit speed" optimization from the plan's weeding section is worth doing. Not needed to get started — worth adding once step 6 (first vision task) is actually built and its real speed is known, not before.</p>
 
-<h3>Connectivity — the part the plan doesn't size, and 6,000m² makes real</h3>
+<h3>Connectivity — deliberately open for now</h3>
 <div class="item-stats">
-  <span class="stat-badge cost">€150-300</span>
-  <span class="stat-badge spec">outdoor mesh/point-to-point + a cheap long-range fallback</span>
+  <span class="stat-badge optional">deferred — settle once terraces and site logistics are known</span>
 </div>
-<p>A single home WiFi router will not reliably cover 6,000m² of outdoor, tree-obstructed ground — this is worth solving deliberately rather than discovering it as a dead zone once the robot is built. Two outdoor-rated access points (~€60-100 each, one at the house, one near the charging dock as sketched on the map above) with overlapping coverage handles video/telemetry over most of the property; a directional point-to-point bridge (Ubiquiti airMax-type gear, ~€50-90 a side) is the alternative if the layout is better served by one strong link than two overlapping circles. Worth adding a cheap LoRa pair (~€10-20) as an independent low-bandwidth fallback channel for basic telemetry and an emergency-stop command — it won't carry video, but it keeps working in a WiFi dead spot or AP outage, which matters more for a machine with blades or moving parts than it would for a pure sensor gadget.</p>
+<p>The plot is separate land, not next to home, so this isn't a "does home WiFi reach the garden" problem — it's a standalone-site connectivity problem, and the right answer depends on things not decided yet (where the brain server physically lives, how far that is from a road or power source, terrain between terraces). Not sizing this now on purpose. Worth keeping in mind once it's time to solve it: options range from outdoor mesh APs or a directional point-to-point bridge (if there's a power source to anchor them to) down to a cellular modem or a LoRa link for a low-bandwidth command/telemetry channel if the site turns out to be genuinely off-grid. Revisit this once the terrace layout — and where the robot's home base actually sits — is settled.</p>
 
 <h3>Charging dock power</h3>
 <div class="item-stats">
-  <span class="stat-badge cost">€100-300</span>
-  <span class="stat-badge optional">depends on whether mains already reaches a garden shed</span>
+  <span class="stat-badge cost">€150-300</span>
+  <span class="stat-badge spec">solar panel + battery is the likely default</span>
 </div>
-<p>If a shed or outbuilding near the dock already has mains power, this is just a weatherproof outlet and enclosure (~€50-100). If not, a small solar panel + battery trickle-charge setup (~€150-300) avoids running a mains cable across the property — genuinely worth it for a low-power charging load like this, less obviously worth it if the robot ever needs to fast-charge.</p>
+<p>Since the plot isn't adjacent to home, running a mains cable out to a charging dock is the less likely option rather than the default — a small solar panel + battery trickle-charge setup (~€150-300) is the more realistic starting assumption for a low-power charging load like this, unless there's already a powered shed or outbuilding on-site to use instead (in which case it's just a weatherproof outlet and enclosure, ~€50-100). Worth confirming which case actually applies once the dock's location is picked.</p>
 
 <h3>Existing GPU machine (training, occasional use)</h3>
 <div class="item-stats">
@@ -217,14 +200,13 @@
 <table class="summary-table">
 <tr><th>Piece</th><th>Rough cost</th><th>Priority</th></tr>
 <tr><td>Mini-PC brain (16-32GB RAM, 512GB+ SSD)</td><td class="num">€250-400</td><td>Needed first — build order step 2 onward</td></tr>
-<tr><td>Outdoor WiFi (2 APs or point-to-point bridge)</td><td class="num">€150-300</td><td>Needed once the robot leaves teleop range of the house</td></tr>
-<tr><td>LoRa fallback telemetry pair</td><td class="num">€10-20</td><td>Cheap enough to add early</td></tr>
-<tr><td>Charging dock power</td><td class="num">€100-300</td><td>Needed before the robot runs unattended</td></tr>
+<tr><td>Charging dock power (solar + battery, likely)</td><td class="num">€150-300</td><td>Needed before the robot runs unattended</td></tr>
+<tr><td>Connectivity to the site</td><td class="num">TBD</td><td>Deferred — depends on terrace layout and where the brain server lives</td></tr>
 <tr><td>Vision accelerator (Coral/Hailo)</td><td class="num">€60-120</td><td>Optional, add after step 6 if needed</td></tr>
 <tr><td>Existing GPU machine</td><td class="num">already have</td><td>Used occasionally, from the first vision task on</td></tr>
 </table>
 </div>
-<p class="rules-note">Total new-hardware order of magnitude for the brain + network + power, excluding the robot's own chassis/motors/camera/mechanicals (those depend entirely on which robot is being built — see Design Studio below): roughly €550-1,100.</p>
+<p class="rules-note">Total new-hardware order of magnitude for the brain + power, excluding connectivity (deferred) and the robot's own chassis/motors/camera/mechanicals (those depend entirely on which robot is being built — see Design Studio below): roughly €400-700, plus whatever connectivity ends up costing once that's settled.</p>
 </div>
 
 <h2 class="section-heading">Software Architecture</h2>
@@ -294,7 +276,7 @@
 <line x1="390" y1="255" x2="390" y2="270" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
 <line x1="565" y1="255" x2="565" y2="270" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-<!-- dashboard to house/phone -->
+<!-- dashboard to phone -->
 <rect x="700" y="270" width="150" height="55" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
 <text x="775" y="293" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Phone / laptop</text>
 <text x="775" y="309" text-anchor="middle" font-size="9" fill="var(--ink-soft)">"cut weeds by the tomatoes"</text>
@@ -335,8 +317,8 @@
 <table class="summary-table">
 <tr><th>Step</th><th>What it is</th><th>What it looks like here</th></tr>
 <tr><td>1</td><td>Mobility + teleop</td><td>Reliable driving on real garden terrain (uneven ground, tree roots, loose soil between beds), manual remote control</td></tr>
-<tr><td>2</td><td>Waypoint navigation</td><td>Record one real route once — house to a bed to the dock — and replay it, no vision yet</td></tr>
-<tr><td>3</td><td>Named-location gazetteer</td><td>Tag real coordinates: "tomato bed," "orchard row 2," "compost strip," "dock" — the labels from the map above</td></tr>
+<tr><td>2</td><td>Waypoint navigation</td><td>Record one real route once — dock to a terrace and back — and replay it, no vision yet</td></tr>
+<tr><td>3</td><td>Named-location gazetteer</td><td>Tag real coordinates once the terrace layout exists: "terrace A," "the tomato bed," "compost strip," "dock" — human-sayable labels, not raw coordinates</td></tr>
 <tr><td>4</td><td>LLM command parsing</td><td>Small local model on the mini-PC turns "go check the corn" into <code>goto("corn_bed")</code> against that gazetteer</td></tr>
 <tr><td>5</td><td>First payload capability</td><td>Weed cutting (see Design Studio below) — the plan's own suggested first task</td></tr>
 <tr><td>6</td><td>First vision task</td><td>Just enough recognition to support weeding: find a stem near a known plant coordinate</td></tr>
@@ -358,17 +340,20 @@
 
 <h4>Garden-specific constraints</h4>
 <ul>
-<li>Needs to operate around free-ranging chickens anywhere in the worked area — a hard stop-on-obstacle requirement, not optional.</li>
+<li>Terraced, sloped terrain — terrace count, widths, and what's planted where aren't planned yet, so chassis mobility (wheels vs. tracks, ramp gradients it needs to handle) can't be finalized until that's settled.</li>
+<li>Chickens are rotated through one fenced terrace/section at a time, never the whole plot — as long as the robot's schedule and the chicken rotation schedule are kept mutually exclusive per section, no live chicken detection or avoidance is needed at all.</li>
 <li>Bed spacing and soil surface (raised beds vs. flat) aren't nailed down on this page yet — affects wheel/track choice and ground clearance.</li>
 <li>Revisits every ~2 days per the plan — cadence affects battery/charging-dock sizing.</li>
 </ul>
 
 <h4>Open questions to settle together</h4>
 <ul>
-<li>Chassis: wheels vs. tracks, given actual bed terrain and path width between beds?</li>
-<li>Cutting mechanism: trimmer-head, small blade, or something else — and how it fails safely around a chicken or a foot?</li>
+<li>Does one robot cross terraces via ramps, or does it stay within one terrace at a time and get repositioned by hand or trailer between them?</li>
+<li>Chassis: wheels vs. tracks, given actual terrace terrain and path width — can't fully answer until the terrace plan exists, but worth a working assumption to design toward.</li>
+<li>Cutting mechanism: trimmer-head, small blade, or something else?</li>
 <li>How is a plant's coordinate actually recorded at transplant time — a phone app, the robot itself in a "mark" mode, something else?</li>
-<li>Which beds get this first — all of them at once, or one crop (tomatoes, say) as the pilot?</li>
+<li>How does the system know which terrace/section is chicken-active right now — a manual toggle, a schedule, something tied to the fencing?</li>
+<li>Which terrace or bed gets this first once the layout exists?</li>
 </ul>
 
 <h4>Decisions so far</h4>
@@ -376,8 +361,10 @@
 <tr><th>Date</th><th>Decision</th><th>Why</th></tr>
 <tr><td class="date">2026-09-07</td><td>Brain runs on a dedicated N100/N305 mini-PC, not the robot itself</td><td>Keeps the robot's onboard compute to real-time driving only, per the plan's two-layer split</td></tr>
 <tr><td class="date">2026-09-07</td><td>This is the first robot to actually build</td><td>Reuses steps 1-6 of the build order directly; every later capability builds on it</td></tr>
+<tr><td class="date">2026-09-07</td><td>Chicken safety is a zone-scheduling problem, not live obstacle avoidance</td><td>Chickens are rotated through one fenced section at a time, never sharing a section with the robot — corrected from an earlier assumption of free-ranging over the whole plot</td></tr>
+<tr><td class="date">2026-09-07</td><td>No fixed garden map yet — terrain is terraced, layout not planned</td><td>Corrected from an earlier flat-ground layout guess; chassis/mobility decisions wait on the real terrace plan</td></tr>
 </table>
-<div class="next-step"><strong>Next step:</strong> pick the chassis and cutting mechanism together — bring bed dimensions and path widths next time, or we ballpark them.</div>
+<div class="next-step"><strong>Next step:</strong> once there's even a rough terrace plan (how many levels, roughly how steep), decide the ramps-vs-reposition question — it drives the chassis choice more than anything else here.</div>
 </div>
 
 <div class="robot-card">
