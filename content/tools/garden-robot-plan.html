@@ -89,53 +89,56 @@
 <div class="grb-wrap">
 
 <h1 class="page-title">Garden Automation Robot — Project Plan</h1>
-<p class="grb-intro">A living plan for a garden robot built as a reusable navigation + compute foundation, not a single-task machine — so each new capability (weed cutting, then whatever comes after) reuses the driving, mapping, and command-parsing work already done instead of starting over. Grounded in the actual 6,000m² garden from the <a href="crete-home-savings-guide.html">Home Savings Guide</a>: annual beds, a young orchard, rotationally-grazed chickens, and a compost/cover-crop strip, terraced across a slope on a separate plot from home — the vineyard and olive grove elsewhere on the property stay out of scope here for now.</p>
+<p class="grb-intro">A living plan for a garden robot built as a reusable navigation + compute foundation, not a single-task machine — so each new capability (weed cutting, then whatever comes after) reuses the driving, mapping, and command-parsing work already done instead of starting over. Grounded in the actual parcel — <strong>Xoirostasio (Kipos)</strong>, 6,255m² (6.26 stremmata) — from the <a href="crete-home-savings-guide.html">Home Savings Guide</a>: annual beds, a young orchard, rotationally-grazed chickens, and a compost/cover-crop strip, terraced across a slope on a plot separate from home. It already carries 13 owner-confirmed olive trees at deliberately low density and has a farm building on or adjacent to it. The vineyard and main olive grove elsewhere on the property stay out of scope here for now.</p>
 
 <div class="caveat"><strong>How to read this page:</strong> the first sections lay out the architecture, hardware, and build order as a reference. The last section, "Design Studio," is where the actual robot-by-robot decisions get made — most of it starts as open questions on purpose, to be filled in over future sessions rather than guessed at now.</div>
 
-<div class="caveat"><strong>Corrected as of today:</strong> the terrace layout isn't planned yet, so no specific bed/orchard map exists below — only the general shape of the problem (stepped terraces, not flat ground). Chickens are rotated through fenced sections one at a time, not free-ranging over the whole plot — robot and chickens are assumed to never share a section at once. And the plot is separate land, not adjacent to home — connectivity between the two is a real open question, deliberately left unsolved on this page for now.</div>
+<div class="caveat"><strong>Corrected, previous pass:</strong> the terrace layout isn't fully planned yet, so no specific bed map exists below — only the general shape of the problem (stepped terraces, not flat ground). Chickens are rotated through fenced sections one at a time, not free-ranging over the whole plot — robot and chickens are assumed to never share a section at once. And the plot is separate land, not adjacent to home — connectivity between the two stays an open question, deliberately left unsolved on this page for now.</div>
+
+<div class="caveat"><strong>Pulled in from the parcel records:</strong> the exact area, terrace types, olive count, and access notes below come from the property's own parcel-mapping data (the same records behind the "Xoirostasio (Kipos)" entry). Deliberately left out here: the parcel's cadastral (ΚΑΕΚ) number and GPS centroid — both precisely geolocate real private land, and neither is needed for anything on this page, so they're omitted from this public site rather than published alongside a robot build log.</div>
 
 <h2 class="section-heading">Your Garden, As the Robot Would See It</h2>
 <div class="item">
-<p>No real map yet — the 6,000m² plot is terraced across a slope, and which terrace gets which use (beds, orchard, chicken rotation) hasn't been planned. So this section doesn't pretend to lay out bed corners or tree rows; instead it fixes the two things that <em>are</em> already known and genuinely change the robot's design: the ground is stepped, not flat, and the chickens are rotated through one fenced section at a time rather than ranging freely everywhere. The diagram below is a generic cross-section for that reason — it shows the kind of vertical structure to design around, not a real layout.</p>
+<p>No bed-by-bed map yet — which terrace gets which use (beds, orchard, chicken rotation) hasn't been planned. But the parcel records fix real, specific facts about the ground itself that change the robot's design more than any layout would: the property's terraces come in three distinct types, not one uniform "sloped ground" — stone-walled terraces, cut/dug dirt terraces (a vertical soil face, more erosion-prone right at the cut), and raw un-terraced slope at roughly 60% grade (~31°) with trees planted directly on it. Access today is on foot only once past the edge of a parcel — a vehicle reaches the lower part, nothing more — and the steepest sections are, in the owner's own words, hard to stay in control of even walking. That's a real safety boundary for a machine with a cutting head, not a detail to gloss over. The diagram below reflects this typology directly rather than a generic staircase.</p>
 
 <div class="diagram-wrap">
-<svg viewBox="0 0 900 420" role="img" aria-labelledby="terrace-title terrace-desc">
-<title id="terrace-title">Generic terrace cross-section</title>
-<desc id="terrace-desc">A side-view schematic of four stepped terraces descending a slope, connected by a dashed candidate ramp path. One terrace is flagged as the active chicken rotation zone, off-limits to the robot while active. The other terraces are labeled as possible bed, orchard, or compost use, all still to be decided. A small robot icon sits on the ramp between the first two terraces next to a question mark, representing the open question of whether the robot crosses terraces via ramps or is repositioned by hand.</desc>
+<svg viewBox="0 0 900 440" role="img" aria-labelledby="terrace-title terrace-desc">
+<title id="terrace-title">Terrace cross-section by real terrace type</title>
+<desc id="terrace-desc">A side-view schematic descending a slope: a farm building and charging dock at the base, a stone-walled terrace, a dirt-cut terrace flagged as this cycle's chicken rotation zone, and a raw un-terraced slope at roughly 60 percent grade flagged as off-limits to the ground robot, needing a different approach such as a monorail or mule transport instead. A robot icon sits on the dashed candidate ramp between the first two terraces next to a question mark, representing the open question of whether the robot crosses terraces via ramps or is repositioned by hand.</desc>
 
-<rect x="10" y="10" width="880" height="400" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+<rect x="10" y="10" width="880" height="420" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
 
 <!-- stepped ground profile -->
-<polygon points="50,150 260,150 260,220 480,220 480,290 700,290 700,360 860,360 860,395 50,395"
+<polygon points="50,150 260,150 260,220 480,220 480,290 700,290 700,360 860,360 860,415 50,415"
   fill="#e8ddc8" stroke="var(--ink-soft)" stroke-width="2"/>
 
 <!-- wall face accents -->
 <rect x="256" y="150" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
 <rect x="476" y="220" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
-<rect x="696" y="290" width="8" height="70" fill="var(--gloss)" opacity="0.5"/>
 
 <!-- candidate ramp path, dashed, across each wall face -->
 <line x1="230" y1="150" x2="290" y2="220" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
 <line x1="450" y1="220" x2="510" y2="290" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
-<line x1="670" y1="290" x2="730" y2="360" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
 
-<!-- terrace labels -->
-<text x="150" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace A</text>
-<text x="150" y="120" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD — bed / orchard / compost</text>
+<!-- Terrace 1: stone-walled -->
+<text x="150" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Stone-walled terrace</text>
+<text x="150" y="122" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Type A — most stable, use TBD</text>
 
-<!-- chicken rotation terrace -->
+<!-- Terrace 2: dirt-cut, chicken rotation this cycle -->
 <rect x="270" y="178" width="200" height="38" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-<text x="370" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--accent)">Terrace B</text>
+<text x="370" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--accent)">Dirt-cut terrace (Type B)</text>
 <text x="370" y="205" text-anchor="middle" font-size="9" fill="var(--accent)">chicken rotation zone (this cycle)</text>
-<path d="M 340 165 A 10 10 0 1 1 339 164" fill="none" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="440" y="170" text-anchor="middle" font-size="9" fill="var(--ink-soft)" font-style="italic">flagged off-limits to robot while active</text>
+<text x="440" y="168" text-anchor="middle" font-size="9" fill="var(--ink-soft)" font-style="italic">off-limits to robot while active</text>
 
-<text x="590" y="280" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace C</text>
-<text x="590" y="260" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD</text>
+<!-- Terrace 3: another dirt-cut/general -->
+<text x="590" y="280" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Dirt-cut terrace</text>
+<text x="590" y="262" text-anchor="middle" font-size="10" fill="var(--ink-soft)">Type B — erosion-prone near the cut face</text>
 
-<text x="780" y="350" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Terrace D</text>
-<text x="780" y="330" text-anchor="middle" font-size="10" fill="var(--ink-soft)">use TBD</text>
+<!-- Terrace 4: raw slope, off-limits -->
+<rect x="700" y="335" width="160" height="45" rx="6" fill="#f6e0dc" stroke="#a1503f" stroke-width="1.5"/>
+<text x="780" y="350" text-anchor="middle" font-size="11" font-weight="700" fill="#8a3a2c">Raw slope (Type C)</text>
+<text x="780" y="363" text-anchor="middle" font-size="9" fill="#8a3a2c">~60% grade, no terrace</text>
+<text x="780" y="375" text-anchor="middle" font-size="9" fill="#8a3a2c" font-style="italic">off-limits to a ground robot</text>
 
 <!-- robot icon on first ramp -->
 <g transform="translate(255,225)">
@@ -146,6 +149,14 @@
 </g>
 <text x="255" y="255" text-anchor="middle" font-size="9" fill="var(--ink-soft)" font-style="italic">ramps between terraces, or reposition by hand?</text>
 
+<!-- Farm building + dock at base -->
+<g transform="translate(90,395)">
+  <rect x="-38" y="-28" width="76" height="28" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+  <polygon points="-42,-28 0,-46 42,-28" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+</g>
+<text x="90" y="410" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink)">Existing farm building</text>
+<text x="90" y="425" text-anchor="middle" font-size="9" fill="var(--ink-soft)">candidate brain server + dock site</text>
+
 <defs>
 <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
 <path d="M0,0 L6,3 L0,6 Z" fill="var(--accent)"/>
@@ -153,9 +164,9 @@
 </defs>
 </svg>
 </div>
-<p class="diagram-caption">Generic cross-section, not a real layout. Terrace count, widths, and what's planted where are all still open — this exists to make the slope and rotation constraints concrete, not to fix a map.</p>
+<p class="diagram-caption">Schematic, not a real map — but the terrace types, the raw-slope grade, and the farm building are real facts from the parcel records, not placeholders.</p>
 
-<p>Two things this changes from a flat-ground assumption. First, mobility now has to deal with stepped terraces rather than open ground between beds — a real chassis question (ramps between levels vs. staying within one terrace and being repositioned by hand or trailer) that can't be settled until the terracing plan exists, but is worth deciding early since it drives the whole chassis design. Second, the chicken problem actually gets simpler, not harder, once it's framed correctly: since a section is either "chickens active this rotation" or "robot working," it's a scheduling/zone-flag problem — the robot just needs to know which terraces are chicken-active right now and stay out — not a live obstacle-avoidance problem needing chicken detection at all.</p>
+<p>Three things this changes from a flat-ground assumption. First, mobility has to deal with stepped terraces of genuinely different character — stone-walled terraces are the most stable footing, dirt-cut terraces need care near the exposed soil face, and the raw ~60% slope is realistically off-limits to a wheeled or tracked ground robot entirely; the property's own notes already flag mule/manual work or a monorail-type transporter for the steepest ground, which is the honest answer there rather than forcing a general-purpose chassis to handle it. Second, the chicken problem is a scheduling problem, not a detection problem: since a section is either "chickens active this rotation" or "robot working," the robot just needs to know which terraces are chicken-active right now and stay out — no live chicken detection needed. Third, there's now a real candidate site for the brain server and charging dock: the existing farm building on/adjacent to the parcel, rather than an assumed shed that may or may not exist.</p>
 </div>
 
 <h2 class="section-heading">The Brain: Server Hardware</h2>
@@ -180,14 +191,14 @@
 <div class="item-stats">
   <span class="stat-badge optional">deferred — settle once terraces and site logistics are known</span>
 </div>
-<p>The plot is separate land, not next to home, so this isn't a "does home WiFi reach the garden" problem — it's a standalone-site connectivity problem, and the right answer depends on things not decided yet (where the brain server physically lives, how far that is from a road or power source, terrain between terraces). Not sizing this now on purpose. Worth keeping in mind once it's time to solve it: options range from outdoor mesh APs or a directional point-to-point bridge (if there's a power source to anchor them to) down to a cellular modem or a LoRa link for a low-bandwidth command/telemetry channel if the site turns out to be genuinely off-grid. Revisit this once the terrace layout — and where the robot's home base actually sits — is settled.</p>
+<p>The plot is separate land, not next to home, so this isn't a "does home WiFi reach the garden" problem — it's a standalone-site connectivity problem. Still not sizing this now on purpose, but there's a real anchor point worth checking first: the existing farm building on/adjacent to the parcel. If it already has power or a phone line, that's the natural place to base a WiFi AP or point-to-point bridge from; if it's genuinely off-grid, that pushes toward a cellular modem or a LoRa link for a low-bandwidth command/telemetry channel instead. Revisit this once it's known whether that building has power, and where the robot's home base actually sits relative to it.</p>
 
 <h3>Charging dock power</h3>
 <div class="item-stats">
-  <span class="stat-badge cost">€150-300</span>
-  <span class="stat-badge spec">solar panel + battery is the likely default</span>
+  <span class="stat-badge cost">€50-300</span>
+  <span class="stat-badge spec">check the existing farm building for power before assuming solar</span>
 </div>
-<p>Since the plot isn't adjacent to home, running a mains cable out to a charging dock is the less likely option rather than the default — a small solar panel + battery trickle-charge setup (~€150-300) is the more realistic starting assumption for a low-power charging load like this, unless there's already a powered shed or outbuilding on-site to use instead (in which case it's just a weatherproof outlet and enclosure, ~€50-100). Worth confirming which case actually applies once the dock's location is picked.</p>
+<p>Since the plot isn't adjacent to home, a fresh mains cable out to a charging dock is unlikely to be the easy option — but the parcel already has a farm building on/adjacent to it, so the real first step is checking whether that building has power before assuming anything. If it does, this is just a weatherproof outlet and enclosure (~€50-100). If it doesn't, a small solar panel + battery trickle-charge setup (~€150-300) is the fallback for a low-power charging load like this. Worth confirming which case applies once the dock's location is picked — likely near that building either way.</p>
 
 <h3>Existing GPU machine (training, occasional use)</h3>
 <div class="item-stats">
@@ -200,13 +211,13 @@
 <table class="summary-table">
 <tr><th>Piece</th><th>Rough cost</th><th>Priority</th></tr>
 <tr><td>Mini-PC brain (16-32GB RAM, 512GB+ SSD)</td><td class="num">€250-400</td><td>Needed first — build order step 2 onward</td></tr>
-<tr><td>Charging dock power (solar + battery, likely)</td><td class="num">€150-300</td><td>Needed before the robot runs unattended</td></tr>
+<tr><td>Charging dock power (check the farm building first)</td><td class="num">€50-300</td><td>Needed before the robot runs unattended</td></tr>
 <tr><td>Connectivity to the site</td><td class="num">TBD</td><td>Deferred — depends on terrace layout and where the brain server lives</td></tr>
 <tr><td>Vision accelerator (Coral/Hailo)</td><td class="num">€60-120</td><td>Optional, add after step 6 if needed</td></tr>
 <tr><td>Existing GPU machine</td><td class="num">already have</td><td>Used occasionally, from the first vision task on</td></tr>
 </table>
 </div>
-<p class="rules-note">Total new-hardware order of magnitude for the brain + power, excluding connectivity (deferred) and the robot's own chassis/motors/camera/mechanicals (those depend entirely on which robot is being built — see Design Studio below): roughly €400-700, plus whatever connectivity ends up costing once that's settled.</p>
+<p class="rules-note">Total new-hardware order of magnitude for the brain + power, excluding connectivity (deferred) and the robot's own chassis/motors/camera/mechanicals (those depend entirely on which robot is being built — see Design Studio below): roughly €300-700 — nearer the low end if the existing farm building already has power, higher if a solar setup is needed — plus whatever connectivity ends up costing once that's settled.</p>
 </div>
 
 <h2 class="section-heading">Software Architecture</h2>
@@ -340,7 +351,8 @@
 
 <h4>Garden-specific constraints</h4>
 <ul>
-<li>Terraced, sloped terrain — terrace count, widths, and what's planted where aren't planned yet, so chassis mobility (wheels vs. tracks, ramp gradients it needs to handle) can't be finalized until that's settled.</li>
+<li>Three real terrace types on this land — stone-walled, dirt-cut, and raw ~60% slope — and which terrace holds which bed isn't planned yet, so exact chassis sizing waits on that; but the raw-slope type is realistically off-limits to any wheeled/tracked robot regardless of layout.</li>
+<li>Access today is on foot past the edge of a parcel — no vehicle track through it — and the steepest ground is hard to stay in control of even walking, per the owner's own notes. That's a hard exclusion zone for the robot, not just a rough patch to slow down for.</li>
 <li>Chickens are rotated through one fenced terrace/section at a time, never the whole plot — as long as the robot's schedule and the chicken rotation schedule are kept mutually exclusive per section, no live chicken detection or avoidance is needed at all.</li>
 <li>Bed spacing and soil surface (raised beds vs. flat) aren't nailed down on this page yet — affects wheel/track choice and ground clearance.</li>
 <li>Revisits every ~2 days per the plan — cadence affects battery/charging-dock sizing.</li>
@@ -348,12 +360,12 @@
 
 <h4>Open questions to settle together</h4>
 <ul>
-<li>Does one robot cross terraces via ramps, or does it stay within one terrace at a time and get repositioned by hand or trailer between them?</li>
-<li>Chassis: wheels vs. tracks, given actual terrace terrain and path width — can't fully answer until the terrace plan exists, but worth a working assumption to design toward.</li>
+<li>Does one robot cross terraces via ramps, stay within one terrace and get repositioned by hand/trailer, or is a monorail-type transporter (already the property's own fallback idea for the steepest ground) worth considering for terrace-to-terrace movement generally?</li>
+<li>Chassis: wheels vs. tracks, given stone-walled vs. dirt-cut terrace surfaces — can these two types share one chassis design, or does the dirt-cut terrace's erosion-prone edge need different handling?</li>
 <li>Cutting mechanism: trimmer-head, small blade, or something else?</li>
 <li>How is a plant's coordinate actually recorded at transplant time — a phone app, the robot itself in a "mark" mode, something else?</li>
 <li>How does the system know which terrace/section is chicken-active right now — a manual toggle, a schedule, something tied to the fencing?</li>
-<li>Which terrace or bed gets this first once the layout exists?</li>
+<li>Does the existing farm building become the robot's charging dock, or is a separate dock better positioned relative to the beds once they're planned?</li>
 </ul>
 
 <h4>Decisions so far</h4>
@@ -362,9 +374,10 @@
 <tr><td class="date">2026-09-07</td><td>Brain runs on a dedicated N100/N305 mini-PC, not the robot itself</td><td>Keeps the robot's onboard compute to real-time driving only, per the plan's two-layer split</td></tr>
 <tr><td class="date">2026-09-07</td><td>This is the first robot to actually build</td><td>Reuses steps 1-6 of the build order directly; every later capability builds on it</td></tr>
 <tr><td class="date">2026-09-07</td><td>Chicken safety is a zone-scheduling problem, not live obstacle avoidance</td><td>Chickens are rotated through one fenced section at a time, never sharing a section with the robot — corrected from an earlier assumption of free-ranging over the whole plot</td></tr>
-<tr><td class="date">2026-09-07</td><td>No fixed garden map yet — terrain is terraced, layout not planned</td><td>Corrected from an earlier flat-ground layout guess; chassis/mobility decisions wait on the real terrace plan</td></tr>
+<tr><td class="date">2026-09-07</td><td>Raw-slope (Type C, ~60% grade) terrain is a hard exclusion zone for this robot</td><td>Parcel records note it's hard to stay in control of even on foot — a different transport approach (mule, monorail) is the honest answer there, not a chassis upgrade</td></tr>
+<tr><td class="date">2026-09-07</td><td>Candidate charging dock / brain server site: the existing farm building on/adjacent to the parcel</td><td>Real anchor point from the parcel records, replacing an earlier generic "some on-site enclosure" placeholder</td></tr>
 </table>
-<div class="next-step"><strong>Next step:</strong> once there's even a rough terrace plan (how many levels, roughly how steep), decide the ramps-vs-reposition question — it drives the chassis choice more than anything else here.</div>
+<div class="next-step"><strong>Next step:</strong> once it's confirmed whether the farm building has power, decide the ramps-vs-reposition-vs-monorail question for the stone-walled and dirt-cut terraces — the raw-slope terrain is already settled as out of scope for this robot.</div>
 </div>
 
 <div class="robot-card">
@@ -386,10 +399,11 @@
   <h3>Precision Orchard Work</h3>
   <span class="status-badge future">Future — needs the foundation first</span>
 </div>
-<p>The plan flags precision vine pruning as hard: recognition is easy, precise manipulation on a springy target is the real problem. Mapped to this garden, the nearest equivalent is bud-level work on the young lemon/orange/olive/pomegranate/almond rows once they're established enough to need it.</p>
+<p>The plan flags precision vine pruning as hard: recognition is easy, precise manipulation on a springy target is the real problem. Mapped to this garden, the nearest equivalent is bud-level work on the 13 confirmed olive trees already on this parcel (deliberately low density, no more planned) plus whatever lemon/orange/pomegranate/almond trees join them as the wider garden plan fills in — olive pruning specifically is already an active, hands-on skill elsewhere on the property's main grove, so there's real technique to eventually encode here, not a blank slate.</p>
 <h4>Open questions to settle together</h4>
 <ul>
-<li>Realistically years out given the orchard's current age — worth a placeholder now or revisiting later?</li>
+<li>Realistically years out given this is robot #3+ in the build order — worth a placeholder now or revisiting later?</li>
+<li>Worth pulling in the pruning conventions already used on the main grove once this gets designed, rather than inventing a fresh approach?</li>
 </ul>
 <div class="next-step"><strong>Next step:</strong> nothing to decide yet — parked until the Weeder and Scout are real.</div>
 </div>
@@ -412,13 +426,14 @@
   <h3>Smart Irrigation Valves</h3>
   <span class="status-badge ready">No robot needed — can start anytime</span>
 </div>
-<p>One of the plan's own "easy wins": multi-zone valves with different schedules per bed/orchard row, solved by existing off-the-shelf tech. Genuinely worth doing before or alongside any robot work, since it needs none of the navigation/LLM foundation above.</p>
+<p>One of the plan's own "easy wins": multi-zone valves with different schedules per bed/orchard row, solved by existing off-the-shelf tech. Genuinely worth doing before or alongside any robot work, since it needs none of the navigation/LLM foundation above — and the parcel records already answer part of the design: water comes from the metered local utility, gravity feed is workable given the slope (no pump needed), but pressure-compensating (PC) emitters are close to mandatory, since the elevation change across a terrace run would otherwise starve the top of each run while flooding the bottom.</p>
 <h4>Open questions to settle together</h4>
 <ul>
 <li>How many zones does the real layout need — one per bed cluster, one per orchard row group, plus one for the compost strip's cover crop?</li>
 <li>Tie into Home Assistant now, so it's already a callable function once the robot architecture exists?</li>
+<li>Does the owner's separately-noted plan for a rain-fed cistern/pond factor into this parcel's zones, or is that sized for the wider property?</li>
 </ul>
-<div class="next-step"><strong>Next step:</strong> worth speccing this one independently of the robot timeline — it pays off immediately either way.</div>
+<div class="next-step"><strong>Next step:</strong> worth speccing this one independently of the robot timeline — it pays off immediately either way, and PC emitters are now a settled requirement, not an open question.</div>
 </div>
 
 <div class="robot-card">
